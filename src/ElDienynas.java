@@ -39,6 +39,8 @@ public class ElDienynas {
         VGTU.getCourseList().get(0).addCourseTasks(VGTU.getTaskList().get(0));
         VGTU.getCourseList().get(0).addCourseTasks(VGTU.getTaskList().get(1));
         VGTU.getCourseList().get(0).printCourseTasks();
+        new BasicInterface().frontPageInteraction();
+
         /*try {
             System.out.println(getTeacherByID(14, VGTU).getName());
         }
