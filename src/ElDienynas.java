@@ -18,8 +18,8 @@ public class ElDienynas {
         VGTU.addCourse(2,"darbaiXD");
         VGTU.addCourse(3,"darkoks velnias");
 
-        VGTU.addTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5");
-        VGTU.addTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1");
+        VGTU.addTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", VGTU.getTeacherByID(1));
+        VGTU.addTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", VGTU.getTeacherByID(1));
 
         VGTU.setGroupList(1, "GRUPE1");
         VGTU.setGroupList(2, "GRUPE2");
