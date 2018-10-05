@@ -52,8 +52,8 @@ public class University {
     //endregion
     //Tasks
     //region
-    public void addTask(int taskID, String name, String taskCondition, String deadline, String points) {
-        Task task = new Task(taskID, name, taskCondition, deadline, points);
+    public void addTask(int taskID, String name, String taskCondition, String deadline, String points, Teacher teacher) {
+        Task task = new Task(taskID, name, taskCondition, deadline, points, teacher);
         taskList.add(task);
     }
 
