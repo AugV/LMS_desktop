@@ -9,23 +9,22 @@ public void frontPageInteraction() {
         //TODO doesnt react to input, possibly something wrong with Input class method and getByte thang
         switch(selection ) {
             case '1':
-                System.out.println("boi");
-                teacherPageInteraction();
 
+                teacherPageInteraction();
+                break;
             case '2':
                 studentPageInteraction();
-
+                break;
             case '3':
                 coursePageInteraction();
-
+                break;
             case '4':
                 taskPageInteraction();
-
+                break;
             case '5':
                 completedTaskPageInteraction();
-
-            case '6':
-                System.out.println("boi");
+                break;
+            default:
                 exit= true;
 
         }

@@ -9,7 +9,7 @@ public class Input {
     }
 
     public char getUserInputchar(){
-        char input  =(char) scanner.nextByte();
+        char input  = scanner.next().charAt(0);
         return input;
     }
 
