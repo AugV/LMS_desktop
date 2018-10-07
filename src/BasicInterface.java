@@ -51,13 +51,34 @@ public class BasicInterface {
     }
 
     private void studentPageInteraction() {
-        new Printer().printStudentPage();
+        back=false;
+        while(!back) {
+            new Printer().printStudentPage();
+            switch (new Input().getUserInputchar()) {
+                case '1':
+                    university.printGroupList();
+                    break;
+                case '2':
+                    university.getGroupByID(new Input().getUserInputInt()).printGroupStudents();
+                    break;
+                case '3':
+                    university.addGroup(new Group(new Input().getUserInputInt(),new Input().getUserInputLine() ));
+                    break;
+                case '4':
+                    //university.removeTeacher();
+                    break;
+                default:
+                    back = true;
+                    break;
+            }
+        }
     }
 
     private void teacherPageInteraction() {
-        new Printer().printTeacherPage();
+
         back=false;
         while(!back) {
+            new Printer().printTeacherPage();
             switch (new Input().getUserInputchar()) {
                 case '1':
                     university.printTeacherList();
@@ -69,10 +90,13 @@ public class BasicInterface {
                     university.addTeacherKeyboard();
                     break;
                 case '4':
+                    university.removeTeacher();
                     break;
                 case '5':
+                    //TODO print to file
                     break;
                 default:
+                    back = true;
                     break;
             }
         }

@@ -28,6 +28,8 @@ public class ElDienynas {
         university.addCompletedTask(1, "atsakymas1", "balas1", "data1", "ivertdata1", "komentaras1");
         university.addCompletedTask(2, "atsakymas2", "balas2", "data2", "ivertdata2", "komentaras2");
 
+        university.getGroupByID(1).setGroupStudents(university.getStudentByID(1));
+
         //endregion
         //university.removeTeacher();
         //university.printTeacherList();
@@ -37,9 +39,7 @@ public class ElDienynas {
         //university.getGroupList().get(0).printGroupStudents();
         //university.getCourseList().get(0).printCourseInfo();
 
-        university.getCourseList().get(0).addCourseTasks(university.getTaskList().get(0));
-        university.getCourseList().get(0).addCourseTasks(university.getTaskList().get(1));
-        university.getCourseList().get(0).printCourseTasks();
+
         new BasicInterface(university).frontPageInteraction();
 
         /*try {

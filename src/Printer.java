@@ -19,7 +19,6 @@ public class Printer {
         System.out.println("4. Delete teacher");
         System.out.println("5. Print teacher list to file");
         System.out.println("6. Return");
-        System.out.println("7. Return");
     }
 
     public void printStudentPage(){

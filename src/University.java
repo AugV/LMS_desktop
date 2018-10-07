@@ -15,12 +15,24 @@ public class University {
         return groupList;
     }
 
-    public void setGroupList(Group group) {
+    public void addGroup(Group group) {
         this.groupList.add(group);
     }
 
+
     public void setGroupList(int id, String name) {
         this.groupList.add(new Group(id, name));
+    }
+
+    public Group getGroupByID(int id) {
+        Group groupMatch = null;
+        for (Group group : this.getGroupList()) {
+            if (group.getGroupID()== id) {
+                groupMatch = group;
+                break;
+            }
+        }
+        return groupMatch;
     }
 
     public void printGroupList(){
@@ -107,7 +119,7 @@ public class University {
     public void addTeacherKeyboard() {
         Scanner sc = new Scanner(System.in);
         System.out.println("ID   Name    Surname");
-        setTeacherList(sc.nextInt(), sc.nextLine(), sc.nextLine());
+        setTeacherList(sc.nextInt(), sc.next(), sc.next());
     }
 
     public void printTeacherList() {
@@ -146,6 +158,17 @@ public class University {
 
     public void setStudentList(Student student) {
         this.studentList.add(student);
+    }
+
+    public Student getStudentByID(int id) {
+        Student studentMatch = null;
+        for (Student student : this.getStudentList()) {
+            if (student.getId() == id) {
+                studentMatch = student;
+                break;
+            }
+        }
+        return studentMatch;
     }
 //endregion
 
