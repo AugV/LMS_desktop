@@ -1,15 +1,20 @@
 public class BasicInterface {
+    private University university;
+    boolean exit;
+    boolean back;
 
-public void frontPageInteraction() {
+
+    public BasicInterface(University university) {
+        this.university = university;
+    }
+
+    public void frontPageInteraction() {
     boolean exit=false;
     while(!exit){
         new Printer().printFrontPage();
-        char selection= new Input().getUserInputchar();
 
-        //TODO doesnt react to input, possibly something wrong with Input class method and getByte thang
-        switch(selection ) {
+        switch(new Input().getUserInputchar()) {
             case '1':
-
                 teacherPageInteraction();
                 break;
             case '2':
@@ -26,7 +31,7 @@ public void frontPageInteraction() {
                 break;
             default:
                 exit= true;
-
+                new Printer().printExitMessage();
         }
 
     }
@@ -34,18 +39,43 @@ public void frontPageInteraction() {
 }
 
     private void completedTaskPageInteraction() {
+    new Printer().printCompletedTaskPage();
     }
 
     private void taskPageInteraction() {
+        new Printer().printTaskPage();
     }
 
     private void coursePageInteraction() {
+        new Printer().printCoursePage();
     }
 
     private void studentPageInteraction() {
+        new Printer().printStudentPage();
     }
 
     private void teacherPageInteraction() {
+        new Printer().printTeacherPage();
+        back=false;
+        while(!back) {
+            switch (new Input().getUserInputchar()) {
+                case '1':
+                    university.printTeacherList();
+                    break;
+                case '2':
+                    //TODO add reading teacher from file
+                    break;
+                case '3':
+                    university.addTeacherKeyboard();
+                    break;
+                case '4':
+                    break;
+                case '5':
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
 }

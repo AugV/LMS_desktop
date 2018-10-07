@@ -1,4 +1,7 @@
 public class Printer {
+    public void printExitMessage(){
+        System.out.println("Program closing...");
+    }
 
     public void printFrontPage(){
         System.out.println("1. Manage teachers");
