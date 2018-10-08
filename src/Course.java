@@ -49,9 +49,19 @@ public class Course {
         teacherToRemove.removeTeacherCourse(this);
     }
 
-    public void addCourseTasks(Task task) {
-        task.setTaskFromTask(this);
+    public void addCourseTask(Task task) {
         courseTasks.add(task);
+    }
+
+    public Task getCourseTaskByID(int id) {
+        Task taskMatch = null;
+        for (Task task : this.getCourseTasks()) {
+            if (task.getTaskID() == id) {
+                taskMatch = task;
+                break;
+            }
+        }
+        return taskMatch;
     }
 
     public ArrayList<Task> getCourseTasks() {

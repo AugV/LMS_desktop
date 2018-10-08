@@ -5,6 +5,12 @@ public class Group {
     private String name;
 
     ArrayList<Student> groupStudents = new ArrayList();
+    ArrayList<Task> groupTasks = new ArrayList();
+
+
+    public void addGroupTask(Task groupTask) {
+        this.groupTasks.add(groupTask);
+    }
 
     public Group(int groupID, String name) {
         this.groupID = groupID;

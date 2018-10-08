@@ -17,8 +17,11 @@ public class ElDienynas {
         university.addCourse(2,"darbaiXD", "Darbuko salalai");
         university.addCourse(3,"darkoks velnias", "dar vienas niekam nereikalingas kursas");
 
-        university.addTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1));
-        university.addTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1));
+        university.getCourseByID(1).addCourseTask(university.getNsetTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1), university.getCourseByID(2));
+        university.getCourseByID(2).addCourseTask(university.getNsetTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1), university.getCourseByID(3));
+
+        //university.addTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1), university.getCourseByID(2));
+        //university.addTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1), university.getCourseByID(3));
 
         university.setGroupList(1, "GRUPE1");
         university.setGroupList(2, "GRUPE2");

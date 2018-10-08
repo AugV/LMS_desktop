@@ -9,56 +9,72 @@ public class BasicInterface {
     }
 
     public void frontPageInteraction() {
-    boolean exit=false;
-    while(!exit){
-        new Printer().printFrontPage();
+        boolean exit = false;
+        while (!exit) {
+            new Printer().printFrontPage();
 
-        switch(new Input().getUserInputchar()) {
-            case '1':
-                teacherPageInteraction();
-                break;
-            case '2':
-                studentPageInteraction();
-                break;
-            case '3':
-                coursePageInteraction();
-                break;
-            case '4':
-                taskPageInteraction();
-                break;
-            case '5':
-                completedTaskPageInteraction();
-                break;
-            default:
-                exit= true;
-                new Printer().printExitMessage();
+            switch (new Input().getUserInputchar()) {
+                case '1':
+                    teacherPageInteraction();
+                    break;
+                case '2':
+                    studentPageInteraction();
+                    break;
+                case '3':
+                    coursePageInteraction();
+                    break;
+                case '4':
+                    taskPageInteraction();
+                    break;
+                case '5':
+                    completedTaskPageInteraction();
+                    break;
+                default:
+                    exit = true;
+                    new Printer().printExitMessage();
+            }
+
         }
 
     }
 
-}
-
     private void completedTaskPageInteraction() {
-    new Printer().printCompletedTaskPage();
+        new Printer().printCompletedTaskPage();
     }
 
     private void taskPageInteraction() {
-        back=false;
+        back = false;
         Course selectedCourse = null;
-        while(!back) {
+        while (!back) {
             new Printer().printTaskPage();
             switch (new Input().getUserInputchar()) {
                 case '1':
-                        selectedCourse = university.getCourseByID(new Input().getUserInputInt());
+                    selectedCourse = university.getCourseByID(new Input().getUserInputInt());
                     break;
                 case '2':
-                        selectedCourse.printCourseTasks();
+                    selectedCourse.printCourseTasks();
                     break;
                 case '3':
-
+                    selectedCourse.addCourseTask(university.getNsetTask(
+                            new Input().getUserInputInt(),
+                            new Input().getUserInputSingleToken(),
+                            new Input().getUserInputLine(),
+                            new Input().getUserInputSingleToken(),
+                            new Input().getUserInputSingleToken(),
+                            university.getTeacherByID(new Input().getUserInputInt()),
+                            university.getCourseByID(new Input().getUserInputInt())));
                     break;
                 case '4':
-
+                    //TODO make task inaccessible
+                    break;
+                case '5':
+                    selectedCourse.getCourseTaskByID(new Input().getUserInputInt()).printTaskCompletedTasks();
+                    break;
+                case '6':
+                    university.getCompletedTaskByID(new Input().getUserInputInt()).getAnswer();
+                    break;
+                case '7':
+                    university.getCompletedTaskByID(new Input().getUserInputInt()).setGrade(new Input().getUserInputLine());
                     break;
                 default:
                     back = true;
@@ -69,8 +85,8 @@ public class BasicInterface {
 
     private void coursePageInteraction() {
 
-        back=false;
-        while(!back) {
+        back = false;
+        while (!back) {
             new Printer().printCoursePage();
             switch (new Input().getUserInputchar()) {
                 case '1':
@@ -93,8 +109,8 @@ public class BasicInterface {
     }
 
     private void studentPageInteraction() {
-        back=false;
-        while(!back) {
+        back = false;
+        while (!back) {
             new Printer().printStudentPage();
             switch (new Input().getUserInputchar()) {
                 case '1':
@@ -104,7 +120,7 @@ public class BasicInterface {
                     university.getGroupByID(new Input().getUserInputInt()).printGroupStudents();
                     break;
                 case '3':
-                    university.addGroup(new Group(new Input().getUserInputInt(),new Input().getUserInputSingleToken() ));
+                    university.addGroup(new Group(new Input().getUserInputInt(), new Input().getUserInputSingleToken()));
                     break;
                 case '4':
                     university.getGroupByID(new Input().getUserInputInt()).addGroupStudents(university.getStudentByID(new Input().getUserInputInt()));
@@ -118,8 +134,8 @@ public class BasicInterface {
 
     private void teacherPageInteraction() {
 
-        back=false;
-        while(!back) {
+        back = false;
+        while (!back) {
             new Printer().printTeacherPage();
             switch (new Input().getUserInputchar()) {
                 case '1':

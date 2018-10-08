@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Task {
 
@@ -6,8 +7,8 @@ public class Task {
     private String  taskCondition;
     private String  deadline;
     private String  points;
-    Course taskCourse;
     Teacher taskTeacher;
+    ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
 
     public Teacher getTaskTeacher() {
         return taskTeacher;
@@ -64,16 +65,16 @@ public class Task {
         return points;
     }
 
-    public void setTaskCourse(Course taskCourse) {
-        taskCourse.addCourseTasks(this);
-        this.taskCourse = taskCourse;
+
+    public void addTaskCompletedTask(CompletedTask completedTask) {
+        this.taskCompletedTasks.add(completedTask);
     }
 
-    public void setTaskFromTask(Course taskCourse) {
-        this.taskCourse = taskCourse;
-    }
-    public Course getTaskCourse() {
-        return taskCourse;
+    public void printTaskCompletedTasks(){
+        for (CompletedTask completedTask: this.taskCompletedTasks
+             ) {
+            System.out.println(completedTask);
+        }
     }
 
     @Override
@@ -83,7 +84,6 @@ public class Task {
                 ", taskCondition='" + taskCondition + '\'' +
                 ", deadline='" + deadline + '\'' +
                 ", points='" + points + '\'' +
-                ", taskCourse=" + taskCourse +
                 '}';
     }
 }

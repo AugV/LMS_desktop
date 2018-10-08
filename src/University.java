@@ -89,8 +89,25 @@ public class University {
         return taskList;
     }
 
-    public void setTaskList(Task task) {
+    public void addTask(Task task) {
         this.taskList.add(task);
+    }
+
+    public Task getNsetTask(int taskID, String name, String taskCondition, String deadline, String points, Teacher teacher){
+        Task task = new Task(taskID, name, taskCondition, deadline, points, teacher);
+        taskList.add(task);
+        return task;
+    }
+
+    public Task getTaskByID(int id) {
+        Task taskMatch = null;
+        for (Task task : this.getTaskList()) {
+            if (task.getTaskID() == id) {
+                taskMatch = task;
+                break;
+            }
+        }
+        return taskMatch;
     }
 
     public ArrayList<CompletedTask> getCompletedTaskList() {
@@ -99,6 +116,17 @@ public class University {
 
     public void setCompletedTaskList(CompletedTask completedTask) {
         this.completedTaskList.add(completedTask);
+    }
+
+    public CompletedTask getCompletedTaskByID(int id) {
+        CompletedTask completedTaskMatch = null;
+        for (CompletedTask completedTask : this.getCompletedTaskList()) {
+            if (completedTask.getTaskID() == id) {
+                completedTaskMatch = completedTask;
+                break;
+            }
+        }
+        return completedTaskMatch;
     }
 //endregion
     //Teachers
