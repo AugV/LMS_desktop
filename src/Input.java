@@ -3,8 +3,13 @@ import java.util.Scanner;
 public class Input {
     Scanner scanner = new Scanner(System.in);
 
-    public String getUserInputLine(){
+    public String getUserInputSingleToken(){
         String input  = scanner.next();
+        return input;
+    }
+
+    public String getUserInputLine(){
+        String input  = scanner.nextLine();
         return input;
     }
 

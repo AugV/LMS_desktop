@@ -43,11 +43,53 @@ public class BasicInterface {
     }
 
     private void taskPageInteraction() {
-        new Printer().printTaskPage();
+        back=false;
+        Course selectedCourse = null;
+        while(!back) {
+            new Printer().printTaskPage();
+            switch (new Input().getUserInputchar()) {
+                case '1':
+                        selectedCourse = university.getCourseByID(new Input().getUserInputInt());
+                    break;
+                case '2':
+                        selectedCourse.printCourseTasks();
+                    break;
+                case '3':
+
+                    break;
+                case '4':
+
+                    break;
+                default:
+                    back = true;
+                    break;
+            }
+        }
     }
 
     private void coursePageInteraction() {
-        new Printer().printCoursePage();
+
+        back=false;
+        while(!back) {
+            new Printer().printCoursePage();
+            switch (new Input().getUserInputchar()) {
+                case '1':
+                    university.printCourseList();
+                    break;
+                case '2':
+                    university.getCourseByID(new Input().getUserInputInt()).getCourseInformation();
+                    break;
+                case '3':
+                    university.addCourse(new Input().getUserInputInt(), new Input().getUserInputSingleToken(), new Input().getUserInputLine());
+                    break;
+                case '4':
+                    //TODO new window for Course group and teacher deletion/adding
+                    break;
+                default:
+                    back = true;
+                    break;
+            }
+        }
     }
 
     private void studentPageInteraction() {
@@ -62,10 +104,10 @@ public class BasicInterface {
                     university.getGroupByID(new Input().getUserInputInt()).printGroupStudents();
                     break;
                 case '3':
-                    university.addGroup(new Group(new Input().getUserInputInt(),new Input().getUserInputLine() ));
+                    university.addGroup(new Group(new Input().getUserInputInt(),new Input().getUserInputSingleToken() ));
                     break;
                 case '4':
-                    //university.removeTeacher();
+                    university.getGroupByID(new Input().getUserInputInt()).addGroupStudents(university.getStudentByID(new Input().getUserInputInt()));
                     break;
                 default:
                     back = true;

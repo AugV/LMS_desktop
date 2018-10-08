@@ -4,13 +4,19 @@ import java.util.ArrayList;
 public class Course {
     private int courseID;
     private String name;
+    private String information;
     private ArrayList<Teacher> courseTeachers = new ArrayList();
     private ArrayList<Task> courseTasks = new ArrayList();
     private ArrayList<Group> courseGroups = new ArrayList();
 
-    public Course(int courseID, String name) {
+    public String getCourseInformation() {
+        return information;
+    }
+
+    public Course(int courseID, String name, String information) {
         this.courseID = courseID;
         this.name = name;
+        this.information = information;
     }
 
     public void setCourseID(int courseID) {
@@ -42,7 +48,6 @@ public class Course {
         courseTeachers.remove(teacherToRemove);
         teacherToRemove.removeTeacherCourse(this);
     }
-
 
     public void addCourseTasks(Task task) {
         task.setTaskFromTask(this);

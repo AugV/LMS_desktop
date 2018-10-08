@@ -51,8 +51,8 @@ public class University {
         this.courseList.add(course);
     }
 
-    public void addCourse(int id, String name) {
-        Course course = new Course(id, name);
+    public void addCourse(int id, String name, String information) {
+        Course course = new Course(id, name, information);
         courseList.add(course);
     }
 
@@ -60,6 +60,17 @@ public class University {
         for (Course course : courseList) {
             System.out.println(course);
         }
+    }
+
+    public Course getCourseByID(int id) {
+        Course courseMatch = null;
+        for (Course course : this.getCourseList()) {
+            if (course.getCourseID() == id) {
+                courseMatch = course;
+                break;
+            }
+        }
+        return courseMatch;
     }
     //endregion
     //Tasks

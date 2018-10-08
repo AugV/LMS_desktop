@@ -1,5 +1,3 @@
-import javax.naming.NamingException;
-
 public class ElDienynas {
 
     //private University university;
@@ -15,9 +13,9 @@ public class ElDienynas {
         university.addStudent(1, "studentas1", "studentopavard1");
         university.addStudent(2, "studentas2", "studentopavard2");
 
-        university.addCourse(1,"matematika");
-        university.addCourse(2,"darbaiXD");
-        university.addCourse(3,"darkoks velnias");
+        university.addCourse(1,"matematika", "Matematikos kursas");
+        university.addCourse(2,"darbaiXD", "Darbuko salalai");
+        university.addCourse(3,"darkoks velnias", "dar vienas niekam nereikalingas kursas");
 
         university.addTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1));
         university.addTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1));
@@ -28,14 +26,14 @@ public class ElDienynas {
         university.addCompletedTask(1, "atsakymas1", "balas1", "data1", "ivertdata1", "komentaras1");
         university.addCompletedTask(2, "atsakymas2", "balas2", "data2", "ivertdata2", "komentaras2");
 
-        university.getGroupByID(1).setGroupStudents(university.getStudentByID(1));
+        university.getGroupByID(1).addGroupStudents(university.getStudentByID(1));
 
         //endregion
         //university.removeTeacher();
         //university.printTeacherList();
         //university.printGroupList();
         //university.getGroupList().get(0).printGroupStudents();
-        //university.getGroupList().get(0).setGroupStudents(university.getStudentList().get(0));
+        //university.getGroupList().get(0).addGroupStudents(university.getStudentList().get(0));
         //university.getGroupList().get(0).printGroupStudents();
         //university.getCourseList().get(0).printCourseInfo();
 

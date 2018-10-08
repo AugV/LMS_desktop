@@ -33,7 +33,7 @@ public class Group {
             System.out.println(student);
         }
     }
-    public void setGroupStudents(Student student) {
+    public void addGroupStudents(Student student) {
         student.setGroupFromGroup(this);
         this.groupStudents.add(student);
     }
