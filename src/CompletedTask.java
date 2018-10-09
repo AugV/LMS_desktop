@@ -14,6 +14,7 @@ public class CompletedTask {
         this.taskID = id;
         this.answer = answer;
         this.submissionDate = submissionDate;
+
     }
 
     public int getTaskID() {

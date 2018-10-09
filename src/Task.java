@@ -3,28 +3,19 @@ import java.util.ArrayList;
 public class Task {
 
     private int taskID;
-    private String  name;
-    private String  taskCondition;
-    private String  deadline;
-    private String  points;
-    Teacher taskTeacher;
+    private String name;
+    private String taskCondition;
+    private String deadline;
+    private String points;
     ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
 
-    public Teacher getTaskTeacher() {
-        return taskTeacher;
-    }
 
-    public void setTaskTeacher(Teacher taskTeacher) {
-        this.taskTeacher = taskTeacher;
-    }
-
-    public Task(int id,String name, String taskCondition, String deadline, String points, Teacher teacher) {
+    public Task(int id, String name, String taskCondition, String deadline, String points) {
         this.taskID = id;
         this.name = name;
         this.taskCondition = taskCondition;
         this.deadline = deadline;
         this.points = points;
-        this.taskTeacher = teacher;
     }
 
     public Task() {
@@ -33,6 +24,7 @@ public class Task {
     public void setTaskID(int taskID) {
         this.taskID = taskID;
     }
+
     public int getTaskID() {
         return taskID;
     }
@@ -40,6 +32,7 @@ public class Task {
     public void setName(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
@@ -47,6 +40,7 @@ public class Task {
     public void setTaskCondition(String taskCondition) {
         this.taskCondition = taskCondition;
     }
+
     public String getTaskCondition() {
         return taskCondition;
     }
@@ -54,6 +48,7 @@ public class Task {
     public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
+
     public String getDeadline() {
         return deadline;
     }
@@ -61,6 +56,7 @@ public class Task {
     public void setPoints(String points) {
         this.points = points;
     }
+
     public String getPoints() {
         return points;
     }
@@ -70,9 +66,9 @@ public class Task {
         this.taskCompletedTasks.add(completedTask);
     }
 
-    public void printTaskCompletedTasks(){
-        for (CompletedTask completedTask: this.taskCompletedTasks
-             ) {
+    public void printTaskCompletedTasks() {
+        for (CompletedTask completedTask : this.taskCompletedTasks
+        ) {
             System.out.println(completedTask);
         }
     }

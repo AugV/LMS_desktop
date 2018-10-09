@@ -7,14 +7,20 @@ public class Course {
     private String information;
     private ArrayList<Task> courseTasks = new ArrayList();
 
-    public String getCourseInformation() {
-        return information;
-    }
+
 
     public Course(int courseID, String name, String information) {
         this.courseID = courseID;
         this.name = name;
         this.information = information;
+    }
+
+    public Course(int courseID, String name, String information, Teacher teacher, Group group) {
+        this.courseID = courseID;
+        this.name = name;
+        this.information = information;
+        teacher.setTeacherCourses(this);
+        group.addGroupCourse(this);
     }
 
     public void setCourseID(int courseID) {
@@ -33,6 +39,9 @@ public class Course {
         return name;
     }
 
+    public String getCourseInformation() {
+        return information;
+    }
 
     public void addCourseTask(Task task) {
         courseTasks.add(task);

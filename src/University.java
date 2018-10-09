@@ -50,8 +50,7 @@ public class University {
         this.courseList.add(course);
     }
 
-    public void addCourse(int id, String name, String information) {
-        Course course = new Course(id, name, information);
+    public void addCourse(Course course) {
         courseList.add(course);
     }
 

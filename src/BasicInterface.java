@@ -46,10 +46,13 @@ public class BasicInterface {
             new Printer().printCompletedTaskPage();
             switch (new Input().getUserInputchar()) {
                 case '1':
-                    university.getGroupByID(new Input().getUserInputInt()).printGroupTasks();
+                    for (Course course : university.getGroupByID(new Input().getUserInputInt()).getGroupCourses()) {
+                        course.printCourseTasks();
+                    }
                     break;
                 case '2':
                     university.getTaskByID(new Input().getUserInputInt()).addTaskCompletedTask(new CompletedTask(
+                            new Input().getUserInputInt(),
                             new Input().getUserInputLine(),
                             new Input().getUserInputLine()));
                     break;
@@ -142,7 +145,7 @@ public class BasicInterface {
                     university.getGroupByID(new Input().getUserInputInt()).printGroupStudents();
                     break;
                 case '3':
-                    university.addGroup(new Group(new Input().getUserInputSingleToken()));
+                    university.addGroup(new Group(new Input().getUserInputInt(), new Input().getUserInputSingleToken()));
                     break;
                 case '4':
                     university.getGroupByID(new Input().getUserInputInt()).addGroupStudents(university.getStudentByID(new Input().getUserInputInt()));

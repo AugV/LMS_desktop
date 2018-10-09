@@ -21,17 +21,6 @@ public class Group {
         return groupID;
     }
 
-    public void setGroupID(int groupID) {
-        this.groupID = groupID;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public ArrayList<Student> getGroupStudents() {
         return groupStudents;
@@ -48,11 +37,15 @@ public class Group {
         this.groupStudents.add(student);
     }
 
-    public void printGroupCourse() {
+    public void printGroupCourses() {
         for (Course course :
                 groupCourses) {
             System.out.println(course);
         }
+    }
+
+    public ArrayList<Course> getGroupCourses() {
+        return groupCourses;
     }
 
     @Override
