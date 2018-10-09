@@ -10,21 +10,6 @@ public class Student extends Person {
 
    }
 
-    public Group getGroup() {
-        return group;
-    }
-    public void setGroup(Group group) {
-        group.setStudentsFromStudents(this);
-        this.group = group;
-    }
-
-    public ArrayList<Course> getStudentCourses() {
-        return studentCourses;
-    }
-    public void setStudentCourses(Course course){
-        studentCourses.add(course);
-    }
-
     public ArrayList<CompletedTask> getStudentCompletedTasks() {
         return studentCompletedTasks;
     }

@@ -3,20 +3,17 @@ public class CompletedTask {
     private int taskID;
     private String answer,
             grade,
-            submissionDate,
-            gradeDate,
+            submissionDate, //TODO make date type
+            gradeDate,//TODO make date type
             comment;
     Task task = new Task();
-    Teacher teacher= new Teacher();
+    Teacher teacher;
     Student student;
 
-    public CompletedTask(int id, String answer, String grade, String submissionDate, String gradeDate, String comment) {
+    public CompletedTask(int id,String answer, String submissionDate) {
         this.taskID = id;
         this.answer = answer;
-        this.grade = grade;
         this.submissionDate = submissionDate;
-        this.gradeDate = gradeDate;
-        this.comment = comment;
     }
 
     public int getTaskID() {
@@ -40,6 +37,9 @@ public class CompletedTask {
     public void setGrade(String grade) {
         this.grade = grade;
     }
+    public void printGrade() {
+        System.out.println(grade);;
+    }
 
     public String getSubmissionDate() {
         return submissionDate;
@@ -55,12 +55,17 @@ public class CompletedTask {
         this.gradeDate = gradeDate;
     }
 
+
     public String getComment() {
         return comment;
     }
     public void setComment(String comment) {
         this.comment = comment;
     }
+    public void printComment() {
+        System.out.println(comment);;
+    }
+
 
     public Task getTask() {
         return task;

@@ -40,6 +40,29 @@ public class BasicInterface {
 
     private void completedTaskPageInteraction() {
         new Printer().printCompletedTaskPage();
+
+        back = false;
+        while (!back) {
+            new Printer().printCompletedTaskPage();
+            switch (new Input().getUserInputchar()) {
+                case '1':
+                    university.getGroupByID(new Input().getUserInputInt()).printGroupTasks();
+                    break;
+                case '2':
+                    university.getTaskByID(new Input().getUserInputInt()).addTaskCompletedTask(new CompletedTask(
+                            new Input().getUserInputLine(),
+                            new Input().getUserInputLine()));
+                    break;
+                case '3':
+                    int taskSelection = new Input().getUserInputInt();
+                    university.getCompletedTaskByID(taskSelection).printGrade();
+                    university.getCompletedTaskByID(taskSelection).printComment();
+                    break;
+                default:
+                    back = true;
+                    break;
+            }
+        }
     }
 
     private void taskPageInteraction() {
@@ -61,8 +84,7 @@ public class BasicInterface {
                             new Input().getUserInputLine(),
                             new Input().getUserInputSingleToken(),
                             new Input().getUserInputSingleToken(),
-                            university.getTeacherByID(new Input().getUserInputInt()),
-                            university.getCourseByID(new Input().getUserInputInt())));
+                            university.getTeacherByID(new Input().getUserInputInt())));
                     break;
                 case '4':
                     //TODO make task inaccessible
@@ -120,7 +142,7 @@ public class BasicInterface {
                     university.getGroupByID(new Input().getUserInputInt()).printGroupStudents();
                     break;
                 case '3':
-                    university.addGroup(new Group(new Input().getUserInputInt(), new Input().getUserInputSingleToken()));
+                    university.addGroup(new Group(new Input().getUserInputSingleToken()));
                     break;
                 case '4':
                     university.getGroupByID(new Input().getUserInputInt()).addGroupStudents(university.getStudentByID(new Input().getUserInputInt()));

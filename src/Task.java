@@ -18,8 +18,8 @@ public class Task {
         this.taskTeacher = taskTeacher;
     }
 
-    public Task(int taskID, String name, String taskCondition, String deadline, String points, Teacher teacher) {
-        this.taskID = taskID;
+    public Task(int id,String name, String taskCondition, String deadline, String points, Teacher teacher) {
+        this.taskID = id;
         this.name = name;
         this.taskCondition = taskCondition;
         this.deadline = deadline;

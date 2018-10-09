@@ -19,9 +19,8 @@ public class University {
         this.groupList.add(group);
     }
 
-
-    public void setGroupList(int id, String name) {
-        this.groupList.add(new Group(id, name));
+    public void addGroup(int id, String name) {
+        this.groupList.add(new Group(id,name));
     }
 
     public Group getGroupByID(int id) {
@@ -80,8 +79,8 @@ public class University {
         taskList.add(task);
     }
 
-    public void addCompletedTask(int id, String answer, String grade, String submissionDate, String gradeDate, String comment) {
-        CompletedTask completedTask = new CompletedTask(id, answer, grade, submissionDate, gradeDate, comment);
+    public void addCompletedTask(int id, String answer, String submissionDate) {
+        CompletedTask completedTask = new CompletedTask(id, answer, submissionDate);
         completedTaskList.add(completedTask);
     }
 
@@ -156,9 +155,8 @@ public class University {
     }
 
     public void addTeacherKeyboard() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("ID   Name    Surname");
-        setTeacherList(sc.nextInt(), sc.next(), sc.next());
+        System.out.println("ID Name    Surname");
+        setTeacherList(new Input().getUserInputInt(), new Input().getUserInputSingleToken(), new Input().getUserInputSingleToken());
     }
 
     public void printTeacherList() {

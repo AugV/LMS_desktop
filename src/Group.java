@@ -5,21 +5,22 @@ public class Group {
     private String name;
 
     ArrayList<Student> groupStudents = new ArrayList();
-    ArrayList<Task> groupTasks = new ArrayList();
+    ArrayList<Course> groupCourses = new ArrayList();
 
 
-    public void addGroupTask(Task groupTask) {
-        this.groupTasks.add(groupTask);
+    public void addGroupCourse(Course groupCourse) {
+        this.groupCourses.add(groupCourse);
     }
 
-    public Group(int groupID, String name) {
-        this.groupID = groupID;
+    public Group(int id, String name) {
+        this.groupID = id;
         this.name = name;
     }
 
     public int getGroupID() {
         return groupID;
     }
+
     public void setGroupID(int groupID) {
         this.groupID = groupID;
     }
@@ -27,6 +28,7 @@ public class Group {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -34,14 +36,23 @@ public class Group {
     public ArrayList<Student> getGroupStudents() {
         return groupStudents;
     }
-    public void printGroupStudents(){
+
+    public void printGroupStudents() {
         for (Student student : groupStudents) {
             System.out.println(student);
         }
     }
+
     public void addGroupStudents(Student student) {
         student.setGroupFromGroup(this);
         this.groupStudents.add(student);
+    }
+
+    public void printGroupCourse() {
+        for (Course course :
+                groupCourses) {
+            System.out.println(course);
+        }
     }
 
     @Override

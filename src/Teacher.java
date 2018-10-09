@@ -7,10 +7,6 @@ public class Teacher extends Person {
         super(loc_id, loc_name, loc_surname);
     }
 
-    public Teacher() {
-        super();
-    }
-
     public ArrayList<Course> getTeacherCourses() {
         return teacherCourses;
     }

@@ -7,27 +7,29 @@ public class ElDienynas {
         University university = new University();
 
 //region
-        university.setTeacherList(1, "Tadas", "jablinksis");
-        university.setTeacherList(2, "Laimonas", "Stanislovsksi");
+        university.setTeacherList(1,"Tadas", "jablinksis");
+        university.setTeacherList(2,"Laimonas", "Stanislovsksi");
 
-        university.addStudent(1, "studentas1", "studentopavard1");
-        university.addStudent(2, "studentas2", "studentopavard2");
+        university.addGroup(1,"GRUPE1");
+        university.addGroup(2,"GRUPE2");
+
+        university.getGroupByID(1).addGroupStudents(new Student(1, "Petras", "Studentauskas"));
+        university.getGroupByID(2).addGroupStudents(new Student(2, "Studenis", "Studavicius"));
+
+
 
         university.addCourse(1,"matematika", "Matematikos kursas");
         university.addCourse(2,"darbaiXD", "Darbuko salalai");
         university.addCourse(3,"darkoks velnias", "dar vienas niekam nereikalingas kursas");
 
-        university.getCourseByID(1).addCourseTask(university.getNsetTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1), university.getCourseByID(2));
-        university.getCourseByID(2).addCourseTask(university.getNsetTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1), university.getCourseByID(3));
+        university.getCourseByID(1).addCourseTask(university.getNsetTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1)));
+        university.getCourseByID(2).addCourseTask(university.getNsetTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1)));
 
         //university.addTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1), university.getCourseByID(2));
         //university.addTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1), university.getCourseByID(3));
 
-        university.setGroupList(1, "GRUPE1");
-        university.setGroupList(2, "GRUPE2");
-
-        university.addCompletedTask(1, "atsakymas1", "balas1", "data1", "ivertdata1", "komentaras1");
-        university.addCompletedTask(2, "atsakymas2", "balas2", "data2", "ivertdata2", "komentaras2");
+        //university.addCompletedTask(1, "atsakymas1", "balas1", "data1", "ivertdata1", "komentaras1");
+        //university.addCompletedTask(2, "atsakymas2", "balas2", "data2", "ivertdata2", "komentaras2");
 
         university.getGroupByID(1).addGroupStudents(university.getStudentByID(1));
 
