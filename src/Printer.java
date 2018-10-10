@@ -70,22 +70,26 @@ public class Printer {
     }
 
     public void printStudentConstructorGuide(){
-        System.out.println("ID  Name  Surname\n[SEPARATE WITH \ENTER\]");
+        System.out.println("ID  Name  Surname\n[SEPARATE WITH 'ENTER']");
     }
 
     public void printTeacherConstructorGuide(){
-        System.out.println("ID  Name  Surname\n[SEPARATE WITH \ENTER\]");
+        System.out.println("ID  Name  Surname\n[SEPARATE WITH 'ENTER']");
     }
 
     public void printGroupConstructorGuide(){
-        System.out.println("ID  Name\n[SEPARATE WITH \ENTER\]");
+        System.out.println("ID  Name\n[SEPARATE WITH 'ENTER']");
     }
 
     public void printCourseConstructorGuide(){
-        System.out.println("ID  Name Information\n[SEPARATE WITH \ENTER\]");
+        System.out.println("ID  Name Information\n[SEPARATE WITH 'ENTER']");
     }
 
     public void printTaskConstructorGuide(){
-        System.out.println("ID Name Condition Deadline Points\n[SEPARATE WITH \ENTER\]");
+        System.out.println("ID Name Condition Deadline Points\n[SEPARATE WITH 'ENTER']");
+    }
+
+    public void printCompletedTaskConstructorGuide(){
+        System.out.println("ID Answer\n[SEPARATE WITH 'ENTER']");
     }
 }

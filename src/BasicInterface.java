@@ -136,7 +136,7 @@ public class BasicInterface {
         }
     }
 
-    private void taskPageInteraction() {
+    private void taskPageInteraction () {
         back = false;
         Course selectedCourse = null;
         while (!back) {
@@ -186,8 +186,6 @@ public class BasicInterface {
     }
 
     private void completedTaskPageInteraction() {
-        new Printer().printCompletedTaskPage();
-
         back = false;
         while (!back) {
             new Printer().printCompletedTaskPage();
@@ -200,7 +198,6 @@ public class BasicInterface {
                 case '2':
                     CompletedTask newCompletedTask = new CompletedTask(
                             new Input().getUserInputInt(),
-                            new Input().getUserInputLine(),
                             new Input().getUserInputLine());
                     university.getTaskByID(new Input().getUserInputTaskInt()).addTaskCompletedTask(newCompletedTask);
                     university.addCompletedTask(newCompletedTask);

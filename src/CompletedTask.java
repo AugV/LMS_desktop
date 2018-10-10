@@ -1,3 +1,6 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class CompletedTask {
     private int taskID;
@@ -6,11 +9,13 @@ public class CompletedTask {
             submissionDate, //TODO make date type
             gradeDate,//TODO make date type
             comment;
+    DateFormat dateFormat= new SimpleDateFormat("yyyy/mm/dd");
+    Calendar calendar = Calendar.getInstance();
 
-    public CompletedTask(int id,String answer, String submissionDate) {
+    public CompletedTask(int id, String answer) {
         this.taskID = id;
         this.answer = answer;
-        this.submissionDate = submissionDate;
+        this.submissionDate = dateFormat.format(calendar.getTime());
     }
 
     public int getTaskID() {
