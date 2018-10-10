@@ -77,11 +77,6 @@ public class University {
         taskList.add(task);
     }
 
-    public void addCompletedTask(int id, String answer, String submissionDate) {
-        CompletedTask completedTask = new CompletedTask(id, answer, submissionDate);
-        completedTaskList.add(completedTask);
-    }
-
     public ArrayList<Task> getTaskList() {
         return taskList;
     }
@@ -111,7 +106,7 @@ public class University {
         return completedTaskList;
     }
 
-    public void setCompletedTaskList(CompletedTask completedTask) {
+    public void addCompletedTask(CompletedTask completedTask) {
         this.completedTaskList.add(completedTask);
     }
 

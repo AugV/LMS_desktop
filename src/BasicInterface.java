@@ -134,12 +134,13 @@ public class BasicInterface {
                     selectedCourse.printCourseTasks();
                     break;
                 case '3':
-                    selectedCourse.addCourseTask(university.getNsetTask(
-                            new Input().getUserInputInt(),
+                    Task newTask = new Task(new Input().getUserInputInt(),
                             new Input().getUserInputSingleToken(),
                             new Input().getUserInputLine(),
                             new Input().getUserInputSingleToken(),
-                            new Input().getUserInputSingleToken()));
+                            new Input().getUserInputSingleToken());
+                    selectedCourse.addCourseTask(newTask);
+                    university.addTask(newTask);
                     break;
                 case '4':
                     //TODO make task inaccessible
@@ -173,10 +174,12 @@ public class BasicInterface {
                     }
                     break;
                 case '2':
-                    university.getTaskByID(new Input().getUserInputTaskInt()).addTaskCompletedTask(new CompletedTask(
+                    CompletedTask newCompletedTask = new CompletedTask(
                             new Input().getUserInputInt(),
                             new Input().getUserInputLine(),
-                            new Input().getUserInputLine()));
+                            new Input().getUserInputLine());
+                    university.getTaskByID(new Input().getUserInputTaskInt()).addTaskCompletedTask(newCompletedTask);
+                    university.addCompletedTask(newCompletedTask);
                     break;
                 case '3':
                     int taskSelection = new Input().getUserInputComplTaskInt();
