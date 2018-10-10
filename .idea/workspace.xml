@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/BasicInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CompletedTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompletedTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElDienynas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +15,7 @@
     <session id="-49887998">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -61,20 +58,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="391">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/University.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
+            <state relative-caret-position="272">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="method#getGroupByID#0;class#University#0" />
                 <element signature="method#printGroupList#0;class#University#0" />
@@ -262,7 +259,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539184217125" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539184468545" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -323,7 +320,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="408" y="91" width="1805" height="1108" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32550144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -335,7 +331,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32887974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29979467" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29979467" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,29 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/University.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
-          <folding>
-            <element signature="method#getGroupByID#0;class#University#0" />
-            <element signature="method#printGroupList#0;class#University#0" />
-            <element signature="method#printCourseList#0;class#University#0" />
-            <element signature="method#getCourseByID#0;class#University#0" />
-            <element signature="method#addTask#0;class#University#0" />
-            <element signature="method#getNsetTask#0;class#University#0" />
-            <element signature="method#getCompletedTaskByID#0;class#University#0" />
-            <element signature="method#getTeacherByID#0;class#University#0" />
-            <element signature="method#setTeacherList#1;class#University#0" />
-            <element signature="method#addTeacherKeyboard#0;class#University#0" />
-            <element signature="method#printTeacherList#0;class#University#0" />
-            <element signature="method#removeTeacher#0;class#University#0" />
-            <element signature="method#addStudent#0;class#University#0" />
-            <element signature="method#getStudentByID#0;class#University#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -526,16 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompletedTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -546,6 +509,13 @@
             <element signature="method#printTaskCompletedTasks#0;class#Task#0" />
             <element signature="method#toString#0;class#Task#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -563,10 +533,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
+    <entry file="file://$PROJECT_DIR$/src/CompletedTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="289">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="method#getGroupByID#0;class#University#0" />
+            <element signature="method#printGroupList#0;class#University#0" />
+            <element signature="method#printCourseList#0;class#University#0" />
+            <element signature="method#getCourseByID#0;class#University#0" />
+            <element signature="method#addTask#0;class#University#0" />
+            <element signature="method#getNsetTask#0;class#University#0" />
+            <element signature="method#getCompletedTaskByID#0;class#University#0" />
+            <element signature="method#getTeacherByID#0;class#University#0" />
+            <element signature="method#setTeacherList#1;class#University#0" />
+            <element signature="method#addTeacherKeyboard#0;class#University#0" />
+            <element signature="method#printTeacherList#0;class#University#0" />
+            <element signature="method#removeTeacher#0;class#University#0" />
+            <element signature="method#addStudent#0;class#University#0" />
+            <element signature="method#getStudentByID#0;class#University#0" />
+          </folding>
         </state>
       </provider>
     </entry>
