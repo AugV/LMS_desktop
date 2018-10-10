@@ -64,6 +64,7 @@ public class Task {
 
     public void addTaskCompletedTask(CompletedTask completedTask) {
         this.taskCompletedTasks.add(completedTask);
+
     }
 
     public void printTaskCompletedTasks() {

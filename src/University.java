@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class University {
     private ArrayList<Teacher> teacherList = new ArrayList();
@@ -73,8 +72,8 @@ public class University {
     //endregion
     //Tasks
     //region
-    public void addTask(int taskID, String name, String taskCondition, String deadline, String points, Teacher teacher) {
-        Task task = new Task(taskID, name, taskCondition, deadline, points, teacher);
+    public void addTask(int taskID, String name, String taskCondition, String deadline, String points) {
+        Task task = new Task(taskID, name, taskCondition, deadline, points);
         taskList.add(task);
     }
 
@@ -91,8 +90,8 @@ public class University {
         this.taskList.add(task);
     }
 
-    public Task getNsetTask(int taskID, String name, String taskCondition, String deadline, String points, Teacher teacher){
-        Task task = new Task(taskID, name, taskCondition, deadline, points, teacher);
+    public Task getNsetTask(int taskID, String name, String taskCondition, String deadline, String points){
+        Task task = new Task(taskID, name, taskCondition, deadline, points);
         taskList.add(task);
         return task;
     }
@@ -165,19 +164,8 @@ public class University {
     }
 
     public void removeTeacher() {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter ID of the teacher you wish to remove:");
-        Teacher teacherToRemove = getTeacherByID(sc.nextInt());
-        for (int i = 0; i < completedTaskList.size(); i++) {
-            if (completedTaskList.get(i).teacher.equals(teacherToRemove)) {
-                completedTaskList.get(i).setTeacher(null);
-            }
-        }
-        for (int i = 0; i < courseList.size(); i++) {
-            if (courseList.get(i).getCourseTeachers().contains(teacherToRemove)) {
-                courseList.get(i).removeCourseTeacher(teacherToRemove);
-            }
-        }
+        Teacher teacherToRemove = getTeacherByID(new Input().getUserInputInt());
         teacherList.remove(teacherList.indexOf(teacherToRemove));
     }
 //endregion
@@ -185,14 +173,14 @@ public class University {
     //region
     public void addStudent(int id, String name, String surname) {
         Student student = new Student(id, name, surname);
-        setStudentList(student);
+        addStudent(student);
     }
 
     public ArrayList<Student> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(Student student) {
+    public void addStudent(Student student) {
         this.studentList.add(student);
     }
 

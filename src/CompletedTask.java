@@ -6,14 +6,13 @@ public class CompletedTask {
             submissionDate, //TODO make date type
             gradeDate,//TODO make date type
             comment;
-    Task task = new Task();
-    Teacher teacher;
-    Student student;
+
 
     public CompletedTask(int id,String answer, String submissionDate) {
         this.taskID = id;
         this.answer = answer;
         this.submissionDate = submissionDate;
+
 
     }
 
@@ -67,30 +66,6 @@ public class CompletedTask {
         System.out.println(comment);;
     }
 
-
-    public Task getTask() {
-        return task;
-    }
-    public void setTask(Task task) {
-        this.task = task;
-    }
-
-    public Teacher getTeacher() {
-        return teacher;
-    }
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
-    }
-
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        student.setStudentCompletedTasks(this);
-        this.student = student;
-    }
-
     @Override
     public String toString() {
         return "CompletedTask{" +
@@ -99,9 +74,6 @@ public class CompletedTask {
                 ", submissionDate='" + submissionDate + '\'' +
                 ", gradeDate='" + gradeDate + '\'' +
                 ", comment='" + comment + '\'' +
-                ", task=" + task.getName() +
-                ", teacher=" + teacher.getName() +
-                ", student=" + student.getName() +
                 '}';
     }
 }
