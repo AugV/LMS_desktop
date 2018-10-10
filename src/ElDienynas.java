@@ -23,10 +23,13 @@ public class ElDienynas {
         university.addCourse(new Course(
                 3,"darkoks velnias", "dar vienas niekam nereikalingas kursas", university.getTeacherByID(1), university.getGroupByID(2)));
 
-        university.getCourseByID(1).addCourseTask(university.getNsetTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5", university.getTeacherByID(1)));
-        university.getCourseByID(2).addCourseTask(university.getNsetTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1", university.getTeacherByID(1)));
+        university.getCourseByID(1).addCourseTask(new Task(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5" ));
+        university.getCourseByID(2).addCourseTask(new Task(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1"));
 
-        university.getGroupByID(1).addGroupStudents(university.getStudentByID(1));
+        university.getCourseByID(1).getCourseTaskByID(1).addTaskCompletedTask(new CompletedTask(
+                1, "teisingas atsakymas, kolegos","1008" ));
+        university.getCourseByID(2).getCourseTaskByID(2).addTaskCompletedTask(new CompletedTask(
+                2, "neteisingas atsakymas, biciuli","9999" ));
 
         //endregion
 

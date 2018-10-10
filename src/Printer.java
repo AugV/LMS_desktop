@@ -29,6 +29,19 @@ public class Printer {
         System.out.println("5. Return");
     }
 
+    public void printCourseSelected(){
+        System.out.println("Course selected.");
+    }
+
+    public void printDataAdded() {
+        System.out.println();
+        System.out.println("Data added.");
+    }
+
+    public void printDataRemoved(){
+        System.out.println();
+        System.out.println("Data removed.");
+    }
 
     public void printCoursePage(){
         System.out.println("1. Print course list");
@@ -54,5 +67,25 @@ public class Printer {
         System.out.println("2. Submit completed task");
         System.out.println("3. View submitted task's grade and comment");
         System.out.println("4. Return");
+    }
+
+    public void printStudentConstructorGuide(){
+        System.out.println("ID  Name  Surname\n[SEPARATE WITH \ENTER\]");
+    }
+
+    public void printTeacherConstructorGuide(){
+        System.out.println("ID  Name  Surname\n[SEPARATE WITH \ENTER\]");
+    }
+
+    public void printGroupConstructorGuide(){
+        System.out.println("ID  Name\n[SEPARATE WITH \ENTER\]");
+    }
+
+    public void printCourseConstructorGuide(){
+        System.out.println("ID  Name Information\n[SEPARATE WITH \ENTER\]");
+    }
+
+    public void printTaskConstructorGuide(){
+        System.out.println("ID Name Condition Deadline Points\n[SEPARATE WITH \ENTER\]");
     }
 }

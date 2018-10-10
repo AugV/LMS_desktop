@@ -13,13 +13,19 @@ public class Input {
         return input;
     }
 
+    public String pressEnterToContinue() {
+        System.out.println();
+        System.out.println("Press ENTER to continue.");
+        String input = scanner.nextLine();
+        return input;
+    }
+
     public char getUserInputchar() {
         char input = scanner.next().charAt(0);
         return input;
     }
 
     public int getUserInputInt() {
-        System.out.println("Enter a number:");
         int input = scanner.nextInt();
         return input;
     }
@@ -53,4 +59,5 @@ public class Input {
         int input = scanner.nextInt();
         return input;
     }
+
 }

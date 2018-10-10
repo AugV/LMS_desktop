@@ -21,11 +21,6 @@ public class Group {
         return groupID;
     }
 
-
-    public ArrayList<Student> getGroupStudents() {
-        return groupStudents;
-    }
-
     public void printGroupStudents() {
         for (Student student : groupStudents) {
             System.out.println(student);
@@ -33,7 +28,6 @@ public class Group {
     }
 
     public void addGroupStudents(Student student) {
-        student.setGroupFromGroup(this);
         this.groupStudents.add(student);
     }
 
@@ -55,9 +49,5 @@ public class Group {
                 ", name='" + name + '\'' +
                 ", groupStudents=" + groupStudents +
                 '}';
-    }
-
-    public void setStudentsFromStudents(Student student) {
-        this.groupStudents.add(student);
     }
 }

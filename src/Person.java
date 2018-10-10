@@ -19,10 +19,6 @@ abstract public class Person {
         return name;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     public String getSurname() {
         return surname;
     }

@@ -8,7 +8,6 @@ public class Course {
     private ArrayList<Task> courseTasks = new ArrayList();
 
 
-
     public Course(int courseID, String name, String information) {
         this.courseID = courseID;
         this.name = name;
@@ -39,8 +38,8 @@ public class Course {
         return name;
     }
 
-    public String getCourseInformation() {
-        return information;
+    public void printCourseInformation() {
+        System.out.println(information);
     }
 
     public void addCourseTask(Task task) {

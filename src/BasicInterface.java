@@ -46,15 +46,19 @@ public class BasicInterface {
             switch (new Input().getUserInputchar()) {
                 case '1':
                     university.printTeacherList();
+                    new Input().pressEnterToContinue();
                     break;
                 case '2':
                     //TODO add reading teacher from file
                     break;
                 case '3':
                     university.addTeacherKeyboard();
+                    new Printer().printDataAdded();
+                    new Input().pressEnterToContinue();
                     break;
                 case '4':
                     university.removeTeacher();
+                    new Printer().printDataRemoved();
                     break;
                 case '5':
                     //TODO print to file
@@ -73,18 +77,25 @@ public class BasicInterface {
             switch (new Input().getUserInputchar()) {
                 case '1':
                     university.printGroupList();
+                    new Input().pressEnterToContinue();
                     break;
                 case '2':
                     university.getGroupByID(new Input().getUserInputGroupInt()).printGroupStudents();
+                    new Input().pressEnterToContinue();
                     break;
                 case '3':
                     university.addGroup(new Group(new Input().getUserInputInt(), new Input().getUserInputSingleToken()));
+                    new Printer().printDataAdded();
+                    new Input().pressEnterToContinue();
                     break;
                 case '4':
+                    new Printer().printStudentConstructorGuide();
                     Student newStudent = new Student(
                             new Input().getUserInputInt(),new Input().getUserInputSingleToken(), new Input().getUserInputSingleToken() );
                     university.getGroupByID(new Input().getUserInputGroupInt()).addGroupStudents(newStudent);
                     university.addStudent(newStudent);
+                    new Printer().printDataAdded();
+                    new Input().pressEnterToContinue();
                     break;
                 default:
                     back = true;
@@ -101,15 +112,19 @@ public class BasicInterface {
             switch (new Input().getUserInputchar()) {
                 case '1':
                     university.printCourseList();
+                    new Input().pressEnterToContinue();
                     break;
                 case '2':
-                    university.getCourseByID(new Input().getUserInputInt()).getCourseInformation();
+                    university.getCourseByID(new Input().getUserInputCourseInt()).printCourseInformation();
+                    new Input().pressEnterToContinue();
                     break;
                 case '3':
                     Course course = new Course(new Input().getUserInputInt(), new Input().getUserInputSingleToken(), new Input().getUserInputLine());
                     university.getTeacherByID(new Input().getUserInputTeacherInt()).setTeacherCourses(course);
                     university.getGroupByID(new Input().getUserInputGroupInt()).addGroupCourse(course);
                     university.addCourse(course);
+                    new Printer().printDataAdded();
+                    new Input().pressEnterToContinue();
                     break;
                 case '4':
                     //TODO new window for Course group and teacher deletion/adding
@@ -129,9 +144,12 @@ public class BasicInterface {
             switch (new Input().getUserInputchar()) {
                 case '1':
                     selectedCourse = university.getCourseByID(new Input().getUserInputCourseInt());
+                    new Printer().printCourseSelected();
+                    new Input().pressEnterToContinue();
                     break;
                 case '2':
                     selectedCourse.printCourseTasks();
+                    new Input().pressEnterToContinue();
                     break;
                 case '3':
                     Task newTask = new Task(new Input().getUserInputInt(),
@@ -141,18 +159,24 @@ public class BasicInterface {
                             new Input().getUserInputSingleToken());
                     selectedCourse.addCourseTask(newTask);
                     university.addTask(newTask);
+                    new Printer().printDataAdded();
+                    new Input().pressEnterToContinue();
                     break;
                 case '4':
                     //TODO make task inaccessible
                     break;
                 case '5':
                     selectedCourse.getCourseTaskByID(new Input().getUserInputTaskInt()).printTaskCompletedTasks();
+                    new Input().pressEnterToContinue();
                     break;
                 case '6':
                     university.getCompletedTaskByID(new Input().getUserInputComplTaskInt()).getAnswer();
+                    new Input().pressEnterToContinue();
                     break;
                 case '7':
                     university.getCompletedTaskByID(new Input().getUserInputComplTaskInt()).setGrade(new Input().getUserInputLine());
+                    new Printer().printDataAdded();
+                    new Input().pressEnterToContinue();
                     break;
                 default:
                     back = true;
@@ -180,11 +204,14 @@ public class BasicInterface {
                             new Input().getUserInputLine());
                     university.getTaskByID(new Input().getUserInputTaskInt()).addTaskCompletedTask(newCompletedTask);
                     university.addCompletedTask(newCompletedTask);
+                    new Printer().printDataAdded();
+                    new Input().pressEnterToContinue();
                     break;
                 case '3':
                     int taskSelection = new Input().getUserInputComplTaskInt();
                     university.getCompletedTaskByID(taskSelection).printGrade();
                     university.getCompletedTaskByID(taskSelection).printComment();
+                    new Input().pressEnterToContinue();
                     break;
                 default:
                     back = true;
