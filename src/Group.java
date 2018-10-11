@@ -21,6 +21,10 @@ public class Group {
         return groupID;
     }
 
+    public ArrayList<Student> getGroupStudents() {
+        return groupStudents;
+    }
+
     public void printGroupStudents() {
         for (Student student : groupStudents) {
             System.out.println(student);

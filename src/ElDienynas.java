@@ -6,6 +6,7 @@ public class ElDienynas {
 
         University university = new University();
 
+
 //region
         university.setTeacherList(1,"Tadas", "jablinksis");
         university.setTeacherList(2,"Laimonas", "Stanislovsksi");
@@ -38,6 +39,9 @@ public class ElDienynas {
         //endregion
 
 
+
+        new Printer().printObjectArray(university.getCourseList());
+        new Printer().printObjectArray(university.getTaskList());
 
         new BasicInterface(university).frontPageInteraction();
 

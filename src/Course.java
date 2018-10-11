@@ -38,8 +38,8 @@ public class Course {
         return name;
     }
 
-    public void printCourseInformation() {
-        System.out.println(information);
+    public String getCourseInformation() {
+        return information;
     }
 
     public void addCourseTask(Task task) {
@@ -67,16 +67,6 @@ public class Course {
         }
     }
 
-
-    public void printCourseInfo() {
-        System.out.println("ID: " + courseID);
-        System.out.println("Name: " + name);
-        System.out.println("Teachers List: ");
-        System.out.println("Task List: ");
-        for (Task task : courseTasks) {
-            System.out.println(task);
-        }
-    }
 
     @Override
     public String toString() {

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Printer {
     public void printExitMessage(){
         System.out.println("Program closing...");
@@ -62,6 +64,10 @@ public class Printer {
         System.out.println("8. Return");
     }
 
+    public void printSingleString(String text){
+        System.out.println(text);
+    }
+
     public void printCompletedTaskPage(){
         System.out.println("1. Print selected group task list");
         System.out.println("2. Submit completed task");
@@ -91,5 +97,11 @@ public class Printer {
 
     public void printCompletedTaskConstructorGuide(){
         System.out.println("ID Answer\n[SEPARATE WITH 'ENTER']");
+    }
+
+    public <T> void printObjectArray(ArrayList<T> objectArray){
+        for (T object : objectArray) {
+            System.out.println(object);
+        }
     }
 }

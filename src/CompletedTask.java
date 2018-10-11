@@ -3,14 +3,15 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class CompletedTask {
+    private static DateFormat dateFormat= new SimpleDateFormat("yyyy/mm/dd");
+    private static Calendar calendar = Calendar.getInstance();
+
     private int taskID;
     private String answer,
-            grade,
-            submissionDate, //TODO make date type
-            gradeDate,//TODO make date type
-            comment;
-    DateFormat dateFormat= new SimpleDateFormat("yyyy/mm/dd");
-    Calendar calendar = Calendar.getInstance();
+    grade,
+    submissionDate, //TODO make date type
+    gradeDate,//TODO make date type
+    comment;
 
     public CompletedTask(int id, String answer) {
         this.taskID = id;
@@ -27,6 +28,10 @@ public class CompletedTask {
     }
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+
+    public String getComment() {
+        return comment;
     }
 
     public String getGrade() {

@@ -21,6 +21,10 @@ public class Task {
         return taskID;
     }
 
+    public ArrayList<CompletedTask> getTaskCompletedTasks() {
+        return taskCompletedTasks;
+    }
+
     public void addTaskCompletedTask(CompletedTask completedTask) {
         this.taskCompletedTasks.add(completedTask);
     }
