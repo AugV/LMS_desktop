@@ -38,11 +38,6 @@ public class ElDienynas {
 
         //endregion
 
-
-
-        new Printer().printObjectArray(university.getCourseList());
-        new Printer().printObjectArray(university.getTaskList());
-
         new BasicInterface(university).frontPageInteraction();
 
         /*try {

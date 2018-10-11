@@ -9,15 +9,17 @@ public class Input {
     }
 
     public String getUserInputLine() {
+        scanner.nextLine();
         String input = scanner.nextLine();
         return input;
     }
 
-    public String pressEnterToContinue() {
+    public void pressEnterToContinue() {
         System.out.println();
         System.out.println("Press ENTER to continue.");
-        String input = scanner.nextLine();
-        return input;
+        System.out.println();
+        scanner.nextLine();
+        scanner.nextLine();
     }
 
     public char getUserInputchar() {

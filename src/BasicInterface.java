@@ -24,8 +24,8 @@ public class BasicInterface {
                     studentPageInteraction();
                     break;
                 case '3':
-                    coursePageInteraction();
-                    break;
+                coursePageInteraction();
+                break;
                 case '4':
                     taskPageInteraction();
                     break;
@@ -55,6 +55,7 @@ public class BasicInterface {
                     //TODO add reading teacher from file
                     break;
                 case '3':
+                    printer.printTeacherConstructorGuide();
                     university.addTeacherKeyboard();
                     printer.printDataAdded();
                     input.pressEnterToContinue();
@@ -87,6 +88,7 @@ public class BasicInterface {
                     input.pressEnterToContinue();
                     break;
                 case '3':
+                    printer.printGroupConstructorGuide();
                     university.addGroup(new Group(input.getUserInputInt(), input.getUserInputSingleToken()));
                     printer.printDataAdded();
                     input.pressEnterToContinue();
@@ -95,8 +97,8 @@ public class BasicInterface {
                     printer.printStudentConstructorGuide();
                     Student newStudent = new Student(
                             input.getUserInputInt(),input.getUserInputSingleToken(), input.getUserInputSingleToken() );
-                    university.getGroupByID(input.getUserInputGroupInt()).addGroupStudents(newStudent);
-                    university.addStudent(newStudent);
+                        university.getGroupByID(input.getUserInputGroupInt()).addGroupStudents(newStudent);
+                        university.addStudent(newStudent);
                     printer.printDataAdded();
                     input.pressEnterToContinue();
                     break;
@@ -122,10 +124,11 @@ public class BasicInterface {
                     input.pressEnterToContinue();
                     break;
                 case '3':
+                    printer.printCourseConstructorGuide();
                     Course course = new Course(input.getUserInputInt(), input.getUserInputSingleToken(), input.getUserInputLine());
-                    university.getTeacherByID(input.getUserInputTeacherInt()).setTeacherCourses(course);
-                    university.getGroupByID(input.getUserInputGroupInt()).addGroupCourse(course);
-                    university.addCourse(course);
+                        university.getTeacherByID(input.getUserInputTeacherInt()).setTeacherCourses(course);
+                        university.getGroupByID(input.getUserInputGroupInt()).addGroupCourse(course);
+                        university.addCourse(course);
                     printer.printDataAdded();
                     input.pressEnterToContinue();
                     break;
@@ -155,6 +158,7 @@ public class BasicInterface {
                     input.pressEnterToContinue();
                     break;
                 case '3':
+                    printer.printTaskConstructorGuide();
                     Task newTask = new Task(input.getUserInputInt(),
                             input.getUserInputSingleToken(),
                             input.getUserInputLine(),
@@ -199,6 +203,7 @@ public class BasicInterface {
                     }
                     break;
                 case '2':
+                    printer.printCompletedTaskConstructorGuide();
                     CompletedTask newCompletedTask = new CompletedTask(
                             input.getUserInputInt(),
                             input.getUserInputLine());
