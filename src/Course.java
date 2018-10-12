@@ -61,13 +61,6 @@ public class Course {
         return courseTasks;
     }
 
-    public void printCourseTasks() {
-        for (Task task : this.courseTasks) {
-            System.out.println(task);
-        }
-    }
-
-
     @Override
     public String toString() {
         return this.getName();

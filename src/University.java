@@ -33,11 +33,6 @@ public class University {
         return groupMatch;
     }
 
-    public void printGroupList(){
-        for (Group group : groupList) {
-            System.out.println(group);
-        }
-    }
     //endregion
     //Courses
     //region
@@ -53,11 +48,6 @@ public class University {
         courseList.add(course);
     }
 
-    public void printCourseList(){
-        for (Course course : courseList) {
-            System.out.println(course);
-        }
-    }
 
     public Course getCourseByID(int id) {
         Course courseMatch = null;
@@ -127,7 +117,7 @@ public class University {
         return teacherList;
     }
 
-    public void setTeacherList(Teacher teacher) {
+    public void addTeacher(Teacher teacher) {
         this.teacherList.add(teacher);
     }
 
@@ -142,25 +132,14 @@ public class University {
         return teacherMatch;
     }
 
-    public void setTeacherList(int id, String name, String surname) {
+    public void addTeacher(int id, String name, String surname) {
         Teacher teacher = new Teacher(id, name, surname);
         this.teacherList.add(teacher);
     }
 
-    public void addTeacherKeyboard() {
-        System.out.println("ID Name    Surname");
-        setTeacherList(new Input().getUserInputInt(), new Input().getUserInputSingleToken(), new Input().getUserInputSingleToken());
-    }
-
-    public void printTeacherList() {
-        for (Teacher teacher : teacherList) {
-            System.out.println(teacher);
-        }
-    }
-
     public void removeTeacher() {
         System.out.println("Enter ID of the teacher you wish to remove:");
-        Teacher teacherToRemove = getTeacherByID(new Input().getUserInputInt());
+        Teacher teacherToRemove = getTeacherByID(new InputKeyboard().getUserInputInt());
         teacherList.remove(teacherList.indexOf(teacherToRemove));
     }
 //endregion

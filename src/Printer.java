@@ -64,6 +64,10 @@ public class Printer {
         System.out.println("8. Return");
     }
 
+    public void printEnterFileName(){
+        System.out.println("Enter file name: ");
+    }
+
     public void printSingleString(String text){
         System.out.println(text);
     }

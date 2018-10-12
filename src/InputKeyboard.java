@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Input {
+public class InputKeyboard {
     Scanner scanner = new Scanner(System.in);
 
     public String getUserInputSingleToken() {
@@ -9,7 +9,6 @@ public class Input {
     }
 
     public String getUserInputLine() {
-        scanner.nextLine();
         String input = scanner.nextLine();
         return input;
     }
@@ -18,7 +17,6 @@ public class Input {
         System.out.println();
         System.out.println("Press ENTER to continue.");
         System.out.println();
-        scanner.nextLine();
         scanner.nextLine();
     }
 
@@ -29,36 +27,42 @@ public class Input {
 
     public int getUserInputInt() {
         int input = scanner.nextInt();
+        scanner.nextLine();
         return input;
     }
 
     public int getUserInputTeacherInt() {
         System.out.println("Enter teacher ID:");
         int input = scanner.nextInt();
+        scanner.nextLine();
         return input;
     }
 
     public int getUserInputGroupInt() {
         System.out.println("Enter group ID:");
         int input = scanner.nextInt();
+        scanner.nextLine();
         return input;
     }
 
     public int getUserInputCourseInt() {
         System.out.println("Enter course ID:");
         int input = scanner.nextInt();
+        scanner.nextLine();
         return input;
     }
 
     public int getUserInputTaskInt() {
         System.out.println("Enter tasl ID:");
         int input = scanner.nextInt();
+        scanner.nextLine();
         return input;
     }
 
     public int getUserInputComplTaskInt() {
         System.out.println("Enter completed task ID:");
         int input = scanner.nextInt();
+        scanner.nextLine();
         return input;
     }
 

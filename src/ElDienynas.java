@@ -8,8 +8,8 @@ public class ElDienynas {
 
 
 //region
-        university.setTeacherList(1,"Tadas", "jablinksis");
-        university.setTeacherList(2,"Laimonas", "Stanislovsksi");
+        university.addTeacher(1,"Tadas", "jablinksis");
+        university.addTeacher(2,"Laimonas", "Stanislovsksi");
 
         university.addGroup(1,"GRUPE1");
         university.addGroup(2,"GRUPE2");

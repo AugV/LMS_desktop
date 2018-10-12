@@ -1,7 +1,8 @@
 public class BasicInterface {
 
     private static Printer printer= new Printer();
-    private static Input input = new Input();
+    private static InputKeyboard inputKeyboard = new InputKeyboard();
+    private static InputFile inputFile = new InputFile();
 
     private University university;
     boolean exit;
@@ -16,7 +17,7 @@ public class BasicInterface {
         boolean exit = false;
         while (!exit) {
             printer.printFrontPage();
-            switch (input.getUserInputchar()) {
+            switch (inputKeyboard.getUserInputchar()) {
                 case '1':
                     teacherPageInteraction();
                     break;
@@ -24,8 +25,8 @@ public class BasicInterface {
                     studentPageInteraction();
                     break;
                 case '3':
-                coursePageInteraction();
-                break;
+                    coursePageInteraction();
+                    break;
                 case '4':
                     taskPageInteraction();
                     break;
@@ -46,25 +47,34 @@ public class BasicInterface {
         back = false;
         while (!back) {
             printer.printTeacherPage();
-            switch (input.getUserInputchar()) {
+            switch (inputKeyboard.getUserInputchar()) {
                 case '1':
                     printer.printObjectArray(university.getTeacherList());
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
-                    //TODO add reading teacher from file
+                    printer.printEnterFileName();
+                    inputKeyboard.getUserInputLine();
+                    university.addTeacher(inputFile.getTeacherFromFile());
+                    printer.printDataAdded();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     printer.printTeacherConstructorGuide();
-                    university.addTeacherKeyboard();
+                    university.addTeacher(inputKeyboard.getUserInputInt(),inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
                     printer.printDataAdded();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
                     university.removeTeacher();
                     printer.printDataRemoved();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '5':
+                    printer.printEnterFileName();
+                    inputKeyboard.getUserInputLine();
+
+
                     //TODO print to file
                     break;
                 default:
@@ -78,29 +88,29 @@ public class BasicInterface {
         back = false;
         while (!back) {
             printer.printStudentPage();
-            switch (input.getUserInputchar()) {
+            switch (inputKeyboard.getUserInputchar()) {
                 case '1':
                     printer.printObjectArray(university.getGroupList());
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
-                    printer.printObjectArray(university.getGroupByID(input.getUserInputGroupInt()).getGroupStudents());
-                    input.pressEnterToContinue();
+                    printer.printObjectArray(university.getGroupByID(inputKeyboard.getUserInputGroupInt()).getGroupStudents());
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     printer.printGroupConstructorGuide();
-                    university.addGroup(new Group(input.getUserInputInt(), input.getUserInputSingleToken()));
+                    university.addGroup(new Group(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine()));
                     printer.printDataAdded();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
                     printer.printStudentConstructorGuide();
                     Student newStudent = new Student(
-                            input.getUserInputInt(),input.getUserInputSingleToken(), input.getUserInputSingleToken() );
-                        university.getGroupByID(input.getUserInputGroupInt()).addGroupStudents(newStudent);
+                            inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine() );
+                        university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);
                         university.addStudent(newStudent);
                     printer.printDataAdded();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 default:
                     back = true;
@@ -114,23 +124,23 @@ public class BasicInterface {
         back = false;
         while (!back) {
             printer.printCoursePage();
-            switch (input.getUserInputchar()) {
+            switch (inputKeyboard.getUserInputchar()) {
                 case '1':
                     printer.printObjectArray(university.getCourseList());
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
-                    printer.printSingleString(university.getCourseByID(input.getUserInputCourseInt()).getCourseInformation());
-                    input.pressEnterToContinue();
+                    printer.printSingleString(university.getCourseByID(inputKeyboard.getUserInputCourseInt()).getCourseInformation());
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     printer.printCourseConstructorGuide();
-                    Course course = new Course(input.getUserInputInt(), input.getUserInputSingleToken(), input.getUserInputLine());
-                        university.getTeacherByID(input.getUserInputTeacherInt()).setTeacherCourses(course);
-                        university.getGroupByID(input.getUserInputGroupInt()).addGroupCourse(course);
+                    Course course = new Course(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
+                        university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).setTeacherCourses(course);
+                        university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
                         university.addCourse(course);
                     printer.printDataAdded();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
                     //TODO new window for Course group and teacher deletion/adding
@@ -147,43 +157,43 @@ public class BasicInterface {
         Course selectedCourse = null;
         while (!back) {
             printer.printTaskPage();
-            switch (input.getUserInputchar()) {
+            switch (inputKeyboard.getUserInputchar()) {
                 case '1':
-                    selectedCourse = university.getCourseByID(input.getUserInputCourseInt());
+                    selectedCourse = university.getCourseByID(inputKeyboard.getUserInputCourseInt());
                     printer.printCourseSelected();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
                     printer.printObjectArray(selectedCourse.getCourseTasks());
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     printer.printTaskConstructorGuide();
-                    Task newTask = new Task(input.getUserInputInt(),
-                            input.getUserInputSingleToken(),
-                            input.getUserInputLine(),
-                            input.getUserInputSingleToken(),
-                            input.getUserInputSingleToken());
+                    Task newTask = new Task(inputKeyboard.getUserInputInt(),
+                            inputKeyboard.getUserInputLine(),
+                            inputKeyboard.getUserInputLine(),
+                            inputKeyboard.getUserInputLine(),
+                            inputKeyboard.getUserInputLine());
                     selectedCourse.addCourseTask(newTask);
                     university.addTask(newTask);
                     printer.printDataAdded();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
                     //TODO make task inaccessible
                     break;
                 case '5':
-                    printer.printObjectArray(selectedCourse.getCourseTaskByID(input.getUserInputTaskInt()).getTaskCompletedTasks());
-                    input.pressEnterToContinue();
+                    printer.printObjectArray(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getTaskCompletedTasks());
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '6':
-                    printer.printSingleString(university.getCompletedTaskByID(input.getUserInputComplTaskInt()).getAnswer());
-                    input.pressEnterToContinue();
+                    printer.printSingleString(university.getCompletedTaskByID(inputKeyboard.getUserInputComplTaskInt()).getAnswer());
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '7':
-                    university.getCompletedTaskByID(input.getUserInputComplTaskInt()).setGrade(input.getUserInputLine());
+                    university.getCompletedTaskByID(inputKeyboard.getUserInputComplTaskInt()).setGrade(inputKeyboard.getUserInputLine());
                     printer.printDataAdded();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 default:
                     back = true;
@@ -196,27 +206,27 @@ public class BasicInterface {
         back = false;
         while (!back) {
             printer.printCompletedTaskPage();
-            switch (input.getUserInputchar()) {
+            switch (inputKeyboard.getUserInputchar()) {
                 case '1':
-                    for (Course course : university.getGroupByID(input.getUserInputGroupInt()).getGroupCourses()) {
+                    for (Course course : university.getGroupByID(inputKeyboard.getUserInputGroupInt()).getGroupCourses()) {
                         printer.printObjectArray(course.getCourseTasks());
                     }
                     break;
                 case '2':
                     printer.printCompletedTaskConstructorGuide();
                     CompletedTask newCompletedTask = new CompletedTask(
-                            input.getUserInputInt(),
-                            input.getUserInputLine());
-                    university.getTaskByID(input.getUserInputTaskInt()).addTaskCompletedTask(newCompletedTask);
+                            inputKeyboard.getUserInputInt(),
+                            inputKeyboard.getUserInputLine());
+                    university.getTaskByID(inputKeyboard.getUserInputTaskInt()).addTaskCompletedTask(newCompletedTask);
                     university.addCompletedTask(newCompletedTask);
                     printer.printDataAdded();
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
-                    int taskSelection = input.getUserInputComplTaskInt();
+                    int taskSelection = inputKeyboard.getUserInputComplTaskInt();
                     printer.printSingleString(university.getCompletedTaskByID(taskSelection).getGrade());
                     printer.printSingleString(university.getCompletedTaskByID(taskSelection).getComment());
-                    input.pressEnterToContinue();
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 default:
                     back = true;
