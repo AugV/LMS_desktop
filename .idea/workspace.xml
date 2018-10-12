@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BasicInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompletedTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompletedTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InputFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InputKeyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputKeyboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Printer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrinterFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrinterFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,24 +40,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="100" />
+          <entry key="java" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="100" />
+          <entry key="JAVA" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="19910" />
+          <entry key="java" value="20629" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19910" />
+          <entry key="JAVA" value="20629" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -65,107 +66,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/University.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="143" column="5" lean-forward="true" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
-              <folding>
-                <element signature="e#445#453#0" />
-                <element signature="method#getGroupByID#0;class#University#0" />
-                <element signature="method#getCourseByID#0;class#University#0" />
-                <element signature="method#addTask#0;class#University#0" />
-                <element signature="method#getNsetTask#0;class#University#0" />
-                <element signature="method#getTaskByID#0;class#University#0" />
-                <element signature="method#getCompletedTaskByID#0;class#University#0" />
-                <element signature="method#getTeacherByID#0;class#University#0" />
-                <element signature="method#addTeacher#1;class#University#0" />
-                <element signature="method#removeTeacher#0;class#University#0" />
-                <element signature="method#addStudent#0;class#University#0" />
-                <element signature="method#getStudentByID#0;class#University#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Printer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-              <folding>
-                <element signature="method#printFrontPage#0;class#Printer#0" />
-                <element signature="method#printTeacherPage#0;class#Printer#0" />
-                <element signature="method#printStudentPage#0;class#Printer#0" />
-                <element signature="method#printDataAdded#0;class#Printer#0" />
-                <element signature="method#printDataRemoved#0;class#Printer#0" />
-                <element signature="method#printCoursePage#0;class#Printer#0" />
-                <element signature="method#printTaskPage#0;class#Printer#0" />
-                <element signature="e#2358#2359#0" expanded="true" />
-                <element signature="e#2394#2395#0" expanded="true" />
-                <element signature="method#printDataAddedToFile#0;class#Printer#0" />
-                <element signature="method#printCompletedTaskPage#0;class#Printer#0" />
-                <element signature="method#printTaskConstructorGuide#0;class#Printer#0" />
-                <element signature="method#printObjectArray#0;class#Printer#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-              <folding>
-                <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
-                <element signature="method#studentPageInteraction#0;class#BasicInterface#0" />
-                <element signature="method#coursePageInteraction#0;class#BasicInterface#0" />
-                <element signature="method#taskPageInteraction#0;class#BasicInterface#0" />
-                <element signature="method#completedTaskPageInteraction#0;class#BasicInterface#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PrinterFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InputKeyboard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-              <folding>
-                <element signature="method#getUserInputSingleToken#0;class#Input#0" />
-                <element signature="method#pressEnterToContinue#0;class#Input#0" />
-                <element signature="method#getUserInputInt#0;class#Input#0" />
-                <element signature="method#getUserInputTeacherInt#0;class#Input#0" />
-                <element signature="method#getUserInputGroupInt#0;class#Input#0" />
-                <element signature="method#getUserInputCourseInt#0;class#Input#0" />
-                <element signature="method#getUserInputTaskInt#0;class#Input#0" />
-                <element signature="method#getUserInputComplTaskInt#0;class#Input#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InputFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CompletedTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Task.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+              <folding>
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+                <element signature="method#toString#0;class#Task#0" />
               </folding>
             </state>
           </provider>
@@ -174,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Teacher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="153">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -228,19 +165,19 @@
         <option value="$PROJECT_DIR$/src/Student.java" />
         <option value="$PROJECT_DIR$/src/Person.java" />
         <option value="$PROJECT_DIR$/src/Group.java" />
-        <option value="$PROJECT_DIR$/src/Task.java" />
-        <option value="$PROJECT_DIR$/src/CompletedTask.java" />
         <option value="$PROJECT_DIR$/src/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/Course.java" />
         <option value="$PROJECT_DIR$/src/Input.java" />
         <option value="$PROJECT_DIR$/src/InputFromKeyboard.java" />
         <option value="$PROJECT_DIR$/src/University.java" />
-        <option value="$PROJECT_DIR$/src/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/Printer.java" />
-        <option value="$PROJECT_DIR$/src/InputKeyboard.java" />
         <option value="$PROJECT_DIR$/src/PrinterFile.java" />
-        <option value="$PROJECT_DIR$/src/BasicInterface.java" />
         <option value="$PROJECT_DIR$/src/InputFile.java" />
+        <option value="$PROJECT_DIR$/src/CompletedTask.java" />
+        <option value="$PROJECT_DIR$/src/InputKeyboard.java" />
+        <option value="$PROJECT_DIR$/src/Printer.java" />
+        <option value="$PROJECT_DIR$/src/Task.java" />
+        <option value="$PROJECT_DIR$/src/BasicInterface.java" />
+        <option value="$PROJECT_DIR$/src/Teacher.java" />
       </list>
     </option>
   </component>
@@ -292,7 +229,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539335210570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539343952925" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -365,11 +302,11 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32854208" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29979467" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29979467" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32921812" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32854208" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -480,26 +417,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompletedTask.java">
+    <entry file="file://$PROJECT_DIR$/src/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="408">
+          <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="method#toString#0;class#Task#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Task.java">
+    <entry file="file://$PROJECT_DIR$/src/CompletedTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+        <state relative-caret-position="357">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
           <folding>
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="method#toString#0;class#Task#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -513,8 +452,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="153">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="method#printFrontPage#0;class#Printer#0" />
+            <element signature="method#printTeacherPage#0;class#Printer#0" />
+            <element signature="method#printStudentPage#0;class#Printer#0" />
+            <element signature="method#printDataAdded#0;class#Printer#0" />
+            <element signature="method#printDataRemoved#0;class#Printer#0" />
+            <element signature="method#printCoursePage#0;class#Printer#0" />
+            <element signature="method#printTaskPage#0;class#Printer#0" />
+            <element signature="method#printCourseEditPage#0;class#Printer#0" />
+            <element signature="method#printDataAddedToFile#0;class#Printer#0" />
+            <element signature="method#printCompletedTaskPage#0;class#Printer#0" />
+            <element signature="method#printTaskConstructorGuide#0;class#Printer#0" />
+            <element signature="method#printObjectArray#0;class#Printer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="172" column="53" selection-start-line="172" selection-start-column="53" selection-end-line="172" selection-end-column="53" />
+          <folding>
+            <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#teacherPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#studentPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#coursePageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#completedTaskPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#courseEditPageInteraction#0;class#BasicInterface#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -539,28 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-          <folding>
-            <element signature="method#printFrontPage#0;class#Printer#0" />
-            <element signature="method#printTeacherPage#0;class#Printer#0" />
-            <element signature="method#printStudentPage#0;class#Printer#0" />
-            <element signature="method#printDataAdded#0;class#Printer#0" />
-            <element signature="method#printDataRemoved#0;class#Printer#0" />
-            <element signature="method#printCoursePage#0;class#Printer#0" />
-            <element signature="method#printTaskPage#0;class#Printer#0" />
-            <element signature="e#2358#2359#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
-            <element signature="method#printDataAddedToFile#0;class#Printer#0" />
-            <element signature="method#printCompletedTaskPage#0;class#Printer#0" />
-            <element signature="method#printTaskConstructorGuide#0;class#Printer#0" />
-            <element signature="method#printObjectArray#0;class#Printer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PrinterFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -571,24 +524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-          <folding>
-            <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#studentPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#coursePageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#taskPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#completedTaskPageInteraction#0;class#BasicInterface#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/InputKeyboard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="493">
+          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
           <folding>
             <element signature="method#getUserInputSingleToken#0;class#Input#0" />
             <element signature="method#pressEnterToContinue#0;class#Input#0" />
@@ -596,7 +535,6 @@
             <element signature="method#getUserInputTeacherInt#0;class#Input#0" />
             <element signature="method#getUserInputGroupInt#0;class#Input#0" />
             <element signature="method#getUserInputCourseInt#0;class#Input#0" />
-            <element signature="method#getUserInputTaskInt#0;class#Input#0" />
             <element signature="method#getUserInputComplTaskInt#0;class#Input#0" />
           </folding>
         </state>
@@ -604,8 +542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InputFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

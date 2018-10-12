@@ -7,6 +7,7 @@ public class Task {
     private String taskCondition;
     private String deadline;
     private String points;
+    private boolean allowSubmitCompletedTask = true;
     ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
 
     public Task(int id, String name, String taskCondition, String deadline, String points) {
@@ -21,12 +22,20 @@ public class Task {
         return taskID;
     }
 
+    public void setAllowSubmitCompletedTask(boolean allowSubmitCompletedTask) {
+        this.allowSubmitCompletedTask = allowSubmitCompletedTask;
+    }
+
     public ArrayList<CompletedTask> getTaskCompletedTasks() {
         return taskCompletedTasks;
     }
 
     public void addTaskCompletedTask(CompletedTask completedTask) {
-        this.taskCompletedTasks.add(completedTask);
+        if(allowSubmitCompletedTask){
+        this.taskCompletedTasks.add(completedTask);}
+        else{
+            System.out.println("Sorry, task is closed");
+        }
     }
 
     public void printTaskCompletedTasks() {

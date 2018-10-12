@@ -1,19 +1,18 @@
 public class BasicInterface {
 
-    private static Printer printer= new Printer();
+    private static Printer printer = new Printer();
     private static InputKeyboard inputKeyboard = new InputKeyboard();
 
     private University university;
     boolean exit;
     boolean back;
 
-
     public BasicInterface(University university) {
         this.university = university;
     }
 
     public void frontPageInteraction() {
-        boolean exit = false;
+        exit = false;
         while (!exit) {
             printer.printFrontPage();
             switch (inputKeyboard.getUserInputchar()) {
@@ -59,7 +58,7 @@ public class BasicInterface {
                     break;
                 case '3':
                     printer.printTeacherConstructorGuide();
-                    university.addTeacher(inputKeyboard.getUserInputInt(),inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
+                    university.addTeacher(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -103,9 +102,9 @@ public class BasicInterface {
                 case '4':
                     printer.printStudentConstructorGuide();
                     Student newStudent = new Student(
-                            inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine() );
-                        university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);
-                        university.addStudent(newStudent);
+                            inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
+                    university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);
+                    university.addStudent(newStudent);
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -133,14 +132,14 @@ public class BasicInterface {
                 case '3':
                     printer.printCourseConstructorGuide();
                     Course course = new Course(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
-                        university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).setTeacherCourses(course);
-                        university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
-                        university.addCourse(course);
+                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).setTeacherCourses(course);
+                    university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
+                    university.addCourse(course);
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
-                    //TODO new window for Course group and teacher deletion/adding
+                    courseEditPageInteraction(university.getCourseByID(inputKeyboard.getUserInputTaskInt()));
                     break;
                 default:
                     back = true;
@@ -149,7 +148,7 @@ public class BasicInterface {
         }
     }
 
-    private void taskPageInteraction () {
+    private void taskPageInteraction() {
         back = false;
         Course selectedCourse = null;
         while (!back) {
@@ -177,7 +176,7 @@ public class BasicInterface {
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
-                    //TODO make task inaccessible
+                  selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).setAllowSubmitCompletedTask(false);
                     break;
                 case '5':
                     printer.printObjectArray(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getTaskCompletedTasks());
@@ -232,4 +231,23 @@ public class BasicInterface {
         }
     }
 
+    private void courseEditPageInteraction(Course course) {
+        back = false;
+        while (!back) {
+            printer.printCourseEditPage();
+            switch (inputKeyboard.getUserInputchar()) {
+                case '1':
+                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).setTeacherCourses(course);
+                    printer.printDataAdded();
+                    break;
+                case '2':
+                    university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
+                    printer.printDataAdded();
+                    break;
+                default:
+                    back = true;
+                    break;
+            }
+        }
+    }
 }

@@ -14,11 +14,11 @@ public class InputFile {
     }
 
     public Teacher getTeacherFromFile(){
-        //file data format: [ID,name,surname]
+        //file data format: {ID: [id], Name: [name],Surname: [surname]}
         String[] teacherInfoArray = scanner.nextLine().split(",");
         return new Teacher(Integer.parseInt(teacherInfoArray[0].substring(teacherInfoArray[0].indexOf(':')+1).trim()),
-                teacherInfoArray[1].substring(teacherInfoArray[1].indexOf(':')+1),
-                teacherInfoArray[2].substring(teacherInfoArray[2].indexOf(':')+1));
+                teacherInfoArray[1].substring(teacherInfoArray[1].indexOf(':')+1).trim(),
+                teacherInfoArray[2].substring(teacherInfoArray[2].indexOf(':')+1).trim());
     }
 
 

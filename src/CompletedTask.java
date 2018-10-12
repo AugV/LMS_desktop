@@ -9,8 +9,8 @@ public class CompletedTask {
     private int taskID;
     private String answer,
     grade,
-    submissionDate, //TODO make date type
-    gradeDate,//TODO make date type
+    submissionDate,
+    gradeDate,
     comment;
 
     public CompletedTask(int id, String answer) {
@@ -39,13 +39,7 @@ public class CompletedTask {
     }
     public void setGrade(String grade) {
         this.grade = grade;
-    }
-    public void printGrade() {
-        System.out.println(grade);;
-    }
-
-    public void printComment() {
-        System.out.println(comment);;
+        this.gradeDate =  dateFormat.format(calendar.getTime());
     }
 
     @Override

@@ -14,10 +14,6 @@ public class Teacher extends Person {
     public void setTeacherCourses(Course course) {
         teacherCourses.add(course);
     }
-    public void removeTeacherCourse(Course course){
-        teacherCourses.remove(course);
-    }
-
 
     @Override
     public String toString() {

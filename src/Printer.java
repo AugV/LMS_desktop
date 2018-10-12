@@ -64,6 +64,12 @@ public class Printer {
         System.out.println("8. Return");
     }
 
+    public void printCourseEditPage(){
+        System.out.println("1. Set teacher");
+        System.out.println("2. Set group");
+        System.out.println("3. Return");
+    }
+
     public void printEnterFileName(){
         System.out.println("Enter file name: ");
     }

@@ -54,7 +54,7 @@ public class InputKeyboard {
     }
 
     public int getUserInputTaskInt() {
-        System.out.println("Enter tasl ID:");
+        System.out.println("Enter task ID:");
         int input = scanner.nextInt();
         scanner.nextLine();
         return input;
