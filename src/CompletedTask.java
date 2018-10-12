@@ -2,7 +2,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class CompletedTask {
+public class CompletedTask implements Indexable{
     private static DateFormat dateFormat= new SimpleDateFormat("yyyy/mm/dd");
     private static Calendar calendar = Calendar.getInstance();
 
@@ -19,15 +19,12 @@ public class CompletedTask {
         this.submissionDate = dateFormat.format(calendar.getTime());
     }
 
-    public int getTaskID() {
+    public int getId() {
         return taskID;
     }
 
     public String getAnswer() {
         return answer;
-    }
-    public void setAnswer(String answer) {
-        this.answer = answer;
     }
 
     public String getComment() {
@@ -37,6 +34,7 @@ public class CompletedTask {
     public String getGrade() {
         return grade;
     }
+
     public void setGrade(String grade) {
         this.grade = grade;
         this.gradeDate =  dateFormat.format(calendar.getTime());

@@ -1,7 +1,6 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
-public class Course {
+public class Course implements Indexable {
     private int courseID;
     private String name;
     private String information;
@@ -18,15 +17,11 @@ public class Course {
         this.courseID = courseID;
         this.name = name;
         this.information = information;
-        teacher.setTeacherCourses(this);
+        teacher.addTeacherCourses(this);
         group.addGroupCourse(this);
     }
 
-    public void setCourseID(int courseID) {
-        this.courseID = courseID;
-    }
-
-    public int getCourseID() {
+    public int getId() {
         return courseID;
     }
 
@@ -43,13 +38,17 @@ public class Course {
     }
 
     public void addCourseTask(Task task) {
-        courseTasks.add(task);
+        if (!new DuplicateChecker().idDublicateCheck(task, courseTasks)) {
+            courseTasks.add(task);
+        } else {
+            System.out.println(" !Task already exists!");
+        }
     }
 
     public Task getCourseTaskByID(int id) {
         Task taskMatch = null;
         for (Task task : this.getCourseTasks()) {
-            if (task.getTaskID() == id) {
+            if (task.getId() == id) {
                 taskMatch = task;
                 break;
             }

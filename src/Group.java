@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Group {
+public class Group implements Indexable {
     private int groupID;
     private String name;
 
@@ -9,7 +9,11 @@ public class Group {
 
 
     public void addGroupCourse(Course groupCourse) {
-        this.groupCourses.add(groupCourse);
+        if (!new DuplicateChecker().idDublicateCheck(groupCourse, groupCourses)) {
+            this.groupCourses.add(groupCourse);
+        } else {
+            System.out.println(" !Course already exists!");
+        }
     }
 
     public Group(int id, String name) {
@@ -17,7 +21,7 @@ public class Group {
         this.name = name;
     }
 
-    public int getGroupID() {
+    public int getId() {
         return groupID;
     }
 
@@ -25,26 +29,18 @@ public class Group {
         return groupStudents;
     }
 
-    public void printGroupStudents() {
-        for (Student student : groupStudents) {
-            System.out.println(student);
-        }
-    }
-
     public void addGroupStudents(Student student) {
-        this.groupStudents.add(student);
-    }
-
-    public void printGroupCourses() {
-        for (Course course :
-                groupCourses) {
-            System.out.println(course);
+        if (!new DuplicateChecker().idDublicateCheck(student, groupStudents)) {
+            this.groupStudents.add(student);
+        } else {
+            System.out.println(" !Student already exists!");
         }
     }
 
     public ArrayList<Course> getGroupCourses() {
         return groupCourses;
     }
+
 
     @Override
     public String toString() {

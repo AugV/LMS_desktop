@@ -11,8 +11,12 @@ public class Teacher extends Person {
         return teacherCourses;
     }
 
-    public void setTeacherCourses(Course course) {
-        teacherCourses.add(course);
+    public void addTeacherCourses(Course course) {
+        if (!new DuplicateChecker().idDublicateCheck(course, teacherCourses)) {
+            teacherCourses.add(course);
+        } else {
+            System.out.println(" !Student already exists!");
+        }
     }
 
     @Override

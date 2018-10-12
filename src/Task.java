@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Task {
+public class Task implements Indexable{
 
     private int taskID;
     private String name;
@@ -18,7 +18,7 @@ public class Task {
         this.points = points;
     }
 
-    public int getTaskID() {
+    public int getId() {
         return taskID;
     }
 
@@ -31,7 +31,7 @@ public class Task {
     }
 
     public void addTaskCompletedTask(CompletedTask completedTask) {
-        if(allowSubmitCompletedTask){
+        if(allowSubmitCompletedTask && !new DuplicateChecker().idDublicateCheck(completedTask, taskCompletedTasks)){
         this.taskCompletedTasks.add(completedTask);}
         else{
             System.out.println("Sorry, task is closed");

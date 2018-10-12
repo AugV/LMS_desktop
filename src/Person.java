@@ -1,5 +1,5 @@
 
-abstract public class Person {
+abstract public class Person implements Indexable{
 
     private int id;
     private String name;

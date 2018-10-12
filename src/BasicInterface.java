@@ -104,7 +104,7 @@ public class BasicInterface {
                     Student newStudent = new Student(
                             inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
                     university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);
-                    university.addStudent(newStudent);
+                    //university.addStudent(newStudent);
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -132,7 +132,7 @@ public class BasicInterface {
                 case '3':
                     printer.printCourseConstructorGuide();
                     Course course = new Course(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
-                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).setTeacherCourses(course);
+                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).addTeacherCourses(course);
                     university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
                     university.addCourse(course);
                     printer.printDataAdded();
@@ -171,7 +171,7 @@ public class BasicInterface {
                             inputKeyboard.getUserInputLine(),
                             inputKeyboard.getUserInputLine());
                     selectedCourse.addCourseTask(newTask);
-                    university.addTask(newTask);
+                    //university.addTask(newTask);
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -214,7 +214,7 @@ public class BasicInterface {
                             inputKeyboard.getUserInputInt(),
                             inputKeyboard.getUserInputLine());
                     university.getTaskByID(inputKeyboard.getUserInputTaskInt()).addTaskCompletedTask(newCompletedTask);
-                    university.addCompletedTask(newCompletedTask);
+                    //university.addCompletedTask(newCompletedTask);
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -237,7 +237,7 @@ public class BasicInterface {
             printer.printCourseEditPage();
             switch (inputKeyboard.getUserInputchar()) {
                 case '1':
-                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).setTeacherCourses(course);
+                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).addTeacherCourses(course);
                     printer.printDataAdded();
                     break;
                 case '2':

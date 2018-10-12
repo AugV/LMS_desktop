@@ -25,7 +25,7 @@ public class University {
     public Group getGroupByID(int id) {
         Group groupMatch = null;
         for (Group group : this.getGroupList()) {
-            if (group.getGroupID()== id) {
+            if (group.getId()== id) {
                 groupMatch = group;
                 break;
             }
@@ -52,7 +52,7 @@ public class University {
     public Course getCourseByID(int id) {
         Course courseMatch = null;
         for (Course course : this.getCourseList()) {
-            if (course.getCourseID() == id) {
+            if (course.getId() == id) {
                 courseMatch = course;
                 break;
             }
@@ -84,7 +84,7 @@ public class University {
     public Task getTaskByID(int id) {
         Task taskMatch = null;
         for (Task task : this.getTaskList()) {
-            if (task.getTaskID() == id) {
+            if (task.getId() == id) {
                 taskMatch = task;
                 break;
             }
@@ -103,7 +103,7 @@ public class University {
     public CompletedTask getCompletedTaskByID(int id) {
         CompletedTask completedTaskMatch = null;
         for (CompletedTask completedTask : this.getCompletedTaskList()) {
-            if (completedTask.getTaskID() == id) {
+            if (completedTask.getId() == id) {
                 completedTaskMatch = completedTask;
                 break;
             }
