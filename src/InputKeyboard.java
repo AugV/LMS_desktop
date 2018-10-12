@@ -22,6 +22,7 @@ public class InputKeyboard {
 
     public char getUserInputchar() {
         char input = scanner.next().charAt(0);
+        scanner.nextLine();
         return input;
     }
 

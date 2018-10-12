@@ -2,7 +2,6 @@ public class BasicInterface {
 
     private static Printer printer= new Printer();
     private static InputKeyboard inputKeyboard = new InputKeyboard();
-    private static InputFile inputFile = new InputFile();
 
     private University university;
     boolean exit;
@@ -54,8 +53,7 @@ public class BasicInterface {
                     break;
                 case '2':
                     printer.printEnterFileName();
-                    inputKeyboard.getUserInputLine();
-                    university.addTeacher(inputFile.getTeacherFromFile());
+                    university.addTeacher(new InputFile(inputKeyboard.getUserInputLine()).getTeacherFromFile());
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -72,10 +70,9 @@ public class BasicInterface {
                     break;
                 case '5':
                     printer.printEnterFileName();
-                    inputKeyboard.getUserInputLine();
-
-
-                    //TODO print to file
+                    new PrinterFile(inputKeyboard.getUserInputLine()).printObjectArrayToFile(university.getTeacherList());
+                    printer.printDataAddedToFile();
+                    printer.printEnterFileName();
                     break;
                 default:
                     back = true;

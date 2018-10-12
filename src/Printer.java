@@ -68,6 +68,12 @@ public class Printer {
         System.out.println("Enter file name: ");
     }
 
+    public void printDataAddedToFile(){
+        System.out.println();
+        System.out.println("Data added to file...");
+        System.out.println();
+    }
+
     public void printSingleString(String text){
         System.out.println(text);
     }
