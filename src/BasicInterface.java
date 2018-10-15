@@ -90,7 +90,11 @@ public class BasicInterface {
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
-                    printer.printObjectArray(university.getGroupByID(inputKeyboard.getUserInputGroupInt()).getGroupStudents());
+                    try{
+                        printer.printObjectArray(university.getGroupByID(inputKeyboard.getUserInputGroupInt()).getGroupStudents());}
+                    catch (NullPointerException e){
+                        System.out.println(" !Group with this ID does not exist!");
+                    }
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
@@ -103,9 +107,11 @@ public class BasicInterface {
                     printer.printStudentConstructorGuide();
                     Student newStudent = new Student(
                             inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
-                    university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);
-                    //university.addStudent(newStudent);
-                    printer.printDataAdded();
+                    try{university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);}
+                    catch(NullPointerException e){
+                        System.out.println(" !Group with this ID does not exist!");
+                    }
+                    //printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
                 default:
@@ -126,20 +132,31 @@ public class BasicInterface {
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
-                    printer.printSingleString(university.getCourseByID(inputKeyboard.getUserInputCourseInt()).getCourseInformation());
+                    try{printer.printSingleString(university.getCourseByID(inputKeyboard.getUserInputCourseInt()).getCourseInformation());}
+                    catch(NullPointerException e){
+                        System.out.println(" !Course with this ID does not exist!");
+                    }
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     printer.printCourseConstructorGuide();
                     Course course = new Course(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
-                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).addTeacherCourses(course);
-                    university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
+                    try {
+                        university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).addTeacherCourses(course);
+                    }catch (NullPointerException e) {
+                        System.out.println(" !Teacher with this ID does not exist!");
+                    }
+                    try{
+                        university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
+                    }catch (NullPointerException e) {
+                        System.out.println(" !Group with this ID does not exist!");
+                    }
                     university.addCourse(course);
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
-                    courseEditPageInteraction(university.getCourseByID(inputKeyboard.getUserInputTaskInt()));
+                        courseEditPageInteraction(university.getCourseByID(inputKeyboard.getUserInputTaskInt()));
                     break;
                 default:
                     back = true;
@@ -148,7 +165,7 @@ public class BasicInterface {
         }
     }
 
-    private void taskPageInteraction() {
+    private void taskPageInteraction(){
         back = false;
         Course selectedCourse = null;
         while (!back) {
@@ -156,14 +173,26 @@ public class BasicInterface {
             switch (inputKeyboard.getUserInputchar()) {
                 case '1':
                     selectedCourse = university.getCourseByID(inputKeyboard.getUserInputCourseInt());
-                    printer.printCourseSelected();
+                    if(selectedCourse==null){
+                        System.out.println(" !Course with this ID does not exist!");
+                    }
+                    else{
+                    printer.printCourseSelected();}
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
-                    printer.printObjectArray(selectedCourse.getCourseTasks());
+                    try {
+                        printer.printObjectArray(selectedCourse.getCourseTasks());
+                    }
+                    catch(NullPointerException e){
+                        System.out.println(" !No Course selected!");
+                    }
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
+                    if (selectedCourse == null) {
+                        System.out.println( "!No Course selected!");
+                    }else{
                     printer.printTaskConstructorGuide();
                     Task newTask = new Task(inputKeyboard.getUserInputInt(),
                             inputKeyboard.getUserInputLine(),
@@ -171,23 +200,41 @@ public class BasicInterface {
                             inputKeyboard.getUserInputLine(),
                             inputKeyboard.getUserInputLine());
                     selectedCourse.addCourseTask(newTask);
-                    printer.printDataAdded();
+                    printer.printDataAdded();}
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
-                    selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).setAllowSubmitCompletedTask(false);
+
+                    try{
+                        selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).setAllowSubmitCompletedTask(false);
+                    }
+                    catch(NullPointerException e){
+                        System.out.println(" !No Course selected Or bad Task ID!");
+                    }
                     break;
                 case '5':
-                    printer.printObjectArray(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getTaskCompletedTasks());
+                    try{
+                        printer.printObjectArray(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getTaskCompletedTasks());
+                    }catch(NullPointerException e){
+                        System.out.println(" !No Course selected Or bad Task ID!");
+                    }
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '6':
-                    printer.printSingleString(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).getAnswer());
+                    try{
+                        printer.printSingleString(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).getAnswer());
+                    }catch(NullPointerException e){
+                        System.out.println(" !No Course selected Or bad Task ID!");
+                    }
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '7':
-                    selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).setGrade(inputKeyboard.getUserInputLine());
-                    printer.printDataAdded();
+                    try{
+                        selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).setGrade(inputKeyboard.getUserInputLine());
+                    }catch(NullPointerException e){
+                        System.out.println(" !No Course selected Or bad Completed Task ID!");
+                    }
+                    //printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
                 default:
@@ -203,17 +250,24 @@ public class BasicInterface {
             printer.printCompletedTaskPage();
             switch (inputKeyboard.getUserInputchar()) {
                 case '1':
-                    for (Course course : university.getGroupByID(inputKeyboard.getUserInputGroupInt()).getGroupCourses()) {
-                        printer.printObjectArray(course.getCourseTasks());
+                    try{
+                        for (Course course : university.getGroupByID(inputKeyboard.getUserInputGroupInt()).getGroupCourses()) {
+                            printer.printObjectArray(course.getCourseTasks());
+                        }
+                    }catch(NullPointerException e){
+                        System.out.println(" !Group with this ID does not exist!");
                     }
+                    inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
                     printer.printCompletedTaskConstructorGuide();
                     CompletedTask newCompletedTask = new CompletedTask(
                             inputKeyboard.getUserInputInt(),
                             inputKeyboard.getUserInputLine());
+                    int taskId= inputKeyboard.getUserInputTaskInt();
+
                     for (Course course : university.getCourseList()) {
-                        course.addCompletedTaskToCourseTaskById(inputKeyboard.getUserInputTaskInt(), newCompletedTask);
+                        course.addCompletedTaskToCourseTaskById(taskId, newCompletedTask);
                     }
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
@@ -239,11 +293,19 @@ public class BasicInterface {
             printer.printCourseEditPage();
             switch (inputKeyboard.getUserInputchar()) {
                 case '1':
-                    university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).addTeacherCourses(course);
+                    try{
+                        university.getTeacherByID(inputKeyboard.getUserInputTeacherInt()).addTeacherCourses(course);
+                    }catch (NullPointerException e){
+                        System.out.println("Wrong Course or Teacher ID");
+                    }
                     printer.printDataAdded();
                     break;
                 case '2':
-                    university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
+                    try{
+                        university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
+                    }catch(NullPointerException e){
+                        System.out.println("Wrong Course or Group ID");
+                    }
                     printer.printDataAdded();
                     break;
                 default:

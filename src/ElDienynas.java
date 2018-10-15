@@ -26,10 +26,10 @@ public class ElDienynas {
 
         Task task1 = new Task(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5" );
         university.getCourseByID(1).addCourseTask(task1);
-        university.addTask(task1);
+
         Task task2 = new Task(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1");
         university.getCourseByID(2).addCourseTask(task2);
-        university.addTask(task2);
+
 
         university.getCourseByID(1).getCourseTaskByID(1).addTaskCompletedTask(new CompletedTask(
                 1, "teisingas atsakymas, kolegos"));
@@ -40,11 +40,6 @@ public class ElDienynas {
 
         new BasicInterface(university).frontPageInteraction();
 
-        /*try {
-            System.out.println(getTeacherByID(14, university).getName());
-        }
-        catch(NullPointerException e){
-            System.out.println("No such teacher, my man");
-        }*/
+
     }
 }

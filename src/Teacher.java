@@ -19,10 +19,14 @@ public class Teacher extends Person {
         }
     }
 
+
     @Override
     public String toString() {
         return "ID: " + this.getId() +
                 ", Name: " + this.getName() +
-                ", Surname: " + this.getSurname();
+                ", Surname: " + this.getSurname() +
+                "Teacher{" +
+                "teacherCourses=" + teacherCourses +
+                '}';
     }
 }

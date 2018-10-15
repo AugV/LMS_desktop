@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class University {
     private ArrayList<Teacher> teacherList = new ArrayList();
@@ -13,22 +14,30 @@ public class University {
     }
 
     public void addGroup(Group group) {
-        this.groupList.add(group);
+        if (!new DuplicateChecker().idDublicateCheck(group, groupList)) {
+            groupList.add(group);
+        } else {
+            System.out.println(" !Group already exists!");
+        }
     }
 
     public void addGroup(int id, String name) {
-        this.groupList.add(new Group(id,name));
+        Group group = new Group(id,name);
+        if (!new DuplicateChecker().idDublicateCheck(group, groupList)) {
+            groupList.add(group);
+        } else {
+            System.out.println(" !Group already exists!");
+        }
+
     }
 
     public Group getGroupByID(int id) {
-        Group groupMatch = null;
         for (Group group : this.getGroupList()) {
-            if (group.getId()== id) {
-                groupMatch = group;
-                break;
+                if (group.getId() == id) {
+                    return group;
+                }
             }
-        }
-        return groupMatch;
+        return null;
     }
 
     //endregion
@@ -39,7 +48,11 @@ public class University {
     }
 
     public void addCourse(Course course) {
-        courseList.add(course);
+        if (!new DuplicateChecker().idDublicateCheck(course, courseList)) {
+            courseList.add(course);
+        } else {
+            System.out.println(" !Course already exists!");
+        }
     }
 
     public Course getCourseByID(int id) {
@@ -65,24 +78,33 @@ public class University {
 
     public Teacher getTeacherByID(int id) {
         Teacher teacherMatch = null;
-        for (Teacher teacher : this.getTeacherList()) {
+               for (Teacher teacher : this.getTeacherList()) {
             if (teacher.getId() == id) {
                 teacherMatch = teacher;
-                break;
+                return teacherMatch;
             }
         }
-        return teacherMatch;
+        //if (teacherMatch==null) throw new IllegalArgumentException(" !Teacher with this ID does not exist!");
+        return null;
     }
 
     public void addTeacher(int id, String name, String surname) {
         Teacher teacher = new Teacher(id, name, surname);
-        this.teacherList.add(teacher);
+        if (!new DuplicateChecker().idDublicateCheck(teacher, teacherList)) {
+            teacherList.add(teacher);
+        } else {
+            System.out.println(" !Teacher already exists!");
+        }
     }
 
     public void removeTeacher() {
         System.out.println("Enter ID of the teacher you wish to remove:");
         Teacher teacherToRemove = getTeacherByID(new InputKeyboard().getUserInputInt());
-        teacherList.remove(teacherList.indexOf(teacherToRemove));
+        try{
+            teacherList.remove(teacherList.indexOf(teacherToRemove));
+        } catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(" !Teacher does not exist!");
+        }
     }
 //endregion
 

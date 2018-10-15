@@ -45,7 +45,7 @@ public class Task implements Indexable{
         if(allowSubmitCompletedTask && !new DuplicateChecker().idDublicateCheck(completedTask, taskCompletedTasks)){
         this.taskCompletedTasks.add(completedTask);}
         else{
-            System.out.println("Sorry, task is closed");
+            System.out.println("Sorry, task is closed or you already submited this task");
         }
     }
 

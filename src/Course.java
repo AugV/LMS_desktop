@@ -76,6 +76,11 @@ public class Course implements Indexable {
 
     @Override
     public String toString() {
-        return this.getName();
+        return "Course{" +
+                "courseID=" + courseID +
+                ", name='" + name + '\'' +
+                ", information='" + information + '\'' +
+                ", courseTasks=" + courseTasks +
+                '}';
     }
 }
