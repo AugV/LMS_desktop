@@ -222,7 +222,8 @@ public class BasicInterface {
                     break;
                 case '6':
                     try{
-                        printer.printSingleString(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).getAnswer());
+                        printer.printSingleString(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt())
+                                .getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).getAnswer());
                     }catch(NullPointerException e){
                         System.out.println(" !No Course selected Or bad Task ID!");
                     }
@@ -230,7 +231,8 @@ public class BasicInterface {
                     break;
                 case '7':
                     try{
-                        selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).setGrade(inputKeyboard.getUserInputLine());
+                        selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt())
+                                .setGrade(inputKeyboard.getUserInputGrade());
                     }catch(NullPointerException e){
                         System.out.println(" !No Course selected Or bad Completed Task ID!");
                     }
@@ -274,11 +276,17 @@ public class BasicInterface {
                     break;
                 case '3':
                     int taskSelection = inputKeyboard.getUserInputComplTaskInt();
+                    CompletedTask completedTask = null;
                     for (Course course :university.getCourseList()) {
-                        printer.printSingleString(course.getCompletedTaskById(taskSelection).getGrade());
-                        printer.printSingleString(course.getCompletedTaskById(taskSelection).getComment());
-                    }
-                    inputKeyboard.pressEnterToContinue();
+                        completedTask = course.getCompletedTaskById(taskSelection);
+                        if (completedTask!=null){break;}
+                        }
+                        try {
+                            printer.printSingleString(completedTask.getGrade());
+                        } catch(NullPointerException e){
+                            System.out.println(" !Complete task with this ID does not exist!");
+                        }
+                        inputKeyboard.pressEnterToContinue();
                     break;
                 default:
                     back = true;

@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-abstract public class Person implements Indexable{
+abstract public class Person implements Indexable, Serializable {
 
     private int id;
     private String name;

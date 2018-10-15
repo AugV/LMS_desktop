@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class CompletedTask implements Indexable{
+public class CompletedTask implements Indexable, Serializable {
     private static DateFormat dateFormat= new SimpleDateFormat("yyyy/mm/dd");
     private static Calendar calendar = Calendar.getInstance();
 

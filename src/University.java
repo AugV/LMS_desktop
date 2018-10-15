@@ -1,11 +1,10 @@
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Optional;
 
-public class University {
+public class University implements Serializable {
     private ArrayList<Teacher> teacherList = new ArrayList();
     private ArrayList<Group> groupList = new ArrayList();
     private ArrayList<Course> courseList = new ArrayList();
-
 
     //Groups
     //region
@@ -107,9 +106,4 @@ public class University {
         }
     }
 //endregion
-
-
-
-
-
 }

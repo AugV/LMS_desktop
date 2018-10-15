@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class InputKeyboard {
     Scanner scanner = new Scanner(System.in);
 
+    public String getUserInputGrade(){
+        System.out.println("Enter Grade!");
+        return scanner.nextLine();
+    }
+
     public String getUserInputSingleToken() {
         String input = scanner.next();
         return input;

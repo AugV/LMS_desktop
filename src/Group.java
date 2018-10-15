@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Group implements Indexable {
+public class Group implements Indexable, Serializable {
     private int groupID;
     private String name;
 

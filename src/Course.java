@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Course implements Indexable {
+public class Course implements Indexable, Serializable {
     private int courseID;
     private String name;
     private String information;

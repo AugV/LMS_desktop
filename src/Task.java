@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Task implements Indexable{
+public class Task implements Indexable, Serializable {
 
     private int taskID;
     private String name;
@@ -45,14 +46,7 @@ public class Task implements Indexable{
         if(allowSubmitCompletedTask && !new DuplicateChecker().idDublicateCheck(completedTask, taskCompletedTasks)){
         this.taskCompletedTasks.add(completedTask);}
         else{
-            System.out.println("Sorry, task is closed or you already submited this task");
-        }
-    }
-
-    public void printTaskCompletedTasks() {
-        for (CompletedTask completedTask : this.taskCompletedTasks
-        ) {
-            System.out.println(completedTask);
+            System.out.println("Sorry, task is closed or you already submitted this task");
         }
     }
 

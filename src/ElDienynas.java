@@ -8,7 +8,8 @@ public class ElDienynas {
 
 
 //region
-        university.addTeacher(1,"Tadas", "jablinksis");
+
+        /*university.addTeacher(1,"Tadas", "jablinksis");
         university.addTeacher(2,"Laimonas", "Stanislovsksi");
 
         university.addGroup(1,"GRUPE1");
@@ -34,12 +35,15 @@ public class ElDienynas {
         university.getCourseByID(1).getCourseTaskByID(1).addTaskCompletedTask(new CompletedTask(
                 1, "teisingas atsakymas, kolegos"));
         university.getCourseByID(2).getCourseTaskByID(2).addTaskCompletedTask(new CompletedTask(
-                2, "neteisingas atsakymas, biciuli"));
+                2, "neteisingas atsakymas, biciuli"));*/
 
         //endregion
 
+        university = new SerializeDeserialize().deserialize("universityObject.ser");
+
         new BasicInterface(university).frontPageInteraction();
 
+        new SerializeDeserialize().serialize(university, "universityObject.ser" );
+    }
 
     }
-}
