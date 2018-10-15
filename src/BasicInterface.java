@@ -171,23 +171,22 @@ public class BasicInterface {
                             inputKeyboard.getUserInputLine(),
                             inputKeyboard.getUserInputLine());
                     selectedCourse.addCourseTask(newTask);
-                    //university.addTask(newTask);
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '4':
-                  selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).setAllowSubmitCompletedTask(false);
+                    selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).setAllowSubmitCompletedTask(false);
                     break;
                 case '5':
                     printer.printObjectArray(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getTaskCompletedTasks());
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '6':
-                    printer.printSingleString(university.getCompletedTaskByID(inputKeyboard.getUserInputComplTaskInt()).getAnswer());
+                    printer.printSingleString(selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).getAnswer());
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '7':
-                    university.getCompletedTaskByID(inputKeyboard.getUserInputComplTaskInt()).setGrade(inputKeyboard.getUserInputLine());
+                    selectedCourse.getCourseTaskByID(inputKeyboard.getUserInputTaskInt()).getCompletedTaskById(inputKeyboard.getUserInputComplTaskInt()).setGrade(inputKeyboard.getUserInputLine());
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -213,15 +212,18 @@ public class BasicInterface {
                     CompletedTask newCompletedTask = new CompletedTask(
                             inputKeyboard.getUserInputInt(),
                             inputKeyboard.getUserInputLine());
-                    university.getTaskByID(inputKeyboard.getUserInputTaskInt()).addTaskCompletedTask(newCompletedTask);
-                    //university.addCompletedTask(newCompletedTask);
+                    for (Course course : university.getCourseList()) {
+                        course.addCompletedTaskToCourseTaskById(inputKeyboard.getUserInputTaskInt(), newCompletedTask);
+                    }
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     int taskSelection = inputKeyboard.getUserInputComplTaskInt();
-                    printer.printSingleString(university.getCompletedTaskByID(taskSelection).getGrade());
-                    printer.printSingleString(university.getCompletedTaskByID(taskSelection).getComment());
+                    for (Course course :university.getCourseList()) {
+                        printer.printSingleString(course.getCompletedTaskById(taskSelection).getGrade());
+                        printer.printSingleString(course.getCompletedTaskById(taskSelection).getComment());
+                    }
                     inputKeyboard.pressEnterToContinue();
                     break;
                 default:

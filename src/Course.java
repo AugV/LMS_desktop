@@ -45,6 +45,20 @@ public class Course implements Indexable {
         }
     }
 
+    public void addCompletedTaskToCourseTaskById(int taskId, CompletedTask newCompletedTask){
+            for (Task task : courseTasks) {
+                if(task.getId()== taskId){task.addTaskCompletedTask(newCompletedTask);}
+            }
+    }
+
+    public CompletedTask getCompletedTaskById(int completedTaskId){
+        CompletedTask completedTask= null;
+        for (Task task : courseTasks) {
+            completedTask = task.getCompletedTaskById(completedTaskId);
+        }
+        return completedTask;
+    }
+
     public Task getCourseTaskByID(int id) {
         Task taskMatch = null;
         for (Task task : this.getCourseTasks()) {

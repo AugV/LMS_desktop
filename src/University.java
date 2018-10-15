@@ -2,11 +2,9 @@ import java.util.ArrayList;
 
 public class University {
     private ArrayList<Teacher> teacherList = new ArrayList();
-    private ArrayList<Student> studentList = new ArrayList();
     private ArrayList<Group> groupList = new ArrayList();
     private ArrayList<Course> courseList = new ArrayList();
-    private ArrayList<Task> taskList = new ArrayList();
-    private ArrayList<CompletedTask> completedTaskList = new ArrayList();
+
 
     //Groups
     //region
@@ -40,14 +38,9 @@ public class University {
         return courseList;
     }
 
-    public void setCourseList(Course course) {
-        this.courseList.add(course);
-    }
-
     public void addCourse(Course course) {
         courseList.add(course);
     }
-
 
     public Course getCourseByID(int id) {
         Course courseMatch = null;
@@ -60,57 +53,6 @@ public class University {
         return courseMatch;
     }
     //endregion
-    //Tasks
-    //region
-    public void addTask(int taskID, String name, String taskCondition, String deadline, String points) {
-        Task task = new Task(taskID, name, taskCondition, deadline, points);
-        taskList.add(task);
-    }
-
-    public ArrayList<Task> getTaskList() {
-        return taskList;
-    }
-
-    public void addTask(Task task) {
-        this.taskList.add(task);
-    }
-
-    public Task getNsetTask(int taskID, String name, String taskCondition, String deadline, String points){
-        Task task = new Task(taskID, name, taskCondition, deadline, points);
-        taskList.add(task);
-        return task;
-    }
-
-    public Task getTaskByID(int id) {
-        Task taskMatch = null;
-        for (Task task : this.getTaskList()) {
-            if (task.getId() == id) {
-                taskMatch = task;
-                break;
-            }
-        }
-        return taskMatch;
-    }
-
-    public ArrayList<CompletedTask> getCompletedTaskList() {
-        return completedTaskList;
-    }
-
-    public void addCompletedTask(CompletedTask completedTask) {
-        this.completedTaskList.add(completedTask);
-    }
-
-    public CompletedTask getCompletedTaskByID(int id) {
-        CompletedTask completedTaskMatch = null;
-        for (CompletedTask completedTask : this.getCompletedTaskList()) {
-            if (completedTask.getId() == id) {
-                completedTaskMatch = completedTask;
-                break;
-            }
-        }
-        return completedTaskMatch;
-    }
-//endregion
     //Teachers
     // region
     public ArrayList<Teacher> getTeacherList() {
@@ -143,33 +85,6 @@ public class University {
         teacherList.remove(teacherList.indexOf(teacherToRemove));
     }
 //endregion
-    //Students
-    //region
-    public void addStudent(int id, String name, String surname) {
-        Student student = new Student(id, name, surname);
-        addStudent(student);
-    }
-
-    public ArrayList<Student> getStudentList() {
-        return studentList;
-    }
-
-    public void addStudent(Student student) {
-        this.studentList.add(student);
-    }
-
-    public Student getStudentByID(int id) {
-        Student studentMatch = null;
-        for (Student student : this.getStudentList()) {
-            if (student.getId() == id) {
-                studentMatch = student;
-                break;
-            }
-        }
-        return studentMatch;
-    }
-//endregion
-
 
 
 

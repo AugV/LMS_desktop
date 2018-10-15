@@ -8,7 +8,7 @@ public class Task implements Indexable{
     private String deadline;
     private String points;
     private boolean allowSubmitCompletedTask = true;
-    ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
+    private ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
 
     public Task(int id, String name, String taskCondition, String deadline, String points) {
         this.taskID = id;
@@ -20,6 +20,17 @@ public class Task implements Indexable{
 
     public int getId() {
         return taskID;
+    }
+
+    public CompletedTask getCompletedTaskById(int id){
+        CompletedTask completedTaskMatch = null;
+        for (CompletedTask completedTask : taskCompletedTasks) {
+            if (completedTask.getId()== id) {
+                completedTaskMatch = completedTask;
+                break;
+            }
+        }
+        return completedTaskMatch;
     }
 
     public void setAllowSubmitCompletedTask(boolean allowSubmitCompletedTask) {
