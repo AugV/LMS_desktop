@@ -11,8 +11,7 @@ public class CompletedTask implements Indexable, Serializable {
     private String answer,
     grade,
     submissionDate,
-    gradeDate,
-    comment;
+    gradeDate;
 
     public CompletedTask(int id, String answer) {
         this.taskID = id;
@@ -28,9 +27,6 @@ public class CompletedTask implements Indexable, Serializable {
         return answer;
     }
 
-    public String getComment() {
-        return comment;
-    }
 
     public String getGrade() {
         return grade;
@@ -48,7 +44,6 @@ public class CompletedTask implements Indexable, Serializable {
                 ", grade='" + grade + '\'' +
                 ", submissionDate='" + submissionDate + '\'' +
                 ", gradeDate='" + gradeDate + '\'' +
-                ", comment='" + comment + '\'' +
                 '}';
     }
 }

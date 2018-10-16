@@ -39,7 +39,7 @@ public class Course implements Indexable, Serializable {
     }
 
     public void addCourseTask(Task task) {
-        if (!new DuplicateChecker().idDublicateCheck(task, courseTasks)) {
+        if (!new DuplicateChecker().isDuplicateById(task, courseTasks)) {
             courseTasks.add(task);
         } else {
             System.out.println(" !Task already exists!");

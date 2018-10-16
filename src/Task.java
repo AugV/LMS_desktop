@@ -43,7 +43,7 @@ public class Task implements Indexable, Serializable {
     }
 
     public void addTaskCompletedTask(CompletedTask completedTask) {
-        if(allowSubmitCompletedTask && !new DuplicateChecker().idDublicateCheck(completedTask, taskCompletedTasks)){
+        if(allowSubmitCompletedTask && !new DuplicateChecker().isDuplicateById(completedTask, taskCompletedTasks)){
         this.taskCompletedTasks.add(completedTask);}
         else{
             System.out.println("Sorry, task is closed or you already submitted this task");

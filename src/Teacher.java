@@ -12,7 +12,7 @@ public class Teacher extends Person {
     }
 
     public void addTeacherCourses(Course course) {
-        if (!new DuplicateChecker().idDublicateCheck(course, teacherCourses)) {
+        if (!new DuplicateChecker().isDuplicateById(course, teacherCourses)) {
             teacherCourses.add(course);
         } else {
             System.out.println(" !Student already exists!");

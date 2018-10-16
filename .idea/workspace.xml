@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/employee.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SerializeDeserialize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/CompletedTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/CompletedTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/ElDienynas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/ElDienynas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/Group.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/Group.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/University.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/University.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CompletedTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompletedTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElDienynas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DuplicateChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DuplicateChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputKeyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputKeyboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/University.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,11 +22,11 @@
     <session id="-49887998">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="2" />
@@ -47,7 +35,7 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -65,12 +53,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="24448" />
+          <entry key="java" value="24483" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="24448" />
+          <entry key="JAVA" value="24483" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -82,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Group.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="408">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Group#0;class#Group#0" />
@@ -93,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CompletedTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+            <state relative-caret-position="629">
+              <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -105,17 +93,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DuplicateChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="68">
+              <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="756">
+              <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -124,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/SerializeDeserialize.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -132,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="295" column="5" lean-forward="true" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
+            <state relative-caret-position="2499">
+              <caret line="295" column="5" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
               <folding>
                 <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
                 <element signature="method#teacherPageInteraction#0;class#BasicInterface#0" />
@@ -210,10 +198,8 @@
         <option value="$PROJECT_DIR$/src/InputFile.java" />
         <option value="$PROJECT_DIR$/src/Printer.java" />
         <option value="$PROJECT_DIR$/src/Indexable.java" />
-        <option value="$PROJECT_DIR$/src/DuplicateChecker.java" />
         <option value="$PROJECT_DIR$/src/Teacher.java" />
         <option value="$PROJECT_DIR$/src/University.java" />
-        <option value="$PROJECT_DIR$/src/CompletedTask.java" />
         <option value="$PROJECT_DIR$/src/Course.java" />
         <option value="$PROJECT_DIR$/src/Group.java" />
         <option value="$PROJECT_DIR$/src/Person.java" />
@@ -223,6 +209,8 @@
         <option value="$PROJECT_DIR$/src/Serialization.java" />
         <option value="$PROJECT_DIR$/src/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/SerializeDeserialize.java" />
+        <option value="$PROJECT_DIR$/src/DuplicateChecker.java" />
+        <option value="$PROJECT_DIR$/src/CompletedTask.java" />
       </list>
     </option>
   </component>
@@ -238,6 +226,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AV_LD2" type="58d84e3e:PackageViewProjectNode" />
+              <item name="LD2" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,23 +258,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="AV_LD2" type="58d84e3e:PackageViewProjectNode" />
-              <item name="LD2" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539607777977" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539607967375" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -338,7 +326,7 @@
     <frame x="566" y="162" width="1805" height="1108" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34154728" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34555873" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -348,7 +336,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32854208" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29979467" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29979467" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -542,6 +530,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SerializeDeserialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="295" column="5" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
+          <folding>
+            <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#teacherPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#studentPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#coursePageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#courseEditPageInteraction#0;class#BasicInterface#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/InputKeyboard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -560,31 +569,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="295" column="5" lean-forward="true" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
-          <folding>
-            <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#teacherPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#studentPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#coursePageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#courseEditPageInteraction#0;class#BasicInterface#0" />
-          </folding>
+        <state relative-caret-position="756">
+          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SerializeDeserialize.java">
+    <entry file="file://$PROJECT_DIR$/src/DuplicateChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="68">
+          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="408">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Group#0;class#Group#0" />
@@ -595,22 +597,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CompletedTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DuplicateChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="629">
+          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
         </state>
       </provider>
     </entry>

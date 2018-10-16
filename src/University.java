@@ -13,7 +13,7 @@ public class University implements Serializable {
     }
 
     public void addGroup(Group group) {
-        if (!new DuplicateChecker().idDublicateCheck(group, groupList)) {
+        if (!new DuplicateChecker().isDuplicateById(group, groupList)) {
             groupList.add(group);
         } else {
             System.out.println(" !Group already exists!");
@@ -22,7 +22,7 @@ public class University implements Serializable {
 
     public void addGroup(int id, String name) {
         Group group = new Group(id,name);
-        if (!new DuplicateChecker().idDublicateCheck(group, groupList)) {
+        if (!new DuplicateChecker().isDuplicateById(group, groupList)) {
             groupList.add(group);
         } else {
             System.out.println(" !Group already exists!");
@@ -47,7 +47,7 @@ public class University implements Serializable {
     }
 
     public void addCourse(Course course) {
-        if (!new DuplicateChecker().idDublicateCheck(course, courseList)) {
+        if (!new DuplicateChecker().isDuplicateById(course, courseList)) {
             courseList.add(course);
         } else {
             System.out.println(" !Course already exists!");
@@ -89,7 +89,7 @@ public class University implements Serializable {
 
     public void addTeacher(int id, String name, String surname) {
         Teacher teacher = new Teacher(id, name, surname);
-        if (!new DuplicateChecker().idDublicateCheck(teacher, teacherList)) {
+        if (!new DuplicateChecker().isDuplicateById(teacher, teacherList)) {
             teacherList.add(teacher);
         } else {
             System.out.println(" !Teacher already exists!");

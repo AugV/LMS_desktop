@@ -10,7 +10,7 @@ public class Group implements Indexable, Serializable {
 
 
     public void addGroupCourse(Course groupCourse) {
-        if (!new DuplicateChecker().idDublicateCheck(groupCourse, groupCourses)) {
+        if (!new DuplicateChecker().isDuplicateById(groupCourse, groupCourses)) {
             this.groupCourses.add(groupCourse);
         } else {
             System.out.println(" !Course already exists!");
@@ -31,7 +31,7 @@ public class Group implements Indexable, Serializable {
     }
 
     public void addGroupStudents(Student student) {
-        if (!new DuplicateChecker().idDublicateCheck(student, groupStudents)) {
+        if (!new DuplicateChecker().isDuplicateById(student, groupStudents)) {
             this.groupStudents.add(student);
         } else {
             System.out.println(" !Student already exists!");
