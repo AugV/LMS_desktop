@@ -1,42 +1,47 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Group {
+public class Group implements Indexable, Serializable {
     private int groupID;
     private String name;
 
     ArrayList<Student> groupStudents = new ArrayList();
+    ArrayList<Course> groupCourses = new ArrayList();
 
-    public Group(int groupID, String name) {
-        this.groupID = groupID;
+
+    public void addGroupCourse(Course groupCourse) {
+        if (!new DuplicateChecker().isDuplicateById(groupCourse, groupCourses)) {
+            this.groupCourses.add(groupCourse);
+        } else {
+            System.out.println(" !Course already exists!");
+        }
+    }
+
+    public Group(int id, String name) {
+        this.groupID = id;
         this.name = name;
     }
 
-    public int getGroupID() {
+    public int getId() {
         return groupID;
-    }
-    public void setGroupID(int groupID) {
-        this.groupID = groupID;
-    }
-
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
     }
 
     public ArrayList<Student> getGroupStudents() {
         return groupStudents;
     }
-    public void printGroupStudents(){
-        for (Student student : groupStudents) {
-            System.out.println(student);
+
+    public void addGroupStudents(Student student) {
+        if (!new DuplicateChecker().isDuplicateById(student, groupStudents)) {
+            this.groupStudents.add(student);
+        } else {
+            System.out.println(" !Student already exists!");
         }
     }
-    public void setGroupStudents(Student student) {
-        student.setGroupFromGroup(this);
-        this.groupStudents.add(student);
+
+    public ArrayList<Course> getGroupCourses() {
+        return groupCourses;
     }
+
 
     @Override
     public String toString() {
@@ -45,9 +50,5 @@ public class Group {
                 ", name='" + name + '\'' +
                 ", groupStudents=" + groupStudents +
                 '}';
-    }
-
-    public void setStudentsFromStudents(Student student) {
-        this.groupStudents.add(student);
     }
 }

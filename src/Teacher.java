@@ -7,19 +7,16 @@ public class Teacher extends Person {
         super(loc_id, loc_name, loc_surname);
     }
 
-    public Teacher() {
-        super();
-    }
-
     public ArrayList<Course> getTeacherCourses() {
         return teacherCourses;
     }
 
-    public void setTeacherCourses(Course course) {
-        teacherCourses.add(course);
-    }
-    public void removeTeacherCourse(Course course){
-        teacherCourses.remove(course);
+    public void addTeacherCourses(Course course) {
+        if (!new DuplicateChecker().isDuplicateById(course, teacherCourses)) {
+            teacherCourses.add(course);
+        } else {
+            System.out.println(" !Student already exists!");
+        }
     }
 
 
@@ -27,6 +24,9 @@ public class Teacher extends Person {
     public String toString() {
         return "ID: " + this.getId() +
                 ", Name: " + this.getName() +
-                ", Surname: " + this.getSurname();
+                ", Surname: " + this.getSurname() +
+                "Teacher{" +
+                "teacherCourses=" + teacherCourses +
+                '}';
     }
 }

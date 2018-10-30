@@ -1,79 +1,53 @@
+import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Task {
+public class Task implements Indexable, Serializable {
 
     private int taskID;
-    private String  name;
-    private String  taskCondition;
-    private String  deadline;
-    private String  points;
-    Course taskCourse;
-    Teacher taskTeacher;
+    private String name;
+    private String taskCondition;
+    private String deadline;
+    private String points;
+    private boolean allowSubmitCompletedTask = true;
+    private ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
 
-    public Teacher getTaskTeacher() {
-        return taskTeacher;
-    }
-
-    public void setTaskTeacher(Teacher taskTeacher) {
-        this.taskTeacher = taskTeacher;
-    }
-
-    public Task(int taskID, String name, String taskCondition, String deadline, String points, Teacher teacher) {
-        this.taskID = taskID;
+    public Task(int id, String name, String taskCondition, String deadline, String points) {
+        this.taskID = id;
         this.name = name;
         this.taskCondition = taskCondition;
         this.deadline = deadline;
         this.points = points;
-        this.taskTeacher = teacher;
     }
 
-    public Task() {
-    }
-
-    public void setTaskID(int taskID) {
-        this.taskID = taskID;
-    }
-    public int getTaskID() {
+    public int getId() {
         return taskID;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setTaskCondition(String taskCondition) {
-        this.taskCondition = taskCondition;
-    }
-    public String getTaskCondition() {
-        return taskCondition;
+    public CompletedTask getCompletedTaskById(int id){
+        CompletedTask completedTaskMatch = null;
+        for (CompletedTask completedTask : taskCompletedTasks) {
+            if (completedTask.getId()== id) {
+                completedTaskMatch = completedTask;
+                break;
+            }
+        }
+        return completedTaskMatch;
     }
 
-    public void setDeadline(String deadline) {
-        this.deadline = deadline;
-    }
-    public String getDeadline() {
-        return deadline;
+    public void setAllowSubmitCompletedTask(boolean allowSubmitCompletedTask) {
+        this.allowSubmitCompletedTask = allowSubmitCompletedTask;
     }
 
-    public void setPoints(String points) {
-        this.points = points;
-    }
-    public String getPoints() {
-        return points;
+    public ArrayList<CompletedTask> getTaskCompletedTasks() {
+        return taskCompletedTasks;
     }
 
-    public void setTaskCourse(Course taskCourse) {
-        taskCourse.addCourseTasks(this);
-        this.taskCourse = taskCourse;
-    }
-
-    public void setTaskFromTask(Course taskCourse) {
-        this.taskCourse = taskCourse;
-    }
-    public Course getTaskCourse() {
-        return taskCourse;
+    public void addTaskCompletedTask(CompletedTask completedTask) {
+        if(allowSubmitCompletedTask && !new DuplicateChecker().isDuplicateById(completedTask, taskCompletedTasks)){
+        this.taskCompletedTasks.add(completedTask);}
+        else{
+            System.out.println("Sorry, task is closed or you already submitted this task");
+        }
     }
 
     @Override
@@ -83,7 +57,6 @@ public class Task {
                 ", taskCondition='" + taskCondition + '\'' +
                 ", deadline='" + deadline + '\'' +
                 ", points='" + points + '\'' +
-                ", taskCourse=" + taskCourse +
                 '}';
     }
 }

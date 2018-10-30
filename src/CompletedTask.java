@@ -1,88 +1,40 @@
+import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
-public class CompletedTask {
+public class CompletedTask implements Indexable, Serializable {
+    private static DateFormat dateFormat= new SimpleDateFormat("yyyy/mm/dd");
+    private static Calendar calendar = Calendar.getInstance();
+
     private int taskID;
     private String answer,
-            grade,
-            submissionDate,
-            gradeDate,
-            comment;
-    Task task = new Task();
-    Teacher teacher= new Teacher();
-    Student student;
+    grade,
+    submissionDate,
+    gradeDate;
 
-    public CompletedTask(int id, String answer, String grade, String submissionDate, String gradeDate, String comment) {
+    public CompletedTask(int id, String answer) {
         this.taskID = id;
         this.answer = answer;
-        this.grade = grade;
-        this.submissionDate = submissionDate;
-        this.gradeDate = gradeDate;
-        this.comment = comment;
+        this.submissionDate = dateFormat.format(calendar.getTime());
     }
 
-    public int getTaskID() {
+    public int getId() {
         return taskID;
-    }
-
-    public void setTaskID(int taskID) {
-        this.taskID = taskID;
     }
 
     public String getAnswer() {
         return answer;
     }
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
+
 
     public String getGrade() {
         return grade;
     }
+
     public void setGrade(String grade) {
         this.grade = grade;
-    }
-
-    public String getSubmissionDate() {
-        return submissionDate;
-    }
-    public void setSubmissionDate(String submissionDate) {
-        this.submissionDate = submissionDate;
-    }
-
-    public String getGradeDate() {
-        return gradeDate;
-    }
-    public void setGradeDate(String gradeDate) {
-        this.gradeDate = gradeDate;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    public Task getTask() {
-        return task;
-    }
-    public void setTask(Task task) {
-        this.task = task;
-    }
-
-    public Teacher getTeacher() {
-        return teacher;
-    }
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
-    }
-
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        student.setStudentCompletedTasks(this);
-        this.student = student;
+        this.gradeDate =  dateFormat.format(calendar.getTime());
     }
 
     @Override
@@ -92,10 +44,6 @@ public class CompletedTask {
                 ", grade='" + grade + '\'' +
                 ", submissionDate='" + submissionDate + '\'' +
                 ", gradeDate='" + gradeDate + '\'' +
-                ", comment='" + comment + '\'' +
-                ", task=" + task.getName() +
-                ", teacher=" + teacher.getName() +
-                ", student=" + student.getName() +
                 '}';
     }
 }

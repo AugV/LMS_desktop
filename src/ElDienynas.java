@@ -1,49 +1,51 @@
 public class ElDienynas {
 
+    //private University university;
+
+    public static void main(String[] args) {
+
+        University university = new University();
 
 
-
-    public static void main(String[] args){
-
-
-        University VGTU = new University();
 //region
-        VGTU.setTeacherList(1, "Tadas", "jablinksis");
-        VGTU.setTeacherList(2, "Laimonas", "Stanislovsksi");
 
-        VGTU.addStudent(1, "studentas1", "studentopavard1");
-        VGTU.addStudent(2, "studentas2", "studentopavard2");
+/*
+        university.addTeacher(1,"Tadas", "jablinksis");
+        university.addTeacher(2,"Laimonas", "Stanislovsksi");
 
-        VGTU.addCourse(1,"matematika");
-        VGTU.addCourse(2,"darbaiXD");
-        VGTU.addCourse(3,"darkoks velnias");
+        university.addGroup(1,"GRUPE1");
+        university.addGroup(2,"GRUPE2");
 
-        VGTU.addTask(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5");
-        VGTU.addTask(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1");
+        university.getGroupByID(1).addGroupStudents(new Student(1, "Petras", "Studentauskas"));
+        university.getGroupByID(2).addGroupStudents(new Student(2, "Studenis", "Studavicius"));
 
-        VGTU.setGroupList(1, "GRUPE1");
-        VGTU.setGroupList(2, "GRUPE2");
+        university.addCourse(new Course(
+                1,"matematika", "Matematikos kursas", university.getTeacherByID(1), university.getGroupByID(2)));
+        university.addCourse(new Course(
+                2,"darbaiXD", "Darbuko salalai", university.getTeacherByID(2), university.getGroupByID(1)));
+        university.addCourse(new Course(
+                3,"darkoks velnias", "dar vienas niekam nereikalingas kursas", university.getTeacherByID(1), university.getGroupByID(2)));
 
-        VGTU.addCompletedTask(1, "atsakymas1", "balas1", "data1", "ivertdata1", "komentaras1");
-        VGTU.addCompletedTask(2, "atsakymas2", "balas2", "data2", "ivertdata2", "komentaras2");
+        Task task1 = new Task(1,"primasTaskas", "ejozaselse per ezereli", "08-09", "5" );
+        university.getCourseByID(1).addCourseTask(task1);
+
+        Task task2 = new Task(2,"antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1");
+        university.getCourseByID(2).addCourseTask(task2);
+
+
+        university.getCourseByID(1).getCourseTaskByID(1).addTaskCompletedTask(new CompletedTask(
+                1, "teisingas atsakymas, kolegos"));
+        university.getCourseByID(2).getCourseTaskByID(2).addTaskCompletedTask(new CompletedTask(
+                2, "neteisingas atsakymas, biciuli"));
+*/
 
         //endregion
-        //VGTU.removeTeacher();
-        //VGTU.printTeacherList();
-        //VGTU.printGroupList();
-        //VGTU.getGroupList().get(0).printGroupStudents();
-        //VGTU.getGroupList().get(0).setGroupStudents(VGTU.getStudentList().get(0));
-        //VGTU.getGroupList().get(0).printGroupStudents();
-        //VGTU.getCourseList().get(0).printCourseInfo();
 
-        VGTU.getCourseList().get(0).addCourseTasks(VGTU.getTaskList().get(0));
-        VGTU.getCourseList().get(0).addCourseTasks(VGTU.getTaskList().get(1));
-        VGTU.getCourseList().get(0).printCourseTasks();
-        /*try {
-            System.out.println(getTeacherByID(14, VGTU).getName());
-        }
-        catch(NullPointerException e){
-            System.out.println("No such teacher, my man");
-        }*/
+        university = new SerializeDeserialize().deserialize("universityObject.ser");
+
+        new BasicInterface(university).frontPageInteraction();
+
+        new SerializeDeserialize().serialize(university, "universityObject.ser" );
     }
-}
+
+    }

@@ -1,12 +1,9 @@
+import java.io.Serializable;
 
-abstract public class Person {
+abstract public class Person implements Indexable, Serializable {
 
     private int id;
-
-
     private String name;
-
-
     private String surname;
 
     public Person(int loc_id, String loc_name, String loc_surname) {
@@ -15,26 +12,14 @@ abstract public class Person {
         this.surname = loc_surname;
     }
 
-    public Person() {
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
     public int getId() {
         return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
     public String getName() {
         return name;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
     public String getSurname() {
         return surname;
     }
