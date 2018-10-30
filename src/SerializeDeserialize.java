@@ -24,6 +24,7 @@ public class SerializeDeserialize {
             university = (University) in.readObject();
             in.close();
             fileIn.close();
+            System.out.println("Data read from " + deserializationFileName);
         } catch (IOException i) {
             i.printStackTrace();
         } catch (ClassNotFoundException c) {

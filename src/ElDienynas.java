@@ -5,15 +5,21 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class ElDienynas extends Application {
+    University university = new University();
+
+    public void init() {
+        university = new SerializeDeserialize().deserialize("universityObject.ser");
+    }
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+//           Parent root = FXMLLoader.load(getClass().getResource("ApplicationInterface.fxml"));
+        ControlerForFXML controlerForFXML = new ControlerForFXML();
+        controlerForFXML.setUniversity(university);
             primaryStage.setTitle("TEST");
-            primaryStage.setScene(new Scene(root, 600, 800));
+            primaryStage.setScene(new Scene(controlerForFXML, 600, 800));
             primaryStage.show();
-
-        University university = new University();
 //region
 
 /*
@@ -47,10 +53,12 @@ public class ElDienynas extends Application {
 */
 
         //endregion
-        university = new SerializeDeserialize().deserialize("universityObject.ser");
 
-        new BasicInterface(university).frontPageInteraction();
+        //new BasicInterface(university).frontPageInteraction();
 
+    }
+
+    public void stop() {
         new SerializeDeserialize().serialize(university, "universityObject.ser" );
     }
 
