@@ -1,2 +1,0 @@
-ID: 1, Name: Tadas, Surname: jablinksis
-ID: 2, Name: Laimonas, Surname: Stanislovsksi

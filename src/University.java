@@ -2,6 +2,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class University implements Serializable {
+    private static final long serialVersionUID = 6529685098267757690L;
+
     private ArrayList<Teacher> teacherList = new ArrayList();
     private ArrayList<Group> groupList = new ArrayList();
     private ArrayList<Course> courseList = new ArrayList();
