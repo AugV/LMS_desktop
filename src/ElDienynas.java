@@ -1,12 +1,19 @@
-public class ElDienynas {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-    //private University university;
+public class ElDienynas extends Application {
 
-    public static void main(String[] args) {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            primaryStage.setTitle("TEST");
+            primaryStage.setScene(new Scene(root, 600, 800));
+            primaryStage.show();
 
         University university = new University();
-
-
 //region
 
 /*
@@ -40,7 +47,6 @@ public class ElDienynas {
 */
 
         //endregion
-
         university = new SerializeDeserialize().deserialize("universityObject.ser");
 
         new BasicInterface(university).frontPageInteraction();
@@ -48,4 +54,8 @@ public class ElDienynas {
         new SerializeDeserialize().serialize(university, "universityObject.ser" );
     }
 
+    public static void main(String[] args) {
+        launch(args);
+
     }
+}
