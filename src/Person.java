@@ -12,6 +12,7 @@ abstract public class Person implements Indexable, Serializable {
         this.surname = loc_surname;
     }
 
+
     public int getId() {
         return id;
     }

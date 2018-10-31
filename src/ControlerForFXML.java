@@ -9,12 +9,15 @@ import javafx.scene.control.TabPane;
 import javafx.scene.paint.Paint;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ControlerForFXML extends TabPane  {
 
     University university;
 
     public void setUniversity(University university) {
+        System.out.println("ayeee");
         this.university = university;
     }
 
@@ -25,7 +28,8 @@ public class ControlerForFXML extends TabPane  {
     private ListView teacherListView;
 
 
-    public ControlerForFXML() {
+    public ControlerForFXML(University university) {
+        this.university = university;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ApplicationInterface.fxml"));
         loader.setController(this);
         System.out.println("GOOOO");
@@ -39,11 +43,9 @@ public class ControlerForFXML extends TabPane  {
 
     @FXML
     private void initialize(){
-        System.out.println("noway");
-        ObservableList<String> items = FXCollections.observableArrayList (
-                new Printer().printObjectArray(university.getTeacherList()));
-        teacherListView.setItems(items);
-        //TODO sukisti lista i listviewa
+        teacherListView.setItems(new Utility().objectListToObservableList(university.getTeacherList()));
+
+
 
     }
 }

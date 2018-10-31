@@ -15,8 +15,8 @@ public class ElDienynas extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 //           Parent root = FXMLLoader.load(getClass().getResource("ApplicationInterface.fxml"));
-        ControlerForFXML controlerForFXML = new ControlerForFXML();
-        controlerForFXML.setUniversity(university);
+        ControlerForFXML controlerForFXML = new ControlerForFXML(university);
+        //controlerForFXML.setUniversity(university);
             primaryStage.setTitle("TEST");
             primaryStage.setScene(new Scene(controlerForFXML, 600, 800));
             primaryStage.show();
