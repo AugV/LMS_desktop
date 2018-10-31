@@ -10,9 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-         prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" type="TabPane"
-         xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<fx:root id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <tabs>
         <Tab id="teacherTab" text="Teachers">
 
@@ -21,26 +19,24 @@
                     <children>
                         <HBox id="teacherHBox" prefHeight="82.0" prefWidth="600.0">
                             <children>
-                                <Button id="button" fx:id="button" mnemonicParsing="false" prefHeight="53.0"
-                                        prefWidth="81.0" text="Add Teacher">
+                                <Button id="button" fx:id="btAddTeacher" mnemonicParsing="false" prefHeight="53.0" prefWidth="81.0" text="Add Teacher">
                                     <HBox.margin>
-                                        <Insets left="10.0" top="10.0"/>
+                                        <Insets left="10.0" top="10.0" />
                                     </HBox.margin>
                                 </Button>
-                                <Button id="teacherSaveButton" fx:id="button2" mnemonicParsing="false" prefHeight="53.0"
-                                        prefWidth="81.0" text="Save to file">
+                                <Button id="teacherSaveButton" fx:id="btSave" mnemonicParsing="false" prefHeight="53.0" prefWidth="81.0" text="Save to file">
                                     <HBox.margin>
-                                        <Insets left="10.0" top="10.0"/>
+                                        <Insets left="10.0" top="10.0" />
                                     </HBox.margin>
                                 </Button>
                             </children>
                         </HBox>
                         <ScrollPane id="teacherScrollPane" prefHeight="191.0" prefWidth="600.0">
                             <content>
-                                <ListView fx:id="teacherListView" prefHeight="262.0" prefWidth="573.0"/>
+                                <ListView fx:id="teacherListView" prefHeight="262.0" prefWidth="573.0" />
                             </content>
                             <VBox.margin>
-                                <Insets left="10.0" top="10.0"/>
+                                <Insets left="10.0" top="10.0" />
                             </VBox.margin>
                         </ScrollPane>
                     </children>
@@ -49,7 +45,7 @@
         </Tab>
         <Tab text="Untitled Tab 2">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
         </Tab>
     </tabs>
