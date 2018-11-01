@@ -31,7 +31,7 @@
                                 </Button>
                             </children>
                         </HBox>
-                        <ScrollPane id="teacherScrollPane" prefHeight="191.0" prefWidth="600.0">
+                        <ScrollPane id="teacherScrollPane" hbarPolicy="ALWAYS" prefHeight="191.0" prefWidth="600.0">
                             <content>
                                 <ListView fx:id="teacherListView" prefHeight="262.0" prefWidth="573.0" />
                             </content>

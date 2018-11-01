@@ -2,20 +2,18 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class TeacherAddWindowController extends AnchorPane {
     University university;
-
+    ControlerForFXML superController;
+    Stage stage;
 
     @FXML
     private TextField teacherId;
@@ -26,8 +24,16 @@ public class TeacherAddWindowController extends AnchorPane {
     @FXML
     private Button btTeacherAdd;
 
-    public TeacherAddWindowController(University university){
+    public TeacherAddWindowController(University university, ControlerForFXML superController){
+        this.superController = superController;
         this.university = university;
+        setUpTheLoader();
+        stage = new Stage();
+        stage.setScene(new Scene(this, 450, 450));
+        stage.show();
+    }
+
+    private void setUpTheLoader() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TeacherAddWindow.fxml"));
         loader.setController(this);
         loader.setRoot(this);
@@ -36,14 +42,18 @@ public class TeacherAddWindowController extends AnchorPane {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //root = FXMLLoader.load(getClass().getResource("TeacherAddWindow.fxml"));
     }
 
-    public void initialize() {
+    @FXML
+    private void initialize() {
         btTeacherAdd.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.addTeacher(Integer.parseInt(teacherId.getText()), teacherName.getText(), teacherSurname.getText());
+                university.addTeacher(  Integer.parseInt(teacherId.getText()),
+                                        teacherName.getText(),
+                                        teacherSurname.getText());
+                superController.updateListView();
+                stage.close();
             }
 
         });

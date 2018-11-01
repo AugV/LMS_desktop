@@ -14,12 +14,9 @@ public class ElDienynas extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//           Parent root = FXMLLoader.load(getClass().getResource("ApplicationInterface.fxml"));
         ControlerForFXML controlerForFXML = new ControlerForFXML(university);
-        //controlerForFXML.setUniversity(university);
-            primaryStage.setTitle("TEST");
-            primaryStage.setScene(new Scene(controlerForFXML, 600, 800));
-            primaryStage.show();
+        primaryStage.setScene(new Scene(controlerForFXML, 600, 800));
+        primaryStage.show();
 //region
 
 /*
@@ -59,7 +56,7 @@ public class ElDienynas extends Application {
     }
 
     public void stop() {
-        new SerializeDeserialize().serialize(university, "universityObject.ser" );
+        new SerializeDeserialize().serialize(university, "universityObject.ser");
     }
 
     public static void main(String[] args) {
