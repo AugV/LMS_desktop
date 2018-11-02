@@ -1,6 +1,4 @@
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -14,8 +12,9 @@ public class ElDienynas extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ControlerForFXML controlerForFXML = new ControlerForFXML(university);
-        primaryStage.setScene(new Scene(controlerForFXML, 600, 800));
+        ControlerTeachersWindow controlerTeachersWindow = new ControlerTeachersWindow(university);
+        controlerTeachersWindow.localInitialize();
+        primaryStage.setScene(new Scene(controlerTeachersWindow, 600, 800));
         primaryStage.show();
 //region
 

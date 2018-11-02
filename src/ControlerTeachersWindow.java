@@ -7,39 +7,42 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-
-import javax.naming.Context;
 import java.io.IOException;
 
 
-public class ControlerForFXML extends TabPane {
+public class ControlerTeachersWindow extends TabPane {
     University university;
-
 
     @FXML
     private Button btAddTeacher;
     @FXML
     private Button btSave;
-
     @FXML
     private ListView teacherListView;
 
 
-    public ControlerForFXML(University university) {
+    public ControlerTeachersWindow(University university) {
         this.university = university;
         setUpTheLoader();
     }
 
-    @FXML
-    private void initialize() {
+    public void localInitialize(){
         teacherListView.setItems(new Utility().objectListToObservableList(university.getTeacherList()));
 
         btAddTeacher.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
                 createNewController();
             }});
+    }
+
+    @FXML
+    private void initialize() {
+        /*teacherListView.setItems(new Utility().objectListToObservableList(university.getTeacherList()));
+
+        btAddTeacher.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                createNewController();
+            }});*/
         }
 
     private void setUpTheLoader() {
@@ -53,7 +56,7 @@ public class ControlerForFXML extends TabPane {
         }
     }
     private void createNewController() {
-        TeacherAddWindowController addWindowController = new TeacherAddWindowController(university,this);
+        ControlerTeacherAdd addWindowController = new ControlerTeacherAdd(university,this);
     }
 
     public void updateListView(){

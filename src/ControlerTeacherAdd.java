@@ -10,9 +10,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TeacherAddWindowController extends AnchorPane {
+public class ControlerTeacherAdd extends AnchorPane {
     University university;
-    ControlerForFXML superController;
+    ControlerTeachersWindow superController;
     Stage stage;
 
     @FXML
@@ -24,7 +24,7 @@ public class TeacherAddWindowController extends AnchorPane {
     @FXML
     private Button btTeacherAdd;
 
-    public TeacherAddWindowController(University university, ControlerForFXML superController){
+    public ControlerTeacherAdd(University university, ControlerTeachersWindow superController){
         this.superController = superController;
         this.university = university;
         setUpTheLoader();
