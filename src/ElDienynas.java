@@ -13,7 +13,6 @@ public class ElDienynas extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         ControlerTeachersWindow controlerTeachersWindow = new ControlerTeachersWindow(university);
-        controlerTeachersWindow.localInitialize();
         primaryStage.setScene(new Scene(controlerTeachersWindow, 600, 800));
         primaryStage.show();
 //region
