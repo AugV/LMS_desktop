@@ -5,7 +5,9 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
+import javafx.scene.text.FontSmoothingType;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 
 import java.io.IOException;
 
@@ -31,17 +33,17 @@ public class ControlerTeachersWindow extends TabPane {
     private void initialize() {
         teacherListView.getItems().addAll(university.getTeacherList());
 
-
         teacherListView.setCellFactory(lv -> {
+//            Cell cell = new Cell((ListView) lv);
+//            cell.makeOptionDeleteFrom();
+//            return cell.getCell();
 
-            ListCell<Teacher> cell = new ListCell<>();
-            ContextMenu contextMenu = new ContextMenu();
-            MenuItem deleteItem = new MenuItem();
-            deleteItem.textProperty().bind(Bindings.format("Delete"));
-            deleteItem.setOnAction(event -> teacherListView.getItems().remove(cell.getItem()));
-            contextMenu.getItems().addAll(deleteItem);
+            /*ListCell<Teacher> cell = new ListCell<>();
             Text text = new Text();
             cell.setGraphic(text);
+            text.setTextAlignment(TextAlignment.CENTER);
+            text.setStyle("-fx-fill: -fx-text-background-color;");
+            text.setFontSmoothingType(FontSmoothingType.LCD);
             text.textProperty().bind(Bindings.createStringBinding(() -> {
                 if (cell.isEmpty()) {
                     return null ;
@@ -49,23 +51,47 @@ public class ControlerTeachersWindow extends TabPane {
                     return cell.getItem().toString();
                 }
             }, cell.emptyProperty(), cell.itemProperty()));
+            return cell;*/
 
-            cell.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
-                if (isNowEmpty) {
-                    cell.setContextMenu(contextMenu);
-                } else {
-                    cell.setContextMenu(contextMenu);
+            ListCell<Teacher> cell = new ListCell<Teacher>() {
+                private Text text = new Text();
+                {
+                    this.setGraphic(text);
+                    text.setTextAlignment(TextAlignment.CENTER);
+                    text.setStyle("-fx-fill: -fx-text-background-color;");
+                    text.setFontSmoothingType(FontSmoothingType.LCD);
+                    this.textProperty().bind(Bindings.format("Delete"));
+                    this.textProperty().bind(Bindings.format("Delete"));
+                    //TODO https://stackoverflow.com/questions/46671643/javafx-tableview-displays-null-values
                 }
-            });
-            return cell;
-        });
 
+                @Override
+                protected void updateItem(Teacher item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty) {
+                        text.setText(null);
+                    } else {
+                        text.setText(item.getName());
+                    }
+                }
+            };
+            return cell;
+
+
+        });
 
         btAddTeacher.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
                 createNewController();
             }
         });
+
+//        btSave.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent event) {
+//
+//            }
+//        });
     }
 
     private void setUpTheLoader() {
