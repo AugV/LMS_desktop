@@ -60,9 +60,24 @@ public class ControlerTeachersWindow extends TabPane {
                     text.setTextAlignment(TextAlignment.CENTER);
                     text.setStyle("-fx-fill: -fx-text-background-color;");
                     text.setFontSmoothingType(FontSmoothingType.LCD);
-                    this.textProperty().bind(Bindings.format("Delete"));
-                    this.textProperty().bind(Bindings.format("Delete"));
+
+                    //this.textProperty().bind(Bindings.format("Delete"));
+                    //this.textProperty().bind(Bindings.format("Delete"));
                     //TODO https://stackoverflow.com/questions/46671643/javafx-tableview-displays-null-values
+
+                    ContextMenu contextMenu = new ContextMenu();
+                    MenuItem item = new MenuItem();
+                    item.textProperty().bind(Bindings.format("Delete"));
+                    contextMenu.getItems().addAll(item);
+
+
+                    this.emptyProperty().addListener((obs, wasEmpty, isNowEmpty) -> {
+                        if (isNowEmpty) {
+                            this.setContextMenu(contextMenu);
+                        } else {
+                            this.setContextMenu(contextMenu);
+                        }
+                    });
                 }
 
                 @Override
@@ -71,9 +86,10 @@ public class ControlerTeachersWindow extends TabPane {
                     if (empty) {
                         text.setText(null);
                     } else {
-                        text.setText(item.getName());
+                        text.setText(item.getId() + ". " +item.getName() + " "+ item.getSurname());
                     }
                 }
+
             };
             return cell;
 

@@ -35,7 +35,7 @@ public class Cell {
     }
 
     public void bindToCell() {
-        System.out.println("go");
+
         text.textProperty().bind(Bindings.createStringBinding(() -> {
             if (cell.isEmpty()) {
               return null;
@@ -43,7 +43,7 @@ public class Cell {
            return cell.getItem().toString();
              }
         }, cell.emptyProperty(), cell.itemProperty()));
-        System.out.println("No");
+
     }
 
     public void makeOptionDeleteFrom() {
