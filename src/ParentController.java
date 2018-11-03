@@ -1,13 +1,12 @@
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import java.io.IOException;
 
 public class ParentController extends TabPane {
-    University university;
-    String addTeacherFXML = "TeacherAddWindow.fxml";
+    private University university;
+    private String addTeacherFXML = "TeacherAddWindow.fxml";
+    private String saveTeacherFXML = "saveTeacherWindow.fxml";
 
     @FXML
     private Button btAddTeacher;
@@ -33,7 +32,8 @@ public class ParentController extends TabPane {
 
         btAddTeacher.setOnAction(event -> { createTeacherAddWindowController();}
         );
-        //btSave.setOnAction(event -> {createTeacherSaveWindowController();});
+
+        btSave.setOnAction(event -> {createTeacherSaveWindowController();});
 
 
     }
@@ -50,11 +50,11 @@ public class ParentController extends TabPane {
     }
 
     private void createTeacherSaveWindowController() {
-
+            new SaveTeachersController(university, this, saveTeacherFXML);
     }
 
     private void createTeacherAddWindowController() {
-        addTeacherControler teacherWindow = new addTeacherControler(university, this, addTeacherFXML);
+     new AddTeacherControler(university, this, addTeacherFXML);
 
     }
 
