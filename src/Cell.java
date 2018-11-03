@@ -5,7 +5,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
-public class Cell extends ListCell {
+public class Cell {
     private ListView listView;
     private ListCell<Teacher> cell;
     private ContextMenu contextMenu;
@@ -64,7 +64,6 @@ public class Cell extends ListCell {
                 superControler.updateListView();
             }
         });
-
         contextMenu.getItems().addAll(item);
     }
 

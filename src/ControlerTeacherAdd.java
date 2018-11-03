@@ -29,7 +29,7 @@ public class ControlerTeacherAdd extends AnchorPane {
         this.university = university;
         setUpTheLoader();
         stage = new Stage();
-        stage.setScene(new Scene(this, 450, 450));
+        stage.setScene(new Scene(this));
         stage.show();
     }
 
