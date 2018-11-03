@@ -1,6 +1,7 @@
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
+
 import java.io.IOException;
 
 public class ParentController extends TabPane {
@@ -35,16 +36,20 @@ public class ParentController extends TabPane {
             cell.makeDeleteOption();
             return cell.getCell();
         });
-        btAddTeacher.setOnAction(event -> { createTeacherAddWindowController();}
+        btAddTeacher.setOnAction(event -> {
+                    createTeacherAddWindowController();
+                }
         );
-        btSave.setOnAction(event -> {createTeacherSaveWindowController();});
+        btSave.setOnAction(event -> {
+            createTeacherSaveWindowController();
+        });
 
         courseListView.getItems().addAll(university.getCourseList());
-//        courseListView.setCellFactory(lv -> {
-//            CustomCell cell = new CustomCell(teacherListView, this, university);
-//            cell.makeDeleteOption();
-//            return cell.getCell();
-//        });
+        courseListView.setCellFactory(lv -> {
+            CourseCell cell = new CourseCell(teacherListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
         btAddCourse.setOnAction(event -> createCourseAddWindowController());
     }
 
@@ -61,14 +66,15 @@ public class ParentController extends TabPane {
     }
 
     private void createCourseAddWindowController() {
-        new AddCourseController(university,this, addCourseFXML);
+        new AddCourseController(university, this, addCourseFXML);
     }
+
     private void createTeacherSaveWindowController() {
-            new SaveTeachersController(university, this, saveTeacherFXML);
+        new SaveTeachersController(university, this, saveTeacherFXML);
     }
 
     private void createTeacherAddWindowController() {
-     new AddTeacherControler(university, this, addTeacherFXML);
+        new AddTeacherControler(university, this, addTeacherFXML);
 
     }
 
@@ -78,7 +84,7 @@ public class ParentController extends TabPane {
     }
 
     public void updateCourseListView() {
-        teacherListView.setItems(new Utility().objectListToObservableList(university.getCourseList()));
+        courseListView.setItems(new Utility().objectListToObservableList(university.getCourseList()));
         System.out.println("CourseList updated");
     }
 

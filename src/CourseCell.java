@@ -10,7 +10,7 @@ public class CourseCell extends CustomCell {
         super(listView, superControler, university);
     }
 
-    public void makeDeleteOption() {
+    public void createSelections() {
         MenuItem deletionItem = new MenuItem();
         deletionItem.textProperty().bind(Bindings.format("Delete"));
         deletionItem.setOnAction(new EventHandler<ActionEvent>() {

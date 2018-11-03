@@ -42,8 +42,10 @@ public class AddCourseController extends ChildControler{
                     System.out.println(" !Group with this ID does not exist!");
                 }
                 university.addCourse(course);
+                superController.updateCourseListView();
+                stage.close();
             }
         });
-        stage.close();
+
     }
 }
