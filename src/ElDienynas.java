@@ -1,12 +1,20 @@
-public class ElDienynas {
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-    //private University university;
+public class ElDienynas extends Application {
+    University university = new University();
 
-    public static void main(String[] args) {
+    public void init() {
+        university = new SerializeDeserialize().deserialize("universityObject.ser");
+    }
 
-        University university = new University();
 
-
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        ParentController parentController = new ParentController(university);
+        primaryStage.setScene(new Scene(parentController));
+        primaryStage.show();
 //region
 
 /*
@@ -41,11 +49,16 @@ public class ElDienynas {
 
         //endregion
 
-        university = new SerializeDeserialize().deserialize("universityObject.ser");
-
-        new BasicInterface(university).frontPageInteraction();
-
-        new SerializeDeserialize().serialize(university, "universityObject.ser" );
-    }
+        //new BasicInterface(university).frontPageInteraction();
 
     }
+
+    public void stop() {
+        new SerializeDeserialize().serialize(university, "universityObject.ser");
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+
+    }
+}

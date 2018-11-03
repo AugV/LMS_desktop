@@ -98,6 +98,10 @@ public class University implements Serializable {
         }
     }
 
+    public void removeTeacher(Teacher teacherToRemove){
+        teacherList.remove(teacherToRemove);
+    }
+
     public void removeTeacher() {
         System.out.println("Enter ID of the teacher you wish to remove:");
         Teacher teacherToRemove = getTeacherByID(new InputKeyboard().getUserInputInt());

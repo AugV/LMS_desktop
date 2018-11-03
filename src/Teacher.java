@@ -25,8 +25,8 @@ public class Teacher extends Person {
         return "ID: " + this.getId() +
                 ", Name: " + this.getName() +
                 ", Surname: " + this.getSurname() +
-                "Teacher{" +
-                "teacherCourses=" + teacherCourses +
+                " Teacher{" +
+                " teacherCourses= " + teacherCourses +
                 '}';
     }
 }
