@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/GroupCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroupCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/University.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,12 +20,12 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="8524" />
+          <entry key="java" value="8574" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8524" />
+          <entry key="JAVA" value="8574" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="XML" value="9" />
         </counts>
@@ -31,13 +33,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="8" />
-          <entry key="java" value="64" />
+          <entry key="java" value="66" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="64" />
+          <entry key="JAVA" value="66" />
           <entry key="XML" value="12" />
         </counts>
       </usages-collector>
@@ -61,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ParentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="92" column="33" lean-forward="true" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
+            <state relative-caret-position="469">
+              <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3019#3020#0" expanded="true" />
@@ -79,20 +81,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GroupCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="43" column="58" lean-forward="true" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+            <state relative-caret-position="248">
+              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+              <folding>
+                <element signature="e#1044#1415#0" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/University.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding>
                 <element signature="e#449#450#0" expanded="true" />
                 <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
                 <element signature="method#addGroup#0;class#University#0" />
                 <element signature="method#addGroup#1;class#University#0" />
                 <element signature="method#getGroupByID#0;class#University#0" />
@@ -192,13 +208,13 @@
         <option value="$PROJECT_DIR$/src/CourseCell.java" />
         <option value="$PROJECT_DIR$/src/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/Group.java" />
-        <option value="$PROJECT_DIR$/src/StudentCell.java" />
         <option value="$PROJECT_DIR$/src/AddGroupController.java" />
         <option value="$PROJECT_DIR$/src/AddCoursController.java" />
         <option value="$PROJECT_DIR$/src/AddCourseController.java" />
+        <option value="$PROJECT_DIR$/src/University.java" />
         <option value="$PROJECT_DIR$/src/ParentController.java" />
         <option value="$PROJECT_DIR$/src/GroupCell.java" />
-        <option value="$PROJECT_DIR$/src/University.java" />
+        <option value="$PROJECT_DIR$/src/StudentCell.java" />
       </list>
     </option>
   </component>
@@ -631,28 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="e#1045#1412#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CourseCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" lean-forward="true" selection-start-column="37" selection-end-column="37" />
-          <folding>
-            <element signature="e#1979#2348#0" expanded="true" />
-            <element signature="e#2347#2348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/groupAddWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
@@ -681,10 +675,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="method#addGroup#0;class#University#0" />
+            <element signature="method#addGroup#1;class#University#0" />
+            <element signature="method#getGroupByID#0;class#University#0" />
+            <element signature="method#removeCourse#0;class#University#0" />
+            <element signature="method#addCourse#0;class#University#0" />
+            <element signature="method#getCourseByID#0;class#University#0" />
+            <element signature="method#removeTeacher#0;class#University#0" />
+            <element signature="method#getTeacherByID#0;class#University#0" />
+            <element signature="method#addTeacher#1;class#University#0" />
+            <element signature="method#removeTeacher#1;class#University#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ParentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="92" column="33" lean-forward="true" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
+        <state relative-caret-position="469">
+          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3019#3020#0" expanded="true" />
@@ -697,30 +713,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GroupCell.java">
+    <entry file="file://$PROJECT_DIR$/src/CourseCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="43" column="58" lean-forward="true" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+        <state relative-caret-position="17">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/University.java">
+    <entry file="file://$PROJECT_DIR$/src/GroupCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="248">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
           <folding>
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="method#addGroup#0;class#University#0" />
-            <element signature="method#addGroup#1;class#University#0" />
-            <element signature="method#getGroupByID#0;class#University#0" />
-            <element signature="method#removeCourse#0;class#University#0" />
-            <element signature="method#addCourse#0;class#University#0" />
-            <element signature="method#getCourseByID#0;class#University#0" />
-            <element signature="method#removeTeacher#0;class#University#0" />
-            <element signature="method#getTeacherByID#0;class#University#0" />
-            <element signature="method#addTeacher#1;class#University#0" />
-            <element signature="method#removeTeacher#1;class#University#0" />
+            <element signature="e#1044#1415#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
           </folding>
         </state>
       </provider>

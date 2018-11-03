@@ -118,6 +118,11 @@ public class ParentController extends TabPane {
         System.out.println("TeacherList updated");
     }
 
+    public void updateStudentListView() {
+        studentListView.setItems(new Utility().objectListToObservableList(university.getSelectedGroup().getGroupStudents()));
+        System.out.println("StudentList updated");
+    }
+
     public void updateGroupListView() {
         groupListView.setItems(new Utility().objectListToObservableList(university.getGroupList()));
         System.out.println("GroupList updated");

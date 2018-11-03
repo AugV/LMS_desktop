@@ -14,6 +14,10 @@ public class University implements Serializable {
         this.selectedGroup = (Group) selectedGroup;
     }
 
+    public Group getSelectedGroup() {
+        return selectedGroup;
+    }
+
     //Groups
     //region
     public ArrayList<Group> getGroupList() {

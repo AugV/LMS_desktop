@@ -42,7 +42,7 @@ public class GroupCell extends CustomCell {
             @Override
             public void handle(ActionEvent event) {
                 university.setSelectedGroup(cell.getItem());
-                //superControler.updateGroupListView();
+                superControler.updateStudentListView();
             }
         });
 
