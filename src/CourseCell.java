@@ -35,7 +35,8 @@ public class CourseCell extends CustomCell {
                 dialog.initModality(Modality.APPLICATION_MODAL);
                 //dialog.initOwner(primaryStage);
                 VBox dialogVbox = new VBox(20);
-                dialogVbox.getChildren().add(new Text("This is a Dialog"));
+                Course course= (Course)cell.getItem();
+                dialogVbox.getChildren().add(new Text(course.getCourseInformation()));
                 Scene dialogScene = new Scene(dialogVbox, 300, 200);
                 dialog.setScene(dialogScene);
                 dialog.show();
