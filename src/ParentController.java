@@ -46,8 +46,13 @@ public class ParentController extends TabPane {
             cell.createSelections();
             return cell.getCell();
         });
-        studentListView.getItems().addAll(university.getAllStudents());
 
+        studentListView.getItems().addAll(university.getAllStudents());
+        studentListView.setCellFactory(param -> {
+            StudentCell cell = new StudentCell(groupListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
     }
 
     private void setUpCourseWindow() {
