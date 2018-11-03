@@ -37,6 +37,37 @@
                 </VBox>
             </content>
         </Tab>
+      <Tab id="teacherTab" text="Students">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox id="teacherHBox" prefHeight="82.0" prefWidth="600.0">
+                     <children>
+                        <Button id="button" fx:id="btAddGroup" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Add Group">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TabPane prefHeight="280.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Groups">
+                           <content>
+                              <ListView fx:id="groupListView" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                      <Tab text="Students">
+                           <content>
+                              <ListView fx:id="studentListView" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
       <Tab id="teacherTab" text="Courses">
          <content>
             <VBox prefHeight="200.0" prefWidth="100.0">
