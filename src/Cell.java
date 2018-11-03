@@ -1,19 +1,27 @@
 import javafx.beans.binding.Bindings;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
-public class Cell {
+public class Cell extends ListCell {
     private ListView listView;
     private ListCell<Teacher> cell;
     private ContextMenu contextMenu;
     private MenuItem item;
     private Text text;
+    private ControlerTeachersWindow superControler;
+    University university;
 
-    public Cell(ListView listView) {
+    public Cell(ListView listView, ControlerTeachersWindow superControler, University university) {
+        this.superControler = superControler;
+        this.university = university;
         this.listView = listView;
-        cell = new ListCell<>();
+        cellUpdateMethodOverride();
         contextMenu = new ContextMenu();
         item = new MenuItem();
+        text = new Text();
         setTextToCell();
         setContextMenuToCell();
     }
@@ -29,26 +37,34 @@ public class Cell {
     }
 
     public void setTextToCell() {
-        text = new Text();
         cell.setGraphic(text);
-        bindToCell();
+        //bindToCell();
     }
 
-    public void bindToCell() {
-
-        text.textProperty().bind(Bindings.createStringBinding(() -> {
-            if (cell.isEmpty()) {
-              return null;
-             } else {
-           return cell.getItem().toString();
-             }
-        }, cell.emptyProperty(), cell.itemProperty()));
-
+    private void cellUpdateMethodOverride() {
+        cell = new ListCell<Teacher>() {
+            @Override
+            protected void updateItem(Teacher item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty) {
+                    text.setText(null);
+                } else {
+                    text.setText(item.getId() + ". " + item.getName() + " " + item.getSurname());
+                }
+            }
+        };
     }
 
     public void makeOptionDeleteFrom() {
         item.textProperty().bind(Bindings.format("Delete"));
-        item.setOnAction(event -> listView.getItems().remove(cell.getItem()));
+        item.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                university.removeTeacher(cell.getItem());
+                superControler.updateListView();
+            }
+        });
+
         contextMenu.getItems().addAll(item);
     }
 
