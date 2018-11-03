@@ -16,7 +16,7 @@ public class CourseCell extends CustomCell {
         deletionItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //university.removeTeacher(cell.getItem());
+                university.removeCourse(cell.getItem());
                 superControler.updateCourseListView();
             }
         });

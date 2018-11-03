@@ -48,6 +48,16 @@ public class University implements Serializable {
         return courseList;
     }
 
+    public void removeCourse(Object courseToRemove){
+        courseList.remove(courseToRemove);
+        for(Group group: groupList){
+            group.getGroupCourses().remove(courseToRemove);
+        }
+        for(Teacher teacher: teacherList){
+            teacher.getTeacherCourses().remove(courseToRemove);
+        }
+    }
+
     public void addCourse(Course course) {
         if (!new DuplicateChecker().isDuplicateById(course, courseList)) {
             courseList.add(course);
