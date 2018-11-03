@@ -77,6 +77,11 @@ public class University implements Serializable {
         this.teacherList.add(teacher);
     }
 
+    public void removeTeacher(Object teacherToRemove){
+        System.out.println("remooving");
+        teacherList.remove(teacherToRemove);
+    }
+
     public Teacher getTeacherByID(int id) {
         Teacher teacherMatch = null;
                for (Teacher teacher : this.getTeacherList()) {
@@ -96,10 +101,6 @@ public class University implements Serializable {
         } else {
             System.out.println(" !Teacher already exists!");
         }
-    }
-
-    public void removeTeacher(Teacher teacherToRemove){
-        teacherList.remove(teacherToRemove);
     }
 
     public void removeTeacher() {

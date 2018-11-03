@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class CustomCell {
     private ListView listView;
-    protected ListCell<Teacher> cell;
+    protected ListCell cell;
     protected ContextMenu contextMenu;
     protected Text text;
     protected ParentController superControler;

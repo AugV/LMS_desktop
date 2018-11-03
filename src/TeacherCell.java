@@ -19,7 +19,7 @@ public class TeacherCell extends CustomCell {
         item.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.removeTeacher(cell.getItem());
+               university.removeTeacher(cell.getItem());
                 superControler.updateTeacherListView();
             }
         });
