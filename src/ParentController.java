@@ -10,6 +10,7 @@ public class ParentController extends TabPane {
     private String saveTeacherFXML = "saveTeacherWindow.fxml";
     private String addCourseFXML = "courseAddWindow.fxml";
     private String addGroupFXML = "groupAddWindow.fxml";
+    private String addStudentFXML = "studentAddWindow.fxml";
 
     @FXML
     private Button btAddTeacher;
@@ -29,7 +30,6 @@ public class ParentController extends TabPane {
     private ListView groupListView;
     @FXML
     private ListView studentListView;
-
 
     public ParentController(University university) {
         this.university = university;
@@ -83,7 +83,6 @@ public class ParentController extends TabPane {
         });
     }
 
-
     private void setUpTheLoader() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ApplicationInterface.fxml"));
         loader.setController(this);
@@ -103,7 +102,6 @@ public class ParentController extends TabPane {
         new AddGroupController(university, this, addGroupFXML);
     }
 
-
     private void createTeacherSaveWindowController() {
         new SaveTeachersController(university, this, saveTeacherFXML);
     }
@@ -111,6 +109,10 @@ public class ParentController extends TabPane {
     private void createTeacherAddWindowController() {
         new AddTeacherControler(university, this, addTeacherFXML);
 
+    }
+
+    public void createStudentAddWindowController() {
+        new AddStudentControler(university, this, addStudentFXML);
     }
 
     public void updateTeacherListView() {

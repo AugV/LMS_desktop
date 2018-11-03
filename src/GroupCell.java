@@ -2,6 +2,7 @@ import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
@@ -31,8 +32,7 @@ public class GroupCell extends CustomCell {
         addStudent.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //university.removeGroup(cell.getItem());
-                //superControler.updateGroupListView();
+                superControler.createStudentAddWindowController();
             }
         });
 
@@ -43,6 +43,12 @@ public class GroupCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.setSelectedGroup(cell.getItem());
                 superControler.updateStudentListView();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText("Look, an Information Dialog");
+                alert.setContentText("I have a great message for you!");
+
+                alert.showAndWait();
             }
         });
 

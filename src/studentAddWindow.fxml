@@ -12,7 +12,7 @@
     <children>
         <VBox layoutX="8.0" layoutY="13.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="310.0" prefWidth="250.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Teacher" wrappingWidth="165.13671875">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Student" wrappingWidth="165.13671875">
                     <font>
                         <Font size="27.0" />
                     </font>
@@ -20,22 +20,22 @@
                         <Insets bottom="20.0" />
                     </VBox.margin>
                 </Text>
-                <TextField fx:id="teacherId" maxWidth="-Infinity" prefHeight="40.0" prefWidth="38.0" promptText="ID">
+                <TextField fx:id="Id" maxWidth="-Infinity" prefHeight="40.0" prefWidth="38.0" promptText="ID">
                     <VBox.margin>
                         <Insets bottom="20.0" />
                     </VBox.margin>
                 </TextField>
-                <TextField fx:id="teacherName" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name">
+                <TextField fx:id="name" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name">
                     <VBox.margin>
                         <Insets bottom="20.0" />
                     </VBox.margin>
                 </TextField>
-                <TextField fx:id="teacherSurname" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Surname">
+                <TextField fx:id="surname" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Surname">
                     <VBox.margin>
                         <Insets bottom="20.0" />
                     </VBox.margin>
                 </TextField>
-                <Button fx:id="btTeacherAdd" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="70.0" text="Add">
+                <Button fx:id="btAdd" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="70.0" text="Add">
                     <font>
                         <Font size="18.0" />
                     </font>
