@@ -1,11 +1,13 @@
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class ParentController extends TabPane {
     private University university;
+    public Stage primaryStage;
     private String addTeacherFXML = "TeacherAddWindow.fxml";
     private String saveTeacherFXML = "saveTeacherWindow.fxml";
     private String addCourseFXML = "courseAddWindow.fxml";
@@ -31,7 +33,8 @@ public class ParentController extends TabPane {
     @FXML
     private ListView studentListView;
 
-    public ParentController(University university) {
+    public ParentController(University university, Stage primaryStage) {
+        this.primaryStage=primaryStage;
         this.university = university;
         setUpTheLoader();
     }

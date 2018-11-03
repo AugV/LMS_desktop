@@ -21,6 +21,7 @@ public class TeacherCell extends CustomCell {
             public void handle(ActionEvent event) {
                university.removeTeacher(cell.getItem());
                 superControler.updateTeacherListView();
+                Toast.makeText(superControler.primaryStage, "Teacher removed", 800,200,600);
             }
         });
         contextMenu.getItems().addAll(item);

@@ -5,6 +5,7 @@ import javafx.stage.Stage;
 public class ElDienynas extends Application {
     University university = new University();
 
+
     public void init() {
         //university = new SerializeDeserialize().deserialize("universityObject.ser");
     }
@@ -39,7 +40,8 @@ public class ElDienynas extends Application {
                 1, "teisingas atsakymas, kolegos"));
         university.getCourseByID(2).getCourseTaskByID(2).addTaskCompletedTask(new CompletedTask(
                 2, "neteisingas atsakymas, biciuli"));
-        ParentController parentController = new ParentController(university);
+
+        ParentController parentController = new ParentController(university, primaryStage);
         primaryStage.setScene(new Scene(parentController));
         primaryStage.show();
 //region

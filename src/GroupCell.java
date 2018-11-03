@@ -24,6 +24,7 @@ public class GroupCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.removeGroup(cell.getItem());
                 superControler.updateGroupListView();
+                Toast.makeText(superControler.primaryStage, "Group removed", 800,200,600);
             }
         });
 
@@ -43,12 +44,8 @@ public class GroupCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.setSelectedGroup(cell.getItem());
                 superControler.updateStudentListView();
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Information Dialog");
-                alert.setHeaderText("Look, an Information Dialog");
-                alert.setContentText("I have a great message for you!");
+                Toast.makeText(superControler.primaryStage, "group selected", 700,200,400);
 
-                alert.showAndWait();
             }
         });
 

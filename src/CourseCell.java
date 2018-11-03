@@ -23,6 +23,7 @@ public class CourseCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.removeCourse(cell.getItem());
                 superControler.updateCourseListView();
+                Toast.makeText(superControler.primaryStage, "Course removed", 800,200,600);
             }
         });
 

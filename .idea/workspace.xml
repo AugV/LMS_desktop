@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AddStudentControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/studentAddWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/TeacherAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/TeacherAddWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Toast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CourseCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElDienynas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GroupCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroupCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ParentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TeacherAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TeacherAddWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TeacherCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TeacherCell.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,12 +23,12 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="8760" />
+          <entry key="java" value="9075" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8760" />
+          <entry key="JAVA" value="9075" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="XML" value="9" />
         </counts>
@@ -36,13 +36,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="9" />
-          <entry key="java" value="69" />
+          <entry key="java" value="77" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="69" />
+          <entry key="JAVA" value="77" />
           <entry key="XML" value="13" />
         </counts>
       </usages-collector>
@@ -64,106 +64,68 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ParentController.java">
+        <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="170">
+              <caret line="43" column="89" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
               <folding>
-                <element signature="method#ParentController#0;class#ParentController#0" />
-                <element signature="e#1071#1244#0" />
-                <element signature="e#1361#1530#0" />
-                <element signature="method#setUpCourseWindow#0;class#ParentController#0" />
-                <element signature="e#1189#1359#0" />
-                <element signature="method#setUpTeacherWindow#0;class#ParentController#0" />
-                <element signature="e#1597#1769#0" />
-                <element signature="e#1805#1889#0" />
-                <element signature="e#1928#1997#0" />
-                <element signature="method#setUpTheLoader#0;class#ParentController#0" />
-                <element signature="method#createTeacherAddWindowController#0;class#ParentController#0" />
-                <element signature="e#3581#3582#0" expanded="true" />
-                <element signature="e#3654#3655#0" expanded="true" />
-                <element signature="method#updateTeacherListView#0;class#ParentController#0" />
-                <element signature="method#updateTeacherListView#1;class#ParentController#0" />
-                <element signature="method#updateGroupListView#0;class#ParentController#0" />
-                <element signature="method#updateCourseListView#0;class#ParentController#0" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CourseCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GroupCell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-              <folding>
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1293#1294#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddStudentControler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+            <state relative-caret-position="61">
+              <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
               <folding>
-                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1047#1418#0" expanded="true" />
+                <element signature="e#1417#1418#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/University.java">
+        <entry file="file://$PROJECT_DIR$/src/TeacherCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="214">
+              <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
               <folding>
-                <element signature="e#378#386#0" />
-                <element signature="method#addGroup#0;class#University#0" />
-                <element signature="method#addGroup#1;class#University#0" />
-                <element signature="method#getGroupByID#0;class#University#0" />
-                <element signature="e#1356#1364#0" />
-                <element signature="method#removeCourse#0;class#University#0" />
-                <element signature="method#addCourse#0;class#University#0" />
-                <element signature="method#getCourseByID#0;class#University#0" />
-                <element signature="e#2345#2354#0" />
-                <element signature="method#removeTeacher#0;class#University#0" />
-                <element signature="method#getTeacherByID#0;class#University#0" />
-                <element signature="method#addTeacher#1;class#University#0" />
-                <element signature="method#removeTeacher#1;class#University#0" />
-                <element signature="method#getAllStudents#0;class#University#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddCourseController.java">
+        <entry file="file://$PROJECT_DIR$/src/GroupCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddGroupController.java">
+        <entry file="file://$PROJECT_DIR$/src/Toast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="-51">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,18 +192,19 @@
         <option value="$PROJECT_DIR$/src/SaveTeachersController.java" />
         <option value="$PROJECT_DIR$/src/Cell.java" />
         <option value="$PROJECT_DIR$/src/CustomCell.java" />
-        <option value="$PROJECT_DIR$/src/TeacherCell.java" />
-        <option value="$PROJECT_DIR$/src/CourseCell.java" />
-        <option value="$PROJECT_DIR$/src/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/Group.java" />
         <option value="$PROJECT_DIR$/src/AddGroupController.java" />
         <option value="$PROJECT_DIR$/src/AddCoursController.java" />
         <option value="$PROJECT_DIR$/src/AddCourseController.java" />
         <option value="$PROJECT_DIR$/src/University.java" />
-        <option value="$PROJECT_DIR$/src/StudentCell.java" />
         <option value="$PROJECT_DIR$/src/AddStudentControler.java" />
+        <option value="$PROJECT_DIR$/src/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/ParentController.java" />
+        <option value="$PROJECT_DIR$/src/Toast.java" />
+        <option value="$PROJECT_DIR$/src/CourseCell.java" />
+        <option value="$PROJECT_DIR$/src/TeacherCell.java" />
         <option value="$PROJECT_DIR$/src/GroupCell.java" />
+        <option value="$PROJECT_DIR$/src/StudentCell.java" />
       </list>
     </option>
   </component>
@@ -574,18 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TeacherCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1065#1462#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -607,16 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,13 +595,6 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AddGroupController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -675,16 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-119">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CourseCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,12 +664,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddStudentControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ParentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="-136">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
-            <element signature="method#ParentController#0;class#ParentController#0" />
             <element signature="e#1071#1244#0" />
             <element signature="e#1361#1530#0" />
             <element signature="method#setUpCourseWindow#0;class#ParentController#0" />
@@ -766,30 +703,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
+    <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="170">
+          <caret line="43" column="89" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
           <folding>
-            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddStudentControler.java">
+    <entry file="file://$PROJECT_DIR$/src/Toast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="-51">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CourseCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GroupCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+        <state relative-caret-position="255">
+          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TeacherCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
           <folding>
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
+          <folding>
+            <element signature="e#1047#1418#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
           </folding>
         </state>
       </provider>

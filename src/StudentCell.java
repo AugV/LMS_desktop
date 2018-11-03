@@ -16,8 +16,7 @@ public class StudentCell extends CustomCell {
         deletionItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //university.removeCourse(cell.getItem());
-               //  superControler.updateStudentListView();
+                Toast.makeText(superControler.primaryStage, "Not yet a feature", 800,200,600);
             }
         });
 
