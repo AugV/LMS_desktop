@@ -8,6 +8,12 @@ public class University implements Serializable {
     private ArrayList<Group> groupList = new ArrayList();
     private ArrayList<Course> courseList = new ArrayList();
 
+    private Group selectedGroup;
+
+    public void setSelectedGroup(Object selectedGroup) {
+        this.selectedGroup = (Group) selectedGroup;
+    }
+
     //Groups
     //region
     public ArrayList<Group> getGroupList() {

@@ -26,7 +26,27 @@ public class GroupCell extends CustomCell {
             }
         });
 
-        contextMenu.getItems().addAll(deletionItem);
+        MenuItem addStudent = new MenuItem();
+        addStudent.textProperty().bind(Bindings.format("add Student"));
+        addStudent.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //university.removeGroup(cell.getItem());
+                //superControler.updateGroupListView();
+            }
+        });
+
+        MenuItem selectGroup = new MenuItem();
+        selectGroup.textProperty().bind(Bindings.format("select"));
+        selectGroup.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                university.setSelectedGroup(cell.getItem());
+                //superControler.updateGroupListView();
+            }
+        });
+
+        contextMenu.getItems().addAll(deletionItem, addStudent, selectGroup);
     }
 
     @Override
