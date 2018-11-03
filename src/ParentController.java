@@ -9,6 +9,7 @@ public class ParentController extends TabPane {
     private String addTeacherFXML = "TeacherAddWindow.fxml";
     private String saveTeacherFXML = "saveTeacherWindow.fxml";
     private String addCourseFXML = "courseAddWindow.fxml";
+    private String addGroupFXML = "groupAddWindow.fxml";
 
     @FXML
     private Button btAddTeacher;
@@ -53,6 +54,7 @@ public class ParentController extends TabPane {
             cell.createSelections();
             return cell.getCell();
         });
+        btAddGroup.setOnAction(event -> createGroupAddWindowController());
     }
 
     private void setUpCourseWindow() {
@@ -96,6 +98,11 @@ public class ParentController extends TabPane {
     private void createCourseAddWindowController() {
         new AddCourseController(university, this, addCourseFXML);
     }
+
+    private void createGroupAddWindowController() {
+        new AddGroupController(university, this, addGroupFXML);
+    }
+
 
     private void createTeacherSaveWindowController() {
         new SaveTeachersController(university, this, saveTeacherFXML);
