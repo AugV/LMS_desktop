@@ -26,7 +26,7 @@ public class AddTeacherControler extends ChildControler {
                 university.addTeacher(Integer.parseInt(teacherId.getText()),
                         teacherName.getText(),
                         teacherSurname.getText());
-                superController.updateListView();
+                superController.updateTeacherListView();
                 stage.close();
             }
         });

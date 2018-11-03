@@ -4,22 +4,22 @@ import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
-public class Cell {
-    private ListView listView;
-    private ListCell<Teacher> cell;
-    private ContextMenu contextMenu;
-    private MenuItem item;
-    private Text text;
-    private ParentController superControler;
-    University university;
+import java.util.ArrayList;
 
-    public Cell(ListView listView, ParentController superControler, University university) {
+public class CustomCell {
+    private ListView listView;
+    protected ListCell<Teacher> cell;
+    protected ContextMenu contextMenu;
+    protected Text text;
+    protected ParentController superControler;
+    protected University university;
+
+    public CustomCell(ListView listView, ParentController superControler, University university) {
         this.superControler = superControler;
         this.university = university;
         this.listView = listView;
         cellUpdateMethodOverride();
         contextMenu = new ContextMenu();
-        item = new MenuItem();
         text = new Text();
         setTextToCell();
         setContextMenuToCell();
@@ -37,10 +37,9 @@ public class Cell {
 
     public void setTextToCell() {
         cell.setGraphic(text);
-        //bindToCell();
     }
 
-    private void cellUpdateMethodOverride() {
+    protected void cellUpdateMethodOverride() {
         cell = new ListCell<Teacher>() {
             @Override
             protected void updateItem(Teacher item, boolean empty) {
@@ -48,23 +47,12 @@ public class Cell {
                 if (empty) {
                     text.setText(null);
                 } else {
-                    text.setText(item.getId() + ". " + item.getName() + " " + item.getSurname());
+                    text.setText(String.valueOf(item.getId()));
                 }
             }
         };
     }
 
-    public void makeOptionDeleteFrom() {
-        item.textProperty().bind(Bindings.format("Delete"));
-        item.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                university.removeTeacher(cell.getItem());
-                superControler.updateListView();
-            }
-        });
-        contextMenu.getItems().addAll(item);
-    }
 
     public ListCell<Teacher> getCell() {
         return cell;
