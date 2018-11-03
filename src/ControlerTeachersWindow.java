@@ -49,7 +49,8 @@ public class ControlerTeachersWindow extends TabPane {
     }
 
     private void createNewController() {
-        ControlerTeacherAdd addWindowController = new ControlerTeacherAdd(university, this);
+        addTeacherControler teacherWindow = new addTeacherControler(university, this);
+
     }
 
     public void updateListView() {

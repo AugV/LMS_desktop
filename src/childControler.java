@@ -10,21 +10,21 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControlerTeacherAdd extends AnchorPane {
+public class childControler extends AnchorPane {
     University university;
     ControlerTeachersWindow superController;
     Stage stage;
 
-    @FXML
-    private TextField teacherId;
-    @FXML
-    private TextField teacherName;
-    @FXML
-    private TextField teacherSurname;
-    @FXML
-    private Button btTeacherAdd;
+//    @FXML
+//    private TextField teacherId;
+//    @FXML
+//    private TextField teacherName;
+//    @FXML
+//    private TextField teacherSurname;
+//    @FXML
+//    private Button btTeacherAdd;
 
-    public ControlerTeacherAdd(University university, ControlerTeachersWindow superController){
+    public childControler(University university, ControlerTeachersWindow superController){
         this.superController = superController;
         this.university = university;
         setUpTheLoader();
@@ -44,18 +44,18 @@ public class ControlerTeacherAdd extends AnchorPane {
         }
     }
 
-    @FXML
-    private void initialize() {
-        btTeacherAdd.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                university.addTeacher(  Integer.parseInt(teacherId.getText()),
-                                        teacherName.getText(),
-                                        teacherSurname.getText());
-                superController.updateListView();
-                stage.close();
-            }
-
-        });
-    }
+//    @FXML
+//    private void initialize() {
+//        btTeacherAdd.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent event) {
+//                university.addTeacher(  Integer.parseInt(teacherId.getText()),
+//                                        teacherName.getText(),
+//                                        teacherSurname.getText());
+//                superController.updateListView();
+//                stage.close();
+//            }
+//
+//        });
+//    }
 }
