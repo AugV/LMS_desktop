@@ -42,6 +42,8 @@ public class ParentController extends TabPane {
 
         groupListView.getItems().addAll(university.getGroupList());
 
+        studentListView.getItems().addAll(university.getAllStudents());
+
     }
 
     private void setUpCourseWindow() {

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ParentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/University.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,12 +17,12 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="8023" />
+          <entry key="java" value="8034" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8023" />
+          <entry key="JAVA" value="8034" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="XML" value="9" />
         </counts>
@@ -71,16 +69,63 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ParentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="275">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#2383#2384#0" expanded="true" />
+                <element signature="e#2455#2456#0" expanded="true" />
+                <element signature="e#2511#2512#0" expanded="true" />
+                <element signature="e#2588#2589#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ApplicationInterface.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Group.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="method#addGroupCourse#0;class#Group#0" />
+                <element signature="method#Group#0;class#Group#0" />
+                <element signature="method#addGroupStudents#0;class#Group#0" />
+                <element signature="method#toString#0;class#Group#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="101" column="69" lean-forward="true" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+              <folding>
+                <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
+                <element signature="method#teacherPageInteraction#0;class#BasicInterface#0" />
+                <element signature="method#taskPageInteraction#0;class#BasicInterface#0" />
+                <element signature="method#completedTaskPageInteraction#0;class#BasicInterface#0" />
+                <element signature="method#courseEditPageInteraction#0;class#BasicInterface#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/University.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -168,8 +213,8 @@
         <option value="$PROJECT_DIR$/src/TeacherCell.java" />
         <option value="$PROJECT_DIR$/src/AddCourseController.java" />
         <option value="$PROJECT_DIR$/src/CourseCell.java" />
-        <option value="$PROJECT_DIR$/src/ParentController.java" />
         <option value="$PROJECT_DIR$/src/University.java" />
+        <option value="$PROJECT_DIR$/src/ParentController.java" />
       </list>
     </option>
   </component>
@@ -373,13 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Indexable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -451,14 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApplicationInterface.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/scene/control/skin/VirtualFlow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -526,21 +556,6 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="155" column="57" lean-forward="true" selection-start-line="155" selection-start-column="57" selection-end-line="155" selection-end-column="57" />
-          <folding>
-            <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#teacherPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#studentPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#taskPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#completedTaskPageInteraction#0;class#BasicInterface#0" />
-            <element signature="method#courseEditPageInteraction#0;class#BasicInterface#0" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CustomCell.java">
@@ -628,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ParentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/University.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -653,6 +661,54 @@
             <element signature="method#getTeacherByID#0;class#University#0" />
             <element signature="method#addTeacher#1;class#University#0" />
             <element signature="method#removeTeacher#1;class#University#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BasicInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="101" column="69" lean-forward="true" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+          <folding>
+            <element signature="method#frontPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#teacherPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#taskPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#completedTaskPageInteraction#0;class#BasicInterface#0" />
+            <element signature="method#courseEditPageInteraction#0;class#BasicInterface#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="method#addGroupCourse#0;class#Group#0" />
+            <element signature="method#Group#0;class#Group#0" />
+            <element signature="method#addGroupStudents#0;class#Group#0" />
+            <element signature="method#toString#0;class#Group#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApplicationInterface.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ParentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#2383#2384#0" expanded="true" />
+            <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2511#2512#0" expanded="true" />
+            <element signature="e#2588#2589#0" expanded="true" />
           </folding>
         </state>
       </provider>
