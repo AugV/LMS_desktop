@@ -12,8 +12,8 @@ public class ElDienynas extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ControlerTeachersWindow controlerTeachersWindow = new ControlerTeachersWindow(university);
-        primaryStage.setScene(new Scene(controlerTeachersWindow));
+        ParentController parentController = new ParentController(university);
+        primaryStage.setScene(new Scene(parentController));
         primaryStage.show();
 //region
 

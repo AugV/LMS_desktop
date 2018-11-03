@@ -1,6 +1,5 @@
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -11,10 +10,10 @@ public class Cell {
     private ContextMenu contextMenu;
     private MenuItem item;
     private Text text;
-    private ControlerTeachersWindow superControler;
+    private ParentController superControler;
     University university;
 
-    public Cell(ListView listView, ControlerTeachersWindow superControler, University university) {
+    public Cell(ListView listView, ParentController superControler, University university) {
         this.superControler = superControler;
         this.university = university;
         this.listView = listView;

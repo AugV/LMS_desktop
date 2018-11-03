@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/addTeacherControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LD2/TeacherAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/TeacherAddWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ControlerTeacherAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/childControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ControlerTeachersWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlerTeachersWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LD2/ElDienynas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LD2/ElDienynas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlerTeachersWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElDienynas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/addTeacherControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/addTeacherControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/childControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChildControler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/universityObject.ser" beforeDir="false" afterPath="$PROJECT_DIR$/universityObject.ser" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,12 +23,12 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="6028" />
+          <entry key="java" value="6375" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6028" />
+          <entry key="JAVA" value="6375" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="XML" value="9" />
         </counts>
@@ -35,13 +36,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="5" />
-          <entry key="java" value="39" />
+          <entry key="java" value="40" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="39" />
+          <entry key="JAVA" value="40" />
           <entry key="XML" value="9" />
         </counts>
       </usages-collector>
@@ -66,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,10 +76,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/childControler.java">
+        <entry file="file://$PROJECT_DIR$/src/ChildControler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="200">
+              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/addTeacherControler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            <state relative-caret-position="340">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,16 +100,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ControlerTeachersWindow.java">
+        <entry file="file://$PROJECT_DIR$/src/ParentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+            <state relative-caret-position="285">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ControlerTeachersWindow#0;class#ControlerTeachersWindow#0" />
-                <element signature="method#initialize#0;class#ControlerTeachersWindow#0" />
-                <element signature="e#838#2056#0" />
-                <element signature="class#2626:2770" />
                 <element signature="method#setUpTheLoader#0;class#ControlerTeachersWindow#0" />
                 <element signature="method#updateListView#0;class#ControlerTeachersWindow#0" />
               </folding>
@@ -167,9 +168,11 @@
         <option value="$PROJECT_DIR$/src/Cell.java" />
         <option value="$PROJECT_DIR$/src/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/ControlerTeacherAdd.java" />
-        <option value="$PROJECT_DIR$/src/childControler.java" />
-        <option value="$PROJECT_DIR$/src/addTeacherControler.java" />
         <option value="$PROJECT_DIR$/src/ControlerTeachersWindow.java" />
+        <option value="$PROJECT_DIR$/src/childControler.java" />
+        <option value="$PROJECT_DIR$/src/ChildControler.java" />
+        <option value="$PROJECT_DIR$/src/addTeacherControler.java" />
+        <option value="$PROJECT_DIR$/src/ParentController.java" />
       </list>
     </option>
   </component>
@@ -534,7 +537,17 @@
     <entry file="file://$PROJECT_DIR$/src/ElDienynas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChildControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -543,31 +556,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/addTeacherControler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/childControler.java">
+    <entry file="file://$PROJECT_DIR$/src/ParentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlerTeachersWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        <state relative-caret-position="285">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ControlerTeachersWindow#0;class#ControlerTeachersWindow#0" />
-            <element signature="method#initialize#0;class#ControlerTeachersWindow#0" />
-            <element signature="e#838#2056#0" />
-            <element signature="class#2626:2770" />
             <element signature="method#setUpTheLoader#0;class#ControlerTeachersWindow#0" />
             <element signature="method#updateListView#0;class#ControlerTeachersWindow#0" />
           </folding>

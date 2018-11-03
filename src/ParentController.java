@@ -5,8 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import java.io.IOException;
 
-public class ControlerTeachersWindow extends TabPane {
+public class ParentController extends TabPane {
     University university;
+    String addTeacherFXML = "TeacherAddWindow.fxml";
 
     @FXML
     private Button btAddTeacher;
@@ -15,7 +16,7 @@ public class ControlerTeachersWindow extends TabPane {
     @FXML
     private ListView teacherListView;
 
-    public ControlerTeachersWindow(University university) {
+    public ParentController(University university) {
         this.university = university;
         setUpTheLoader();
     }
@@ -30,11 +31,11 @@ public class ControlerTeachersWindow extends TabPane {
             return cell.getCell();
         });
 
-        btAddTeacher.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent event) {
-                createNewController();
-            }
-        });
+        btAddTeacher.setOnAction(event -> { createTeacherAddWindowController();}
+        );
+        //btSave.setOnAction(event -> {createTeacherSaveWindowController();});
+
+
     }
 
     private void setUpTheLoader() {
@@ -48,8 +49,12 @@ public class ControlerTeachersWindow extends TabPane {
         }
     }
 
-    private void createNewController() {
-        addTeacherControler teacherWindow = new addTeacherControler(university, this);
+    private void createTeacherSaveWindowController() {
+
+    }
+
+    private void createTeacherAddWindowController() {
+        addTeacherControler teacherWindow = new addTeacherControler(university, this, addTeacherFXML);
 
     }
 

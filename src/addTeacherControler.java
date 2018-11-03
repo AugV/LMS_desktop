@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class addTeacherControler extends childControler {
+public class addTeacherControler extends ChildControler {
     @FXML
     private TextField teacherId;
     @FXML
@@ -14,9 +14,8 @@ public class addTeacherControler extends childControler {
     @FXML
     private Button btTeacherAdd;
 
-    public addTeacherControler(University university, ControlerTeachersWindow superController) {
-        super(university, superController);
-
+    public addTeacherControler(University university, ParentController superController, String fxmlFileName) {
+        super(university, superController, fxmlFileName);
     }
 
     @FXML
