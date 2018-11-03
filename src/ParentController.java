@@ -41,7 +41,11 @@ public class ParentController extends TabPane {
         setUpCourseWindow();
 
         groupListView.getItems().addAll(university.getGroupList());
-
+        groupListView.setCellFactory(param -> {
+            GroupCell cell = new GroupCell(groupListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
         studentListView.getItems().addAll(university.getAllStudents());
 
     }
@@ -49,7 +53,7 @@ public class ParentController extends TabPane {
     private void setUpCourseWindow() {
         courseListView.getItems().addAll(university.getCourseList());
         courseListView.setCellFactory(lv -> {
-            CourseCell cell = new CourseCell(teacherListView, this, university);
+            CourseCell cell = new CourseCell(courseListView, this, university);
             cell.createSelections();
             return cell.getCell();
         });

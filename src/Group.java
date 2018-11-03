@@ -42,6 +42,9 @@ public class Group implements Indexable, Serializable {
         return groupCourses;
     }
 
+    public String getName() {
+        return name;
+    }
 
     @Override
     public String toString() {

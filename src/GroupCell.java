@@ -21,8 +21,8 @@ public class GroupCell extends CustomCell {
         deletionItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.removeCourse(cell.getItem());
-                superControler.updateCourseListView();
+//                university.removeCourse(cell.getItem());
+//                superControler.updateCourseListView();
             }
         });
 
@@ -39,7 +39,7 @@ public class GroupCell extends CustomCell {
                 if (empty) {
                     text.setText(null);
                 } else {
-                    text.setText(item.getId() + ". ");
+                    text.setText(item.getId() + ". " + item.getName());
                 }
             }
         };
