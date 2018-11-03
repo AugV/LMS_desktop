@@ -1,9 +1,14 @@
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class CourseCell extends CustomCell {
     public CourseCell(ListView listView, ParentController superControler, University university) {
@@ -20,7 +25,23 @@ public class CourseCell extends CustomCell {
                 superControler.updateCourseListView();
             }
         });
-        contextMenu.getItems().addAll(deletionItem);
+
+        MenuItem infoItem = new MenuItem();
+        infoItem.textProperty().bind(Bindings.format("get information"));
+        infoItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                final Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                //dialog.initOwner(primaryStage);
+                VBox dialogVbox = new VBox(20);
+                dialogVbox.getChildren().add(new Text("This is a Dialog"));
+                Scene dialogScene = new Scene(dialogVbox, 300, 200);
+                dialog.setScene(dialogScene);
+                dialog.show();
+            }
+        });
+        contextMenu.getItems().addAll(deletionItem, infoItem);
     }
 
     @Override
