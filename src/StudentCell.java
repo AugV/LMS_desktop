@@ -33,7 +33,7 @@ public class StudentCell extends CustomCell {
                 if (empty) {
                     text.setText(null);
                 } else {
-                    text.setText(item.getId() + ". " + item.getName());
+                    text.setText(item.getId() + ". " + item.getName() + " " + item.getSurname());
                 }
             }
         };
