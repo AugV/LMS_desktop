@@ -41,6 +41,10 @@ public class University implements Serializable {
         return null;
     }
 
+    public void removeGroup(Object groupToRemove){
+        groupList.remove(groupToRemove);
+    }
+
     //endregion
     //Courses
     //region

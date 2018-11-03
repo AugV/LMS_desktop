@@ -21,8 +21,8 @@ public class GroupCell extends CustomCell {
         deletionItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-//                university.removeCourse(cell.getItem());
-//                superControler.updateCourseListView();
+                university.removeGroup(cell.getItem());
+                superControler.updateGroupListView();
             }
         });
 
