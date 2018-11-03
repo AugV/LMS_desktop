@@ -22,6 +22,13 @@ public class ParentController extends TabPane {
     @FXML
     private Button btAddCourse;
 
+    @FXML
+    private Button btAddGroup;
+    @FXML
+    private ListView groupListView;
+    @FXML
+    private ListView studentListView;
+
 
     public ParentController(University university) {
         this.university = university;
@@ -30,6 +37,24 @@ public class ParentController extends TabPane {
 
     @FXML
     private void initialize() {
+        setUpTeacherWindow();
+        setUpCourseWindow();
+
+        groupListView.getItems().addAll(university.getGroupList());
+
+    }
+
+    private void setUpCourseWindow() {
+        courseListView.getItems().addAll(university.getCourseList());
+        courseListView.setCellFactory(lv -> {
+            CourseCell cell = new CourseCell(teacherListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
+        btAddCourse.setOnAction(event -> createCourseAddWindowController());
+    }
+
+    private void setUpTeacherWindow() {
         teacherListView.getItems().addAll(university.getTeacherList());
         teacherListView.setCellFactory(lv -> {
             TeacherCell cell = new TeacherCell(teacherListView, this, university);
@@ -43,14 +68,6 @@ public class ParentController extends TabPane {
         btSave.setOnAction(event -> {
             createTeacherSaveWindowController();
         });
-
-        courseListView.getItems().addAll(university.getCourseList());
-        courseListView.setCellFactory(lv -> {
-            CourseCell cell = new CourseCell(teacherListView, this, university);
-            cell.createSelections();
-            return cell.getCell();
-        });
-        btAddCourse.setOnAction(event -> createCourseAddWindowController());
     }
 
 

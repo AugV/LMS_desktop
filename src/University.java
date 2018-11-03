@@ -123,4 +123,12 @@ public class University implements Serializable {
         }
     }
 //endregion
+    //General
+    public ArrayList<Student> getAllStudents(){
+        ArrayList<Student> allStudents = new ArrayList<>();
+        for(Group group: groupList){
+            allStudents.addAll(group.getGroupStudents());
+        }
+        return allStudents;
+    }
 }
