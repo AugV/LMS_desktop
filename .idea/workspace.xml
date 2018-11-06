@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElDienynas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/universityObject.ser" beforeDir="false" afterPath="$PROJECT_DIR$/universityObject.ser" afterDir="false" />
-    </list>
+    <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +40,7 @@
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.16" value="1" />
@@ -90,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="35" column="95" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
+            <state relative-caret-position="455">
+              <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
               <folding>
                 <element signature="e#1047#1418#0" expanded="true" />
                 <element signature="e#1417#1418#0" expanded="true" />
@@ -307,7 +303,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="102" width="1797" height="858" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16177318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -319,7 +314,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21546961" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21546961" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -756,8 +751,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StudentCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="35" column="95" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
+        <state relative-caret-position="455">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
           <folding>
             <element signature="e#1047#1418#0" expanded="true" />
             <element signature="e#1417#1418#0" expanded="true" />
