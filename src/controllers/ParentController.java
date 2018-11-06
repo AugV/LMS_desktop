@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import utilities.ArrayListConverter;
 
+
 import java.io.IOException;
 
 public class ParentController extends TabPane {
@@ -21,6 +22,7 @@ public class ParentController extends TabPane {
     private String addCourseFXML = "fxml_files/courseAddWindow.fxml";
     private String addGroupFXML = "fxml_files/groupAddWindow.fxml";
     private String addStudentFXML = "fxml_files/studentAddWindow.fxml";
+    private String parentFile = "fxml_files/ApplicationInterface.fxml";
 
     @FXML
     private Button btAddTeacher;
@@ -95,7 +97,7 @@ public class ParentController extends TabPane {
     }
 
     private void setUpTheLoader() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml_files/ApplicationInterface.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(parentFile));
         loader.setController(this);
         loader.setRoot(this);
         try {

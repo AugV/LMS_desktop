@@ -1,7 +1,5 @@
 package controllers;
 
-import controllers.ChildControler;
-import controllers.ParentController;
 import entities.Student;
 import entities.University;
 import javafx.event.ActionEvent;

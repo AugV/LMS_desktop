@@ -1,7 +1,6 @@
 package controllers;
 
-import controllers.ChildControler;
-import controllers.ParentController;
+
 import entities.University;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
