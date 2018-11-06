@@ -5,10 +5,8 @@ import utilities.DuplicateChecker;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Task implements Indexable, Serializable {
+public class Task extends Entity implements Serializable {
 
-    private int taskID;
-    private String name;
     private String taskCondition;
     private String deadline;
     private String points;
@@ -16,21 +14,16 @@ public class Task implements Indexable, Serializable {
     private ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
 
     public Task(int id, String name, String taskCondition, String deadline, String points) {
-        this.taskID = id;
-        this.name = name;
+        super(id, name);
         this.taskCondition = taskCondition;
         this.deadline = deadline;
         this.points = points;
     }
 
-    public int getId() {
-        return taskID;
-    }
-
-    public CompletedTask getCompletedTaskById(int id){
+    public CompletedTask getCompletedTaskById(int id) {
         CompletedTask completedTaskMatch = null;
         for (CompletedTask completedTask : taskCompletedTasks) {
-            if (completedTask.getId()== id) {
+            if (completedTask.getId() == id) {
                 completedTaskMatch = completedTask;
                 break;
             }
@@ -47,9 +40,9 @@ public class Task implements Indexable, Serializable {
     }
 
     public void addTaskCompletedTask(CompletedTask completedTask) {
-        if(allowSubmitCompletedTask && !new DuplicateChecker().isDuplicateById(completedTask, taskCompletedTasks)){
-        this.taskCompletedTasks.add(completedTask);}
-        else{
+        if (allowSubmitCompletedTask && !new DuplicateChecker().isDuplicateById(completedTask, taskCompletedTasks)) {
+            this.taskCompletedTasks.add(completedTask);
+        } else {
             System.out.println("Sorry, task is closed or you already submitted this task");
         }
     }
@@ -57,7 +50,7 @@ public class Task implements Indexable, Serializable {
     @Override
     public String toString() {
         return "entities.Task{" +
-                "name='" + name + '\'' +
+                "name='" + this.getName() + '\'' +
                 ", taskCondition='" + taskCondition + '\'' +
                 ", deadline='" + deadline + '\'' +
                 ", points='" + points + '\'' +

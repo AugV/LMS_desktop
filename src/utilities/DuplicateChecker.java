@@ -1,12 +1,12 @@
 package utilities;
 
-import entities.Indexable;
+import entities.Entity;
 
 import java.util.ArrayList;
 
 public class DuplicateChecker {
 
-    public <T extends Indexable> boolean isDuplicateById(T objectToCheck, ArrayList<T> objectArray){
+    public <T extends Entity> boolean isDuplicateById(T objectToCheck, ArrayList<T> objectArray){
         for (T object :
                 objectArray) {
             if (objectToCheck.getId() == object.getId()) {

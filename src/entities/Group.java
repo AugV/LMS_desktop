@@ -5,9 +5,7 @@ import utilities.DuplicateChecker;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Group implements Indexable, Serializable {
-    private int groupID;
-    private String name;
+public class Group extends Entity implements Serializable {
 
     ArrayList<Student> groupStudents = new ArrayList();
     ArrayList<Course> groupCourses = new ArrayList();
@@ -22,12 +20,7 @@ public class Group implements Indexable, Serializable {
     }
 
     public Group(int id, String name) {
-        this.groupID = id;
-        this.name = name;
-    }
-
-    public int getId() {
-        return groupID;
+        super(id, name);
     }
 
     public ArrayList<Student> getGroupStudents() {
@@ -46,15 +39,12 @@ public class Group implements Indexable, Serializable {
         return groupCourses;
     }
 
-    public String getName() {
-        return name;
-    }
 
     @Override
     public String toString() {
         return "entities.Group{" +
-                "groupID=" + groupID +
-                ", name='" + name + '\'' +
+                "groupID=" + this.getId() +
+                ", name='" + this.getName() + '\'' +
                 ", groupStudents=" + groupStudents +
                 '}';
     }

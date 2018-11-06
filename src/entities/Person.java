@@ -2,25 +2,13 @@ package entities;
 
 import java.io.Serializable;
 
-abstract public class Person implements Indexable, Serializable {
+abstract public class Person extends Entity implements Serializable {
 
-    private int id;
-    private String name;
     private String surname;
 
     public Person(int loc_id, String loc_name, String loc_surname) {
-        this.id = loc_id;
-        this.name = loc_name;
+        super(loc_id,loc_name);
         this.surname = loc_surname;
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getSurname() {
@@ -30,8 +18,8 @@ abstract public class Person implements Indexable, Serializable {
     @Override
     public String toString() {
         return "entities.Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "id=" + this.getId() +
+                ", name='" + this.getName() + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';
     }

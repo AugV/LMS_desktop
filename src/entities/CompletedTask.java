@@ -5,24 +5,19 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class CompletedTask implements Indexable, Serializable {
+public class CompletedTask extends Entity implements Serializable  {
     private static DateFormat dateFormat= new SimpleDateFormat("yyyy/mm/dd");
     private static Calendar calendar = Calendar.getInstance();
 
-    private int taskID;
     private String answer,
     grade,
     submissionDate,
     gradeDate;
 
     public CompletedTask(int id, String answer) {
-        this.taskID = id;
+        super(id);
         this.answer = answer;
         this.submissionDate = dateFormat.format(calendar.getTime());
-    }
-
-    public int getId() {
-        return taskID;
     }
 
     public String getAnswer() {

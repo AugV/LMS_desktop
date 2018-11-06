@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/fxml_files/ApplicationInterface.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AddCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AddCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AddGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AddGroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AddStudentControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AddStudentControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AddTeacherControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AddTeacherControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LD2/controllers/fxml_files/ApplicationInterface.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LD2/controllers/fxml_files/TeacherAddWindow.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LD2/controllers/fxml_files/courseAddWindow.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LD2/controllers/fxml_files/groupAddWindow.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LD2/controllers/fxml_files/saveTeacherWindow.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LD2/controllers/fxml_files/studentAddWindow.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/ParentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ParentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/SaveTeachersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SaveTeachersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Indexable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Indexable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/ApplicationInterface.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/TeacherAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/fxml_files/TeacherAddWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/courseAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/fxml_files/courseAddWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/groupAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/fxml_files/groupAddWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/saveTeacherWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/fxml_files/saveTeacherWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/studentAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/fxml_files/studentAddWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/fxml_files/ApplicationInterface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/ApplicationInterface.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/fxml_files/TeacherAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/TeacherAddWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/fxml_files/courseAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/courseAddWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/fxml_files/groupAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/groupAddWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/fxml_files/saveTeacherWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/saveTeacherWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/fxml_files/studentAddWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/studentAddWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/CompletedTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/CompletedTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Indexable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ElDienynas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/DuplicateChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/DuplicateChecker.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,12 +39,12 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="9275" />
+          <entry key="java" value="9891" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9275" />
+          <entry key="JAVA" value="9891" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="XML" value="9" />
         </counts>
@@ -44,13 +52,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="11" />
-          <entry key="java" value="129" />
+          <entry key="java" value="141" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="129" />
+          <entry key="JAVA" value="141" />
           <entry key="XML" value="15" />
         </counts>
       </usages-collector>
@@ -58,13 +66,13 @@
         <counts>
           <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -75,12 +83,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/ElDienynas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-end-column="13" />
+            <state relative-caret-position="323">
+              <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#421#422#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,10 +95,84 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/ParentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="-1061">
+              <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/AddTeacherControler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/ChildControler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utilities/DuplicateChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/Entity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding>
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/Task.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/University.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#565#566#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,10 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/BasicInterface.java" />
-        <option value="$PROJECT_DIR$/src/ApplicationInterface.fxml" />
-        <option value="$PROJECT_DIR$/src/TeacherAddWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/ControlerForFXML.java" />
         <option value="$PROJECT_DIR$/src/TeacherAddWindowController.java" />
         <option value="$PROJECT_DIR$/src/ControlerTeacherAdd.java" />
         <option value="$PROJECT_DIR$/src/ControlerTeachersWindow.java" />
@@ -152,24 +228,28 @@
         <option value="$PROJECT_DIR$/src/arrayListConverter.java" />
         <option value="$PROJECT_DIR$/src/utilities/arrayListConverter.java" />
         <option value="$PROJECT_DIR$/src/utilities/ArrayListConverter.java" />
-        <option value="$PROJECT_DIR$/src/controllers/ChildControler.java" />
         <option value="$PROJECT_DIR$/src/cells/GroupCell.java" />
-        <option value="$PROJECT_DIR$/src/entities/University.java" />
         <option value="$PROJECT_DIR$/src/entities/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/entities/Group.java" />
-        <option value="$PROJECT_DIR$/src/entities/Task.java" />
         <option value="$PROJECT_DIR$/src/cells/CourseCell.java" />
         <option value="$PROJECT_DIR$/src/cells/TeacherCell.java" />
         <option value="$PROJECT_DIR$/src/cells/StudentCell.java" />
-        <option value="$PROJECT_DIR$/src/entities/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/controllers/AddCourseController.java" />
         <option value="$PROJECT_DIR$/src/controllers/AddGroupController.java" />
         <option value="$PROJECT_DIR$/src/controllers/AddStudentControler.java" />
         <option value="$PROJECT_DIR$/src/controllers/AddTeacherControler.java" />
         <option value="$PROJECT_DIR$/src/controllers/SaveTeachersController.java" />
-        <option value="$PROJECT_DIR$/src/entities/Indexable.java" />
         <option value="$PROJECT_DIR$/src/filesFXML/ApplicationInterface.fxml" />
+        <option value="$PROJECT_DIR$/src/entities/Indexable.java" />
+        <option value="$PROJECT_DIR$/src/entities/CompletedTask.java" />
+        <option value="$PROJECT_DIR$/src/entities/Course.java" />
+        <option value="$PROJECT_DIR$/src/entities/Person.java" />
+        <option value="$PROJECT_DIR$/src/entities/Group.java" />
+        <option value="$PROJECT_DIR$/src/entities/Task.java" />
+        <option value="$PROJECT_DIR$/src/entities/Entity.java" />
+        <option value="$PROJECT_DIR$/src/utilities/DuplicateChecker.java" />
+        <option value="$PROJECT_DIR$/src/main/ElDienynas.java" />
+        <option value="$PROJECT_DIR$/src/entities/University.java" />
+        <option value="$PROJECT_DIR$/src/controllers/ChildControler.java" />
         <option value="$PROJECT_DIR$/src/controllers/ParentController.java" />
       </list>
     </option>
@@ -186,6 +266,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AV_LD2" type="58d84e3e:PackageViewProjectNode" />
+              <item name="LD2" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,29 +289,6 @@
               <item name="LD2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LD2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LD2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="AV_LD2" type="58d84e3e:PackageViewProjectNode" />
-              <item name="LD2" type="616d4139:PackageViewModuleNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -229,7 +297,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541515878181" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541518910755" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11/lib" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -322,8 +390,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="102" width="1797" height="858" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16695452" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16868164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -333,7 +402,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21546961" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21546961" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -477,7 +546,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/fxml_files/saveTeacherWindow.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/fxml_files/saveTeacherWindow.fxml" />
     <entry file="file://$PROJECT_DIR$/src/output/PrinterFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -485,8 +554,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/fxml_files/courseAddWindow.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/fxml_files/TeacherAddWindow.fxml">
+    <entry file="file://$PROJECT_DIR$/src/fxml_files/courseAddWindow.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/fxml_files/TeacherAddWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
@@ -494,8 +563,8 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/fxml_files/groupAddWindow.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/fxml_files/studentAddWindow.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/fxml_files/groupAddWindow.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/fxml_files/studentAddWindow.fxml" />
     <entry file="file://$PROJECT_DIR$/src/utilities/Toast.java" />
     <entry file="file://$PROJECT_DIR$/src/utilities/ArrayListConverter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -535,13 +604,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ChildControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -612,62 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AddTeacherControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/CompletedTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Indexable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -678,14 +688,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/University.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/fxml_files/ApplicationInterface.fxml">
+    <entry file="file://$PROJECT_DIR$/src/fxml_files/ApplicationInterface.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
@@ -693,22 +696,109 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ElDienynas.java">
+    <entry file="file://$PROJECT_DIR$/src/entities/CompletedTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="13" selection-end-column="13" />
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Course.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utilities/DuplicateChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ElDienynas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AddTeacherControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ChildControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/ParentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="-1061">
+          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

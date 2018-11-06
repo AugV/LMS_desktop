@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import input.InputKeyboard;
 
-public class University implements Serializable {
+public class University extends Entity implements Serializable {
     private static final long serialVersionUID = 6529685098267757690L;
 
     private ArrayList<Teacher> teacherList = new ArrayList();
@@ -12,6 +12,11 @@ public class University implements Serializable {
     private ArrayList<Course> courseList = new ArrayList();
 
     private Group selectedGroup;
+
+    public University(int id, String name) {
+        super(id, name);
+    }
+
 
     public void setSelectedGroup(Object selectedGroup) {
         this.selectedGroup = (Group) selectedGroup;

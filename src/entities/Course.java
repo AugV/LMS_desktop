@@ -5,38 +5,23 @@ import utilities.DuplicateChecker;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Course implements Indexable, Serializable {
-    private int courseID;
-    private String name;
+public class Course extends Entity implements Serializable {
     private String information;
     private ArrayList<Task> courseTasks = new ArrayList();
 
 
     public Course(int courseID, String name, String information) {
-        this.courseID = courseID;
-        this.name = name;
+        super(courseID, name);
         this.information = information;
     }
 
     public Course(int courseID, String name, String information, Teacher teacher, Group group) {
-        this.courseID = courseID;
-        this.name = name;
+        super(courseID, name);
         this.information = information;
         teacher.addTeacherCourses(this);
         group.addGroupCourse(this);
     }
 
-    public int getId() {
-        return courseID;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
 
     public String getCourseInformation() {
         return information;
@@ -50,14 +35,16 @@ public class Course implements Indexable, Serializable {
         }
     }
 
-    public void addCompletedTaskToCourseTaskById(int taskId, CompletedTask newCompletedTask){
-            for (Task task : courseTasks) {
-                if(task.getId()== taskId){task.addTaskCompletedTask(newCompletedTask);}
+    public void addCompletedTaskToCourseTaskById(int taskId, CompletedTask newCompletedTask) {
+        for (Task task : courseTasks) {
+            if (task.getId() == taskId) {
+                task.addTaskCompletedTask(newCompletedTask);
             }
+        }
     }
 
-    public CompletedTask getCompletedTaskById(int completedTaskId){
-        CompletedTask completedTask= null;
+    public CompletedTask getCompletedTaskById(int completedTaskId) {
+        CompletedTask completedTask = null;
         for (Task task : courseTasks) {
             completedTask = task.getCompletedTaskById(completedTaskId);
         }
@@ -82,8 +69,8 @@ public class Course implements Indexable, Serializable {
     @Override
     public String toString() {
         return "entities.Course{" +
-                "courseID=" + courseID +
-                ", name='" + name + '\'' +
+                "courseID=" + this.getId() +
+                ", name='" + this.getName() + '\'' +
                 ", information='" + information + '\'' +
                 ", courseTasks=" + courseTasks +
                 '}';
