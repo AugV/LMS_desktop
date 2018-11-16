@@ -1,8 +1,17 @@
 package entities;
 
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Entity {
+
+    @Id
     private int id;
+
+    @Column
     private String name;
 
     public Entity() {

@@ -54,9 +54,12 @@ public class ElDienynas extends Application {
                 2, "neteisingas atsakymas, biciuli"));
 
 
-        ParentController parentController = new ParentController(university, primaryStage);
-        primaryStage.setScene(new Scene(parentController));
-        primaryStage.show();
+
+
+        //TODO uncomment XD
+//        ParentController parentController = new ParentController(university, primaryStage);
+//        primaryStage.setScene(new Scene(parentController));
+//        primaryStage.show();
 //region
 
 /*

@@ -5,6 +5,7 @@ import utilities.DuplicateChecker;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+
 public class Group extends Entity implements Serializable {
 
     ArrayList<Student> groupStudents = new ArrayList();

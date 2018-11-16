@@ -2,11 +2,16 @@ package entities;
 
 import utilities.DuplicateChecker;
 
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@javax.persistence.Entity
 public class Course extends Entity implements Serializable {
+    @Column
     private String information;
+    @OneToMany
     private ArrayList<Task> courseTasks = new ArrayList();
 
 
@@ -20,6 +25,9 @@ public class Course extends Entity implements Serializable {
         this.information = information;
         teacher.addTeacherCourses(this);
         group.addGroupCourse(this);
+    }
+
+    public Course() {
     }
 
 
