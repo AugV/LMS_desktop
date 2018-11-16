@@ -1,14 +1,13 @@
 package entities;
 
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 @MappedSuperclass
 public abstract class Entity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column
@@ -17,13 +16,10 @@ public abstract class Entity {
     public Entity() {
     }
 
-    Entity(int id, String name){
-        this.id = id;
+    Entity(String name){
         this.name = name;
     }
-    Entity(int id){
-        this.id = id;
-    }
+
     public int getId(){
         return id;
     };

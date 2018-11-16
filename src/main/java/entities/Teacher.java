@@ -11,8 +11,8 @@ public class Teacher extends Person {
     @OneToMany
     private ArrayList<Course> teacherCourses = new ArrayList();
 
-    public Teacher(int loc_id, String loc_name, String loc_surname) {
-        super(loc_id, loc_name, loc_surname);
+    public Teacher(String loc_name, String loc_surname) {
+        super(loc_name, loc_surname);
     }
 
     public Teacher() {

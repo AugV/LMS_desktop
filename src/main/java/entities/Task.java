@@ -2,22 +2,29 @@ package entities;
 
 import utilities.DuplicateChecker;
 
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
-
+@javax.persistence.Entity
 public class Task extends Entity implements Serializable {
 
+    @Column
     private String taskCondition;
     private String deadline;
     private String points;
     private boolean allowSubmitCompletedTask = true;
+    @OneToMany
     private ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
 
     public Task(int id, String name, String taskCondition, String deadline, String points) {
-        super(id, name);
+        super(name);
         this.taskCondition = taskCondition;
         this.deadline = deadline;
         this.points = points;
+    }
+
+    public Task() {
     }
 
     public CompletedTask getCompletedTaskById(int id) {

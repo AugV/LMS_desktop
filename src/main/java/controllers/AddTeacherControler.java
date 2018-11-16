@@ -27,7 +27,7 @@ public class AddTeacherControler extends ChildControler {
         btTeacherAdd.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.addTeacher(Integer.parseInt(teacherId.getText()),
+                university.addTeacher(
                         teacherName.getText(),
                         teacherSurname.getText());
                 superController.updateTeacherListView();

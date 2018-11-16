@@ -60,13 +60,13 @@ public class BasicInterface {
                     break;
                 case '2':
                     printer.printEnterFileName();
-                    university.addTeacher(new InputFile(inputKeyboard.getUserInputLine()).getTeacherFromFile());
+                    //university.addTeacher(new InputFile(inputKeyboard.getUserInputLine()).getTeacherFromFile());
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     printer.printTeacherConstructorGuide();
-                    university.addTeacher(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
+                    university.addTeacher(inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -114,7 +114,7 @@ public class BasicInterface {
                 case '4':
                     printer.printStudentConstructorGuide();
                     Student newStudent = new Student(
-                            inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
+                             inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
                     try{university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);}
                     catch(NullPointerException e){
                         System.out.println(" !entities.Group with this ID does not exist!");
@@ -272,7 +272,7 @@ public class BasicInterface {
                 case '2':
                     printer.printCompletedTaskConstructorGuide();
                     CompletedTask newCompletedTask = new CompletedTask(
-                            inputKeyboard.getUserInputInt(),
+
                             inputKeyboard.getUserInputLine());
                     int taskId= inputKeyboard.getUserInputTaskInt();
 

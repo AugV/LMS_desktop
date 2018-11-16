@@ -4,17 +4,27 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import input.InputKeyboard;
 
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@javax.persistence.Entity
 public class University extends Entity implements Serializable {
     private static final long serialVersionUID = 6529685098267757690L;
 
+    @OneToMany
     private ArrayList<Teacher> teacherList = new ArrayList();
+    @OneToMany
     private ArrayList<Group> groupList = new ArrayList();
+    @OneToMany
     private ArrayList<Course> courseList = new ArrayList();
-
+    @OneToOne
     private Group selectedGroup;
 
-    public University(int id, String name) {
-        super(id, name);
+    public University(String name) {
+        super(name);
+    }
+
+    public University() {
     }
 
 
@@ -126,8 +136,8 @@ public class University extends Entity implements Serializable {
         return null;
     }
 
-    public void addTeacher(int id, String name, String surname) {
-        Teacher teacher = new Teacher(id, name, surname);
+    public void addTeacher(String name, String surname) {
+        Teacher teacher = new Teacher(name, surname);
         if (!new DuplicateChecker().isDuplicateById(teacher, teacherList)) {
             teacherList.add(teacher);
         } else {

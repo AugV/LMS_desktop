@@ -1,11 +1,17 @@
 package entities;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Student extends Person {
 
-    public Student(int loc_id, String loc_name, String loc_surname){
-       super(loc_id, loc_name, loc_surname);
+    public Student(String loc_name, String loc_surname){
+       super(loc_name, loc_surname);
 
    }
+
+    public Student() {
+    }
 
     @Override
     public String toString() {
