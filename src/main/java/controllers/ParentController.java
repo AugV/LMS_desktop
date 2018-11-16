@@ -17,12 +17,12 @@ import java.io.IOException;
 public class ParentController extends TabPane {
     private University university;
     public Stage primaryStage;
-    private String addTeacherFXML = "/fxml_files/TeacherAddWindow.fxml";
-    private String saveTeacherFXML = "/fxml_files/saveTeacherWindow.fxml";
-    private String addCourseFXML = "/fxml_files/courseAddWindow.fxml";
-    private String addGroupFXML = "/fxml_files/groupAddWindow.fxml";
-    private String addStudentFXML = "/fxml_files/studentAddWindow.fxml";
-    private String parentFile = "/fxml_files/ApplicationInterface.fxml";
+    private String addTeacherFXML = "TeacherAddWindow.fxml";
+    private String saveTeacherFXML = "/saveTeacherWindow.fxml";
+    private String addCourseFXML = "/courseAddWindow.fxml";
+    private String addGroupFXML = "/groupAddWindow.fxml";
+    private String addStudentFXML = "/studentAddWindow.fxml";
+    private String parentFile = "/ApplicationInterface.fxml";
 
     @FXML
     private Button btAddTeacher;
@@ -97,6 +97,7 @@ public class ParentController extends TabPane {
     }
 
     private void setUpTheLoader() {
+        System.out.println(getClass().getResource(parentFile));
         FXMLLoader loader = new FXMLLoader(getClass().getResource(parentFile));
         loader.setController(this);
         loader.setRoot(this);
