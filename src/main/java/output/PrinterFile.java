@@ -2,6 +2,7 @@ package output;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PrinterFile {
@@ -16,7 +17,7 @@ public class PrinterFile {
         }
     }
 
-    public <T> void printObjectArrayToFile(ArrayList<T> objectArray) {
+    public <T> void printObjectArrayToFile(List<T> objectArray) {
         for (T object : objectArray){
             printWriter.println(object);
         }

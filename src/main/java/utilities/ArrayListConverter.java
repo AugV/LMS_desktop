@@ -8,8 +8,8 @@ import java.util.List;
 
 public class ArrayListConverter {
 
-    public <T> ArrayList<String> objectListToStringList(ArrayList<T> objectList) {
-        ArrayList<String> stringList = new ArrayList<>();
+    public <T> List<String> objectListToStringList(List<T> objectList) {
+        List<String> stringList = new ArrayList<>();
         for (T obj :
                 objectList) {
             stringList.add(obj.toString());
@@ -19,7 +19,7 @@ public class ArrayListConverter {
     }
 
 
-    public <T> ObservableList<T> objectListToObservableList(ArrayList<T> objectList) {
+    public <T> ObservableList<T> objectListToObservableList(List<T> objectList) {
         ObservableList<T> observableList = FXCollections.observableArrayList();
         for (T obj :
                 objectList) {

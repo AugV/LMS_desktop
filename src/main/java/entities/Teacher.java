@@ -1,6 +1,8 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import utilities.DuplicateChecker;
 
 import javax.persistence.Entity;
@@ -9,7 +11,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Teacher extends Person {
     @OneToMany
-    private ArrayList<Course> teacherCourses = new ArrayList();
+    private List<Course> teacherCourses = new ArrayList();
 
     public Teacher(String loc_name, String loc_surname) {
         super(loc_name, loc_surname);
@@ -18,16 +20,12 @@ public class Teacher extends Person {
     public Teacher() {
     }
 
-    public ArrayList<Course> getTeacherCourses() {
+    public List<Course> getTeacherCourses() {
         return teacherCourses;
     }
 
     public void addTeacherCourses(Course course) {
-        if (!new DuplicateChecker().isDuplicateById(course, teacherCourses)) {
             teacherCourses.add(course);
-        } else {
-            System.out.println(" !entities.Student already exists!");
-        }
     }
 
 

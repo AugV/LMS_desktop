@@ -6,13 +6,14 @@ import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 @javax.persistence.Entity
 public class Course extends Entity implements Serializable {
     @Column
     private String information;
     @OneToMany
-    private ArrayList<Task> courseTasks = new ArrayList();
+    private List<Task> courseTasks = new ArrayList();
 
 
     public Course(int courseID, String name, String information) {
@@ -36,11 +37,7 @@ public class Course extends Entity implements Serializable {
     }
 
     public void addCourseTask(Task task) {
-        if (!new DuplicateChecker().isDuplicateById(task, courseTasks)) {
             courseTasks.add(task);
-        } else {
-            System.out.println(" !entities.Task already exists!");
-        }
     }
 
     public void addCompletedTaskToCourseTaskById(int taskId, CompletedTask newCompletedTask) {
@@ -70,7 +67,7 @@ public class Course extends Entity implements Serializable {
         return taskMatch;
     }
 
-    public ArrayList<Task> getCourseTasks() {
+    public List<Task> getCourseTasks() {
         return courseTasks;
     }
 

@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+
 @javax.persistence.Entity
 public class Task extends Entity implements Serializable {
 
@@ -15,7 +17,7 @@ public class Task extends Entity implements Serializable {
     private String points;
     private boolean allowSubmitCompletedTask = true;
     @OneToMany
-    private ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
+    private List<CompletedTask> taskCompletedTasks = new ArrayList();
 
     public Task(int id, String name, String taskCondition, String deadline, String points) {
         super(name);
@@ -42,15 +44,15 @@ public class Task extends Entity implements Serializable {
         this.allowSubmitCompletedTask = allowSubmitCompletedTask;
     }
 
-    public ArrayList<CompletedTask> getTaskCompletedTasks() {
+    public List<CompletedTask> getTaskCompletedTasks() {
         return taskCompletedTasks;
     }
 
     public void addTaskCompletedTask(CompletedTask completedTask) {
-        if (allowSubmitCompletedTask && !new DuplicateChecker().isDuplicateById(completedTask, taskCompletedTasks)) {
+        if (allowSubmitCompletedTask) {
             this.taskCompletedTasks.add(completedTask);
         } else {
-            System.out.println("Sorry, task is closed or you already submitted this task");
+            System.out.println("Sorry, task is closed");
         }
     }
 

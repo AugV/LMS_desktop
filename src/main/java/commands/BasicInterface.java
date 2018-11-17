@@ -1,3 +1,4 @@
+/*
 package commands;
 
 import entities.*;
@@ -331,3 +332,4 @@ public class BasicInterface {
         }
     }
 }
+*/

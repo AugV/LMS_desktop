@@ -2,6 +2,8 @@ package entities;
 import utilities.DuplicateChecker;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+
 import input.InputKeyboard;
 
 import javax.persistence.OneToMany;
@@ -12,11 +14,11 @@ public class University extends Entity implements Serializable {
     private static final long serialVersionUID = 6529685098267757690L;
 
     @OneToMany
-    private ArrayList<Teacher> teacherList = new ArrayList();
+    private List<Teacher> teacherList = new ArrayList();
     @OneToMany
-    private ArrayList<Group> groupList = new ArrayList();
+    private List<Group> groupList = new ArrayList();
     @OneToMany
-    private ArrayList<Course> courseList = new ArrayList();
+    private List<Course> courseList = new ArrayList();
     @OneToOne
     private Group selectedGroup;
 
@@ -38,26 +40,17 @@ public class University extends Entity implements Serializable {
 
     //Groups
     //region
-    public ArrayList<Group> getGroupList() {
+    public List<Group> getGroupList() {
         return groupList;
     }
 
     public void addGroup(Group group) {
-        if (!new DuplicateChecker().isDuplicateById(group, groupList)) {
             groupList.add(group);
-        } else {
-            System.out.println(" !entities.Group already exists!");
-        }
-    }
+            }
 
     public void addGroup(int id, String name) {
         Group group = new Group(id,name);
-        if (!new DuplicateChecker().isDuplicateById(group, groupList)) {
             groupList.add(group);
-        } else {
-            System.out.println(" !entities.Group already exists!");
-        }
-
     }
 
     public Group getGroupByID(int id) {
@@ -76,7 +69,7 @@ public class University extends Entity implements Serializable {
     //endregion
     //Courses
     //region
-    public ArrayList<Course> getCourseList() {
+    public List<Course> getCourseList() {
         return courseList;
     }
 
@@ -91,12 +84,8 @@ public class University extends Entity implements Serializable {
     }
 
     public void addCourse(Course course) {
-        if (!new DuplicateChecker().isDuplicateById(course, courseList)) {
             courseList.add(course);
-        } else {
-            System.out.println(" !entities.Course already exists!");
-        }
-    }
+            }
 
     public Course getCourseByID(int id) {
         Course courseMatch = null;
@@ -111,7 +100,7 @@ public class University extends Entity implements Serializable {
     //endregion
     //Teachers
     // region
-    public ArrayList<Teacher> getTeacherList() {
+    public List<Teacher> getTeacherList() {
         return teacherList;
     }
 
@@ -120,7 +109,7 @@ public class University extends Entity implements Serializable {
     }
 
     public void removeTeacher(Object teacherToRemove){
-        System.out.println("remooving");
+        System.out.println("removing");
         teacherList.remove(teacherToRemove);
     }
 
@@ -138,11 +127,7 @@ public class University extends Entity implements Serializable {
 
     public void addTeacher(String name, String surname) {
         Teacher teacher = new Teacher(name, surname);
-        if (!new DuplicateChecker().isDuplicateById(teacher, teacherList)) {
             teacherList.add(teacher);
-        } else {
-            System.out.println(" !entities.Teacher already exists!");
-        }
     }
 
     public void removeTeacher() {

@@ -32,18 +32,18 @@ public class ElDienynas extends Application {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-//        entityManager.getTransaction().begin();
-//        entityManager.persist(new Teacher("Mokytahanas", "Dvejerasys"));
-//        entityManager.persist(new Teacher("Tampys", "Uzausa"));
-//        entityManager.persist(new Teacher("Letena", "Skrebys"));
-//        entityManager.getTransaction().commit();
-//        entityManager.close();
-//
-//        entityManager = entityManagerFactory.createEntityManager();
-//        entityManager.getTransaction().begin();
-//        String text = entityManager.createQuery("from Thing", Teacher.class).getResultList().get(0).getName();
-//        System.out.println("SOMETHING:   "+text);
-//        entityManager.close();
+        entityManager.getTransaction().begin();
+        entityManager.persist(new Teacher("Mokytahanas", "Dvejerasys"));
+        entityManager.persist(new Teacher("Tampys", "Uzausa"));
+        entityManager.persist(new Teacher("Letena", "Skrebys"));
+        entityManager.getTransaction().commit();
+        entityManager.close();
+
+        entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        String text = entityManager.createQuery("from Teacher", Teacher.class).getResultList().get(0).getName();
+        System.out.println("SOMETHING:   "+text);
+        entityManager.close();
 
         //TODO uncomment XD
 //        ParentController parentController = new ParentController(university, primaryStage);

@@ -11,9 +11,9 @@ import java.util.List;
 @javax.persistence.Entity
 public class Group extends Entity implements Serializable {
     @OneToMany
-    ArrayList<Student> groupStudents = new ArrayList();
+    List<Student> groupStudents = new ArrayList();
     @ManyToMany
-    ArrayList<Course> groupCourses = new ArrayList();
+    List<Course> groupCourses = new ArrayList();
 
     //TODO change ArrayList<> to List<> in ALL THE PROJECT
     public Group() {
@@ -32,19 +32,15 @@ public class Group extends Entity implements Serializable {
         super(name);
     }
 
-    public ArrayList<Student> getGroupStudents() {
+    public List<Student> getGroupStudents() {
         return groupStudents;
     }
 
     public void addGroupStudents(Student student) {
-        if (!new DuplicateChecker().isDuplicateById(student, groupStudents)) {
             this.groupStudents.add(student);
-        } else {
-            System.out.println(" !entities.Student already exists!");
-        }
     }
 
-    public ArrayList<Course> getGroupCourses() {
+    public List<Course> getGroupCourses() {
         return groupCourses;
     }
 
