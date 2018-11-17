@@ -16,12 +16,12 @@ public class Course extends Entity implements Serializable {
     private List<Task> courseTasks = new ArrayList();
 
 
-    public Course(int courseID, String name, String information) {
+    public Course(String name, String information) {
         super(name);
         this.information = information;
     }
 
-    public Course(int courseID, String name, String information, Teacher teacher, Group group) {
+    public Course(String name, String information, Teacher teacher, Group group) {
         super(name);
         this.information = information;
         teacher.addTeacherCourses(this);

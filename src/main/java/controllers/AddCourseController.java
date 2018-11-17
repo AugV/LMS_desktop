@@ -34,7 +34,7 @@ public class AddCourseController extends ChildControler {
         btAdd.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Course course = new Course(parseInt(id.getText()), name.getText(), information.getText());
+                Course course = new Course( name.getText(), information.getText());
                 try {
                     university.getTeacherByID(parseInt(teacherId.getText())).addTeacherCourses(course);
                 }catch (NullPointerException e) {
