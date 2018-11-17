@@ -3,6 +3,7 @@ package entities;
 import utilities.DuplicateChecker;
 
 import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @javax.persistence.Entity
 public class StudentsGroup extends Entity implements Serializable {
-    @OneToMany(cascade= CascadeType.ALL)
+    @OneToMany(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
     List<Student> groupStudents = new ArrayList();
     @ManyToMany(cascade= CascadeType.ALL)
     List<Course> groupCourses = new ArrayList();

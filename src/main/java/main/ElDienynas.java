@@ -29,8 +29,6 @@ public class ElDienynas extends Application {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-
-
         entityManager.getTransaction().begin();
         entityManager.persist(university);
         entityManager.getTransaction().commit();
@@ -39,8 +37,8 @@ public class ElDienynas extends Application {
         entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
         StudentsGroup stdGrp = entityManager.createQuery("FROM StudentsGroup ", StudentsGroup.class).getResultList().get(0);
-        CompletedTask crs = entityManager.createQuery("FROM CompletedTask ", CompletedTask.class).getResultList().get(0);
-        System.out.println(crs.getAnswer());
+        //CompletedTask crs = entityManager.createQuery("FROM CompletedTask ", CompletedTask.class).getResultList().get(0);
+        System.out.println(stdGrp.getGroupStudents().get(0).getName());
         entityManager.close();
 
         //TODO uncomment XD
