@@ -95,20 +95,20 @@ public class BasicInterface {
             printer.printStudentPage();
             switch (inputKeyboard.getUserInputchar()) {
                 case '1':
-                    printer.printObjectArray(university.getGroupList());
+                    printer.printObjectArray(university.getStudentsGroupList());
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '2':
                     try{
                         printer.printObjectArray(university.getGroupByID(inputKeyboard.getUserInputGroupInt()).getGroupStudents());}
                     catch (NullPointerException e){
-                        System.out.println(" !entities.Group with this ID does not exist!");
+                        System.out.println(" !entities.StudentsGroup with this ID does not exist!");
                     }
                     inputKeyboard.pressEnterToContinue();
                     break;
                 case '3':
                     printer.printGroupConstructorGuide();
-                    university.addGroup(new Group(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine()));
+                    university.addGroup(new StudentsGroup(inputKeyboard.getUserInputInt(), inputKeyboard.getUserInputLine()));
                     printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -118,7 +118,7 @@ public class BasicInterface {
                              inputKeyboard.getUserInputLine(), inputKeyboard.getUserInputLine());
                     try{university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupStudents(newStudent);}
                     catch(NullPointerException e){
-                        System.out.println(" !entities.Group with this ID does not exist!");
+                        System.out.println(" !entities.StudentsGroup with this ID does not exist!");
                     }
                     //printer.printDataAdded();
                     inputKeyboard.pressEnterToContinue();
@@ -158,7 +158,7 @@ public class BasicInterface {
                     try{
                         university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
                     }catch (NullPointerException e) {
-                        System.out.println(" !entities.Group with this ID does not exist!");
+                        System.out.println(" !entities.StudentsGroup with this ID does not exist!");
                     }
                     university.addCourse(course);
                     printer.printDataAdded();
@@ -266,7 +266,7 @@ public class BasicInterface {
                             printer.printObjectArray(course.getCourseTasks());
                         }
                     }catch(NullPointerException e){
-                        System.out.println(" !entities.Group with this ID does not exist!");
+                        System.out.println(" !entities.StudentsGroup with this ID does not exist!");
                     }
                     inputKeyboard.pressEnterToContinue();
                     break;
@@ -321,7 +321,7 @@ public class BasicInterface {
                     try{
                         university.getGroupByID(inputKeyboard.getUserInputGroupInt()).addGroupCourse(course);
                     }catch(NullPointerException e){
-                        System.out.println("Wrong entities.Course or entities.Group ID");
+                        System.out.println("Wrong entities.Course or entities.StudentsGroup ID");
                     }
                     printer.printDataAdded();
                     break;

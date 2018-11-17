@@ -2,6 +2,7 @@ package entities;
 
 import utilities.DuplicateChecker;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
@@ -9,26 +10,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @javax.persistence.Entity
-public class Group extends Entity implements Serializable {
-    @OneToMany
+public class StudentsGroup extends Entity implements Serializable {
+    @OneToMany(cascade= CascadeType.ALL)
     List<Student> groupStudents = new ArrayList();
-    @ManyToMany
+    @ManyToMany(cascade= CascadeType.ALL)
     List<Course> groupCourses = new ArrayList();
 
-    //TODO change ArrayList<> to List<> in ALL THE PROJECT
-    public Group() {
+    public StudentsGroup() {
     }
-
 
     public void addGroupCourse(Course groupCourse) {
-//        if (!new DuplicateChecker().isDuplicateById(groupCourse, groupCourses)) {
-//            this.groupCourses.add(groupCourse);
-//        } else {
-//            System.out.println(" !entities.Course already exists!");
-//        }
-    }
+            this.groupCourses.add(groupCourse);
+            }
 
-    public Group(int id, String name) {
+    public StudentsGroup(String name) {
         super(name);
     }
 
@@ -44,10 +39,9 @@ public class Group extends Entity implements Serializable {
         return groupCourses;
     }
 
-
     @Override
     public String toString() {
-        return "entities.Group{" +
+        return "entities.StudentsGroup{" +
                 "groupID=" + this.getId() +
                 ", name='" + this.getName() + '\'' +
                 ", groupStudents=" + groupStudents +

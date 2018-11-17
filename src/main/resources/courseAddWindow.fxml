@@ -36,7 +36,7 @@
                   <Insets bottom="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="groupId" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="entities.Group ID">
+            <TextField fx:id="groupId" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="entities.StudentsGroup ID">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>

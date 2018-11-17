@@ -26,7 +26,7 @@ public class AddGroupController extends ChildControler {
         btAdd.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.addGroup(Integer.parseInt(id.getText()), name.getText());
+                university.addGroup(name.getText());
                 superController.updateGroupListView();
                 stage.close();
             }

@@ -3,7 +3,7 @@
     <persistence-unit name="PersistenceUnitHibernateH2">
         <class>entities.CompletedTask</class>
         <class>entities.Course</class>
-        <class>entities.Group</class>
+        <class>entities.StudentsGroup</class>
         <class>entities.Student</class>
         <class>entities.Task</class>
         <class>entities.Teacher</class>

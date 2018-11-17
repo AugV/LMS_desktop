@@ -43,7 +43,7 @@ public class AddCourseController extends ChildControler {
                 try{
                     university.getGroupByID(parseInt(groupId.getText())).addGroupCourse(course);
                 }catch (NullPointerException e) {
-                    System.out.println(" !entities.Group with this ID does not exist!");
+                    System.out.println(" !entities.StudentsGroup with this ID does not exist!");
                 }
                 university.addCourse(course);
                 superController.updateCourseListView();

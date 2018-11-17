@@ -1,7 +1,6 @@
 package entities;
 
-import utilities.DuplicateChecker;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
@@ -12,7 +11,7 @@ import java.util.List;
 public class Course extends Entity implements Serializable {
     @Column
     private String information;
-    @OneToMany
+    @OneToMany(cascade= CascadeType.ALL)
     private List<Task> courseTasks = new ArrayList();
 
 
@@ -21,11 +20,11 @@ public class Course extends Entity implements Serializable {
         this.information = information;
     }
 
-    public Course(String name, String information, Teacher teacher, Group group) {
+    public Course(String name, String information, Teacher teacher, StudentsGroup studentsGroup) {
         super(name);
         this.information = information;
         teacher.addTeacherCourses(this);
-        group.addGroupCourse(this);
+        //studentsGroup.addGroupCourse(this);
     }
 
     public Course() {

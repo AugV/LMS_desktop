@@ -1,11 +1,11 @@
 package entities;
-import utilities.DuplicateChecker;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import input.InputKeyboard;
 
+import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -13,14 +13,14 @@ import javax.persistence.OneToOne;
 public class University extends Entity implements Serializable {
     private static final long serialVersionUID = 6529685098267757690L;
 
-    @OneToMany
+    @OneToMany(cascade= CascadeType.ALL)
     private List<Teacher> teacherList = new ArrayList();
-    @OneToMany
-    private List<Group> groupList = new ArrayList();
-    @OneToMany
+    @OneToMany(cascade= CascadeType.ALL)
+    private List<StudentsGroup> studentsGroupList = new ArrayList();
+    @OneToMany(cascade= CascadeType.ALL)
     private List<Course> courseList = new ArrayList();
-    @OneToOne
-    private Group selectedGroup;
+    @OneToOne(cascade= CascadeType.ALL)
+    private StudentsGroup selectedStudentsGroup;
 
     public University(String name) {
         super(name);
@@ -30,40 +30,40 @@ public class University extends Entity implements Serializable {
     }
 
 
-    public void setSelectedGroup(Object selectedGroup) {
-        this.selectedGroup = (Group) selectedGroup;
+    public void setSelectedStudentsGroup(Object selectedStudentsGroup) {
+        this.selectedStudentsGroup = (StudentsGroup) selectedStudentsGroup;
     }
 
-    public Group getSelectedGroup() {
-        return selectedGroup;
+    public StudentsGroup getSelectedStudentsGroup() {
+        return selectedStudentsGroup;
     }
 
     //Groups
     //region
-    public List<Group> getGroupList() {
-        return groupList;
+    public List<StudentsGroup> getStudentsGroupList() {
+        return studentsGroupList;
     }
 
-    public void addGroup(Group group) {
-            groupList.add(group);
+    public void addGroup(StudentsGroup studentsGroup) {
+            studentsGroupList.add(studentsGroup);
             }
 
-    public void addGroup(int id, String name) {
-        Group group = new Group(id,name);
-            groupList.add(group);
+    public void addGroup(String name) {
+        StudentsGroup studentsGroup = new StudentsGroup(name);
+            studentsGroupList.add(studentsGroup);
     }
 
-    public Group getGroupByID(int id) {
-        for (Group group : this.getGroupList()) {
-                if (group.getId() == id) {
-                    return group;
+    public StudentsGroup getGroupByID(int id) {
+        for (StudentsGroup studentsGroup : this.getStudentsGroupList()) {
+                if (studentsGroup.getId() == id) {
+                    return studentsGroup;
                 }
             }
         return null;
     }
 
     public void removeGroup(Object groupToRemove){
-        groupList.remove(groupToRemove);
+        studentsGroupList.remove(groupToRemove);
     }
 
     //endregion
@@ -75,8 +75,8 @@ public class University extends Entity implements Serializable {
 
     public void removeCourse(Object courseToRemove){
         courseList.remove(courseToRemove);
-        for(Group group: groupList){
-            group.getGroupCourses().remove(courseToRemove);
+        for(StudentsGroup studentsGroup : studentsGroupList){
+            studentsGroup.getGroupCourses().remove(courseToRemove);
         }
         for(Teacher teacher: teacherList){
             teacher.getTeacherCourses().remove(courseToRemove);
@@ -141,10 +141,10 @@ public class University extends Entity implements Serializable {
     }
 //endregion
     //General
-    public ArrayList<Student> getAllStudents(){
-        ArrayList<Student> allStudents = new ArrayList<>();
-        for(Group group: groupList){
-            allStudents.addAll(group.getGroupStudents());
+    public List<Student> getAllStudents(){
+        List<Student> allStudents = new ArrayList<>();
+        for(StudentsGroup studentsGroup : studentsGroupList){
+            allStudents.addAll(studentsGroup.getGroupStudents());
         }
         return allStudents;
     }

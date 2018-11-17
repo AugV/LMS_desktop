@@ -49,7 +49,7 @@
                         <HBox id="teacherHBox" prefHeight="82.0" prefWidth="600.0">
                             <children>
                                 <Button id="button" fx:id="btAddGroup" mnemonicParsing="false" prefHeight="50.0"
-                                        prefWidth="70.0" text="Add entities.Group">
+                                        prefWidth="70.0" text="Add entities.StudentsGroup">
                                     <HBox.margin>
                                         <Insets left="10.0" top="10.0"/>
                                     </HBox.margin>

@@ -54,7 +54,7 @@ public class ParentController extends TabPane {
         setUpTeacherWindow();
         setUpCourseWindow();
 
-        groupListView.getItems().addAll(university.getGroupList());
+        groupListView.getItems().addAll(university.getStudentsGroupList());
         groupListView.setCellFactory(param -> {
             GroupCell cell = new GroupCell(groupListView, this, university);
             cell.createSelections();
@@ -135,12 +135,12 @@ public class ParentController extends TabPane {
     }
 
     public void updateStudentListView() {
-        studentListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedGroup().getGroupStudents()));
+        studentListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedStudentsGroup().getGroupStudents()));
         System.out.println("StudentList updated");
     }
 
     public void updateGroupListView() {
-        groupListView.setItems(new ArrayListConverter().objectListToObservableList(university.getGroupList()));
+        groupListView.setItems(new ArrayListConverter().objectListToObservableList(university.getStudentsGroupList()));
         System.out.println("GroupList updated");
     }
 

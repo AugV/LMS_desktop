@@ -1,7 +1,7 @@
 package cells;
 
 import controllers.ParentController;
-import entities.Group;
+import entities.StudentsGroup;
 import entities.University;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
@@ -24,7 +24,7 @@ public class GroupCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.removeGroup(cell.getItem());
                 superControler.updateGroupListView();
-                Toast.makeText(superControler.primaryStage, "entities.Group removed", 800,200,600);
+                Toast.makeText(superControler.primaryStage, "entities.StudentsGroup removed", 800,200,600);
             }
         });
 
@@ -42,7 +42,7 @@ public class GroupCell extends CustomCell {
         selectGroup.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.setSelectedGroup(cell.getItem());
+                university.setSelectedStudentsGroup(cell.getItem());
                 superControler.updateStudentListView();
                 Toast.makeText(superControler.primaryStage, "group selected", 700,200,400);
 
@@ -55,9 +55,9 @@ public class GroupCell extends CustomCell {
     @Override
     protected void cellUpdateMethodOverride() {
         //super.cellUpdateMethodOverride();
-        cell = new ListCell<Group>() {
+        cell = new ListCell<StudentsGroup>() {
             @Override
-            protected void updateItem(Group item, boolean empty) {
+            protected void updateItem(StudentsGroup item, boolean empty) {
                 super.updateItem(item, empty);
                 if (empty) {
                     text.setText(null);

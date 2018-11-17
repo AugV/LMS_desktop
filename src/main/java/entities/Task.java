@@ -2,6 +2,7 @@ package entities;
 
 import utilities.DuplicateChecker;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
@@ -16,10 +17,10 @@ public class Task extends Entity implements Serializable {
     private String deadline;
     private String points;
     private boolean allowSubmitCompletedTask = true;
-    @OneToMany
+    @OneToMany(cascade= CascadeType.ALL)
     private List<CompletedTask> taskCompletedTasks = new ArrayList();
 
-    public Task(int id, String name, String taskCondition, String deadline, String points) {
+    public Task(String name, String taskCondition, String deadline, String points) {
         super(name);
         this.taskCondition = taskCondition;
         this.deadline = deadline;

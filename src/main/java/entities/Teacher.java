@@ -5,12 +5,13 @@ import java.util.List;
 
 import utilities.DuplicateChecker;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
 @Entity
 public class Teacher extends Person {
-    @OneToMany
+    @OneToMany(cascade= CascadeType.ALL)
     private List<Course> teacherCourses = new ArrayList();
 
     public Teacher(String loc_name, String loc_surname) {
