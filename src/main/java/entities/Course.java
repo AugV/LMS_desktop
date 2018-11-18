@@ -24,7 +24,7 @@ public class Course extends Entity implements Serializable {
         super(name);
         this.information = information;
         teacher.addTeacherCourses(this);
-        //studentsGroup.addGroupCourse(this);
+        studentsGroup.addGroupCourse(this);
     }
 
     public Course() {

@@ -14,7 +14,7 @@ import java.util.List;
 public class StudentsGroup extends Entity implements Serializable {
     @OneToMany(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
     List<Student> groupStudents = new ArrayList();
-    @ManyToMany(cascade= CascadeType.ALL)
+    @ManyToMany(cascade= CascadeType.ALL, fetch = FetchType.EAGER)
     List<Course> groupCourses = new ArrayList();
 
     public StudentsGroup() {

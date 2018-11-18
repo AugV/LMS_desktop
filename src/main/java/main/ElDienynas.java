@@ -1,7 +1,9 @@
 package main;
 
+import controllers.ParentController;
 import entities.*;
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import javax.persistence.EntityManager;
@@ -13,9 +15,14 @@ public class ElDienynas extends Application {
 
 
     public void init() {
-       //university = new SerializeDeserialize().deserialize("universityObject.ser");
-    }
+        setUniversity("VGTU");
+        entityInstantiation();
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");
+        persistUniversityToDB(entityManagerFactory);
+        university= null;
+        getUniversityFromDB(entityManagerFactory);
 
+    }
 
     public void setUniversity( String universityName) {
         this.university = new University(universityName);
@@ -23,30 +30,28 @@ public class ElDienynas extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        setUniversity("VGTU");
+//TODO https://stackoverflow.com/questions/30955910/if-i-modify-a-hibernate-entity-after-doing-a-save-when-i-commit-would-the-chan
+        ParentController parentController = new ParentController(university, primaryStage);
+        primaryStage.setScene(new Scene(parentController));
+        primaryStage.show();
 
-        entityInstantiation();
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");
+
+    }
+
+    private void getUniversityFromDB(EntityManagerFactory entityManagerFactory) {
+        EntityManager entityManager;
+        entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        university = entityManager.createQuery("FROM University ", University.class).getResultList().get(0);
+        entityManager.close();
+    }
+
+    private void persistUniversityToDB(EntityManagerFactory entityManagerFactory) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-
         entityManager.getTransaction().begin();
         entityManager.persist(university);
         entityManager.getTransaction().commit();
         entityManager.close();
-
-        entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-        StudentsGroup stdGrp = entityManager.createQuery("FROM StudentsGroup ", StudentsGroup.class).getResultList().get(0);
-        //CompletedTask crs = entityManager.createQuery("FROM CompletedTask ", CompletedTask.class).getResultList().get(0);
-        System.out.println(stdGrp.getGroupStudents().get(0).getName());
-        entityManager.close();
-
-        //TODO uncomment XD
-//        ParentController parentController = new ParentController(university, primaryStage);
-//        primaryStage.setScene(new Scene(parentController));
-//        primaryStage.show();
-
-
     }
 
     private void entityInstantiation() {
