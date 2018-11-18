@@ -12,16 +12,15 @@ import javax.persistence.Persistence;
 
 public class ElDienynas extends Application {
     private University university;
-
+    private static final EntityManagerFactory entityManagerFactory;
+    static{entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");}
 
     public void init() {
         setUniversity("VGTU");
         entityInstantiation();
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");
-        persistUniversityToDB(entityManagerFactory);
+        persistUniversityToDB();
         university= null;
-        getUniversityFromDB(entityManagerFactory);
-
+        getUniversityFromDB();
     }
 
     public void setUniversity( String universityName) {
@@ -34,11 +33,9 @@ public class ElDienynas extends Application {
         ParentController parentController = new ParentController(university, primaryStage);
         primaryStage.setScene(new Scene(parentController));
         primaryStage.show();
-
-
     }
 
-    private void getUniversityFromDB(EntityManagerFactory entityManagerFactory) {
+    private void getUniversityFromDB() {
         EntityManager entityManager;
         entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
@@ -46,7 +43,7 @@ public class ElDienynas extends Application {
         entityManager.close();
     }
 
-    private void persistUniversityToDB(EntityManagerFactory entityManagerFactory) {
+    private void persistUniversityToDB() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
         entityManager.persist(university);
@@ -84,7 +81,16 @@ public class ElDienynas extends Application {
     }
 
     public void stop() {
+        mergeUniversityToDB();
         //new SerializeDeserialize().serialize(university, "universityObject.ser");
+    }
+
+    private void mergeUniversityToDB() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.merge(university);
+        entityManager.getTransaction().commit();
+        entityManager.close();
     }
 
     public static void main(String[] args) {

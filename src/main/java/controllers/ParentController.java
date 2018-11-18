@@ -17,7 +17,7 @@ import java.io.IOException;
 public class ParentController extends TabPane {
     private University university;
     public Stage primaryStage;
-    private String addTeacherFXML = "TeacherAddWindow.fxml";
+    private String addTeacherFXML = "/TeacherAddWindow.fxml";
     private String saveTeacherFXML = "/saveTeacherWindow.fxml";
     private String addCourseFXML = "/courseAddWindow.fxml";
     private String addGroupFXML = "/groupAddWindow.fxml";
