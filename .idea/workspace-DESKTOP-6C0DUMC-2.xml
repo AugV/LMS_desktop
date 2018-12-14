@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ParentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ParentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,52 +32,44 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="11618" />
-          <entry key="xml" value="226" />
+          <entry key="java" value="10180" />
+          <entry key="xml" value="212" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11617" />
-          <entry key="JPA QL" value="1" />
+          <entry key="JAVA" value="10180" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="XML" value="235" />
+          <entry key="XML" value="221" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Persistence/JavaeeElement:/8172a209/PersistenceUnitHibernateH2/LD2/jpa/JPA/PersistenceModel" value="3" />
-          <entry key="class" value="1" />
           <entry key="fxml" value="11" />
-          <entry key="java" value="206" />
+          <entry key="java" value="158" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="9" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="206" />
+          <entry key="JAVA" value="158" />
           <entry key="Scratch" value="1" />
-          <entry key="UML" value="3" />
-          <entry key="XML" value="20" />
+          <entry key="XML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="4" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -88,21 +77,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="initializer##0;class#ElDienynas#0" />
-                <element signature="method#init#0;class#ElDienynas#0" />
-                <element signature="method#start#0;class#ElDienynas#0" />
-                <element signature="method#getUniversityFromDB#0;class#ElDienynas#0" />
-                <element signature="method#persistUniversityToDB#0;class#ElDienynas#0" />
-                <element signature="method#entityInstantiation#0;class#ElDienynas#0" />
-                <element signature="method#stop#0;class#ElDienynas#0" />
-                <element signature="method#mergeUniversityToDB#0;class#ElDienynas#0" />
-                <element signature="method#main#0;class#ElDienynas#0" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Group.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,97 +122,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entities/Course.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Student.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Task.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/University.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-              <folding>
-                <element signature="method#University#1;class#University#0" />
-                <element signature="e#1229#1230#0" expanded="true" />
-                <element signature="e#1269#1270#0" expanded="true" />
-                <element signature="method#addGroup#1;class#University#0" />
-                <element signature="method#getGroupByID#0;class#University#0" />
-                <element signature="method#removeCourse#0;class#University#0" />
-                <element signature="method#getCourseByID#0;class#University#0" />
-                <element signature="method#removeTeacher#0;class#University#0" />
-                <element signature="method#getTeacherByID#0;class#University#0" />
-                <element signature="method#addTeacher#1;class#University#0" />
-                <element signature="method#removeTeacher#1;class#University#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/CompletedTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ParentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="61" lean-forward="true" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-              <folding>
-                <element signature="method#ParentController#0;class#ParentController#0" />
-                <element signature="method#updateCourseListView#0;class#ParentController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddTeacherControler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+            <state relative-caret-position="306">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -220,11 +151,7 @@
     <findStrings>
       <find>contex</find>
       <find>updateItem</find>
-      <find>CascadeType.ALL</find>
     </findStrings>
-    <replaceStrings>
-      <replace>CascadeType.MERGE</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -232,6 +159,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/Group.java" />
+        <option value="$PROJECT_DIR$/src/AddGroupController.java" />
+        <option value="$PROJECT_DIR$/src/AddCoursController.java" />
+        <option value="$PROJECT_DIR$/src/AddCourseController.java" />
+        <option value="$PROJECT_DIR$/src/University.java" />
+        <option value="$PROJECT_DIR$/src/AddStudentControler.java" />
+        <option value="$PROJECT_DIR$/src/ParentController.java" />
+        <option value="$PROJECT_DIR$/src/Toast.java" />
+        <option value="$PROJECT_DIR$/src/CourseCell.java" />
         <option value="$PROJECT_DIR$/src/TeacherCell.java" />
         <option value="$PROJECT_DIR$/src/GroupCell.java" />
         <option value="$PROJECT_DIR$/src/StudentCell.java" />
@@ -264,25 +200,16 @@
         <option value="$PROJECT_DIR$/src/controllers/ParentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cells/CourseCell.java" />
         <option value="$PROJECT_DIR$/src/main/ElDienynas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ParentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cells/GroupCell.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Entity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/commands/BasicInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utilities/ArrayListConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/output/PrinterFile.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/AddCourseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/AddGroupController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Task.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Group.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/StudentGroup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/University.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/ParentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Entity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Group.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       </list>
     </option>
   </component>
@@ -292,11 +219,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="75" />
-    <option name="y" value="50" />
-    <option name="width" value="1800" />
-    <option name="height" value="860" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="240" />
+    <option name="y" value="203" />
+    <option name="width" value="1798" />
+    <option name="height" value="859" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -304,7 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -316,6 +242,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -354,14 +281,6 @@
               <item name="LD2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LD2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -378,6 +297,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -387,7 +310,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542570128434" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542382501859" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -469,17 +392,11 @@
       <option name="presentableId" value="Default" />
       <updated>1537364192446</updated>
       <workItem from="1542364016617" duration="13976000" />
-      <workItem from="1542451342771" duration="2840000" />
-      <workItem from="1542466541675" duration="48000" />
-      <workItem from="1542466717606" duration="2663000" />
-      <workItem from="1542480173351" duration="11097000" />
-      <workItem from="1542556027214" duration="6490000" />
-      <workItem from="1542574352303" duration="1585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38861000" />
+    <option name="totallyTimeSpent" value="14138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,31 +408,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="240" y="204" width="1797" height="858" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8110345" visible="true" weight="0.18230277" />
-      <window_info id="Persistence" order="1" sideWeight="0.18896551" side_tool="true" visible="true" weight="0.18230277" />
-      <window_info id="Structure" order="2" sideWeight="0.50176054" side_tool="true" weight="0.18249856" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="UI Designer" order="6" />
-      <window_info id="Learn" order="7" />
-      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info id="Persistence" sideWeight="0.18309858" side_tool="true" weight="0.18249856" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8169014" visible="true" weight="0.18249856" />
+      <window_info id="Structure" order="1" sideWeight="0.50176054" side_tool="true" weight="0.18249856" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32765958" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21366595" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21546961" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.2567376" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32872927" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32765958" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32872927" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32340425" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32458565" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.4989518" visible="true" weight="0.12723085" />
@@ -525,7 +443,6 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" x="0" y="0" width="410" height="676" id="Documentation" order="8" sideWeight="0.5010482" side_tool="true" visible="true" weight="0.24974975" />
-      <window_info anchor="right" id="Database" order="9" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3304904" />
@@ -632,6 +549,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/groupAddWindow.fxml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/studentAddWindow.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Toast.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/ArrayListConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -639,10 +564,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cells/CourseCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cells/CustomCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SaveTeachersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -660,10 +602,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/BasicInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddCourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddGroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddStudentControler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -675,10 +661,80 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/DuplicateChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddTeacherControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ChildControler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ParentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1061">
+          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/output/PrinterFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/CompletedTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -689,11 +745,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/55106c77-128e-477d-93d1-600ecfb899d8/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/BasicInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/55106c77-128e-477d-93d1-600ecfb899d8/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cells/CourseCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
           <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ParentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="method#ParentController#0;class#ParentController#0" />
+            <element signature="method#initialize#0;class#ParentController#0" />
+            <element signature="e#1628#1797#0" />
+            <element signature="e#1912#2085#0" />
+            <element signature="method#setUpCourseWindow#0;class#ParentController#0" />
+            <element signature="e#2317#2486#0" />
+            <element signature="method#setUpTeacherWindow#0;class#ParentController#0" />
+            <element signature="e#2724#2896#0" />
+            <element signature="e#2932#3016#0" />
+            <element signature="e#3055#3124#0" />
+            <element signature="method#setUpTheLoader#0;class#ParentController#0" />
+            <element signature="method#createTeacherAddWindowController#0;class#ParentController#0" />
+            <element signature="method#updateTeacherListView#0;class#ParentController#0" />
+            <element signature="method#updateStudentListView#0;class#ParentController#0" />
+            <element signature="method#updateGroupListView#0;class#ParentController#0" />
+            <element signature="method#updateCourseListView#0;class#ParentController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -704,259 +811,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/BasicInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="37" selection-end-line="335" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/ArrayListConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/DuplicateChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SaveTeachersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+        <state relative-caret-position="221">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/output/PrinterFile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/OneToMany.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddGroupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddCourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Persistence/JavaeeElement:/8172a209/PersistenceUnitHibernateH2/LD2/jpa/JPA/PersistenceModel">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Persistence</ID>
-          <OriginalElement>JavaeeElement:/8172a209/PersistenceUnitHibernateH2/LD2/jpa/JPA/PersistenceModel</OriginalElement>
-          <nodes>
-            <node x="188.0625" y="712.0">University#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/University.java</node>
-            <node x="0.0" y="422.0">Student#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Student.java</node>
-            <node x="171.125" y="0.0">CompletedTask#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/CompletedTask.java</node>
-            <node x="182.25" y="567.0">Teacher#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Teacher.java</node>
-            <node x="39.25" y="578.0">StudentsGroup#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/StudentsGroup.java</node>
-            <node x="132.625" y="211.0">Task#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Task.java</node>
-            <node x="182.125" y="422.0">Course#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Course.java</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Task#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Task.java" target="CompletedTask#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/CompletedTask.java">
-              <point x="0.0" y="-80.5" />
-              <point x="0.0" y="80.5" />
-            </edge>
-            <edge source="University#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/University.java" target="Teacher#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Teacher.java">
-              <point x="0.0" y="-36.5" />
-              <point x="249.5625" y="687.0" />
-              <point x="252.25" y="687.0" />
-              <point x="0.0" y="47.5" />
-            </edge>
-            <edge source="Teacher#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Teacher.java" target="Course#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Course.java">
-              <point x="0.0" y="-47.5" />
-              <point x="252.25" y="542.0" />
-              <point x="261.625" y="542.0" />
-              <point x="0.0" y="47.5" />
-            </edge>
-            <edge source="StudentsGroup#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/StudentsGroup.java" target="Course#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Course.java">
-              <point x="30.75" y="-36.5" />
-              <point x="131.5" y="542.0" />
-              <point x="208.625" y="542.0" />
-              <point x="-53.0" y="47.5" />
-            </edge>
-            <edge source="Course#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Course.java" target="Task#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Task.java">
-              <point x="0.0" y="-47.5" />
-              <point x="0.0" y="80.5" />
-            </edge>
-            <edge source="University#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/University.java" target="StudentsGroup#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/StudentsGroup.java">
-              <point x="-41.0" y="-36.5" />
-              <point x="208.5625" y="687.0" />
-              <point x="100.75" y="687.0" />
-              <point x="0.0" y="36.5" />
-            </edge>
-            <edge source="University#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/University.java" target="Course#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Course.java">
-              <point x="41.0" y="-36.5" />
-              <point x="290.5625" y="687.0" />
-              <point x="332.75" y="687.0" />
-              <point x="332.75" y="542.0" />
-              <point x="314.625" y="542.0" />
-              <point x="53.0" y="47.5" />
-            </edge>
-            <edge source="StudentsGroup#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/StudentsGroup.java" target="Student#file://C:/Users/Augustinas/OneDrive/javaProjects/LD2/src/main/java/entities/Student.java">
-              <point x="-30.75" y="-36.5" />
-              <point x="0.0" y="47.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.7124645892351275" x="-287.0" y="317.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Properties</Category>
-            <Category>Embeddables</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AddTeacherControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ParentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="61" lean-forward="true" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-          <folding>
-            <element signature="method#ParentController#0;class#ParentController#0" />
-            <element signature="method#updateCourseListView#0;class#ParentController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/CompletedTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/University.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <element signature="method#University#1;class#University#0" />
-            <element signature="e#1229#1230#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="method#addGroup#1;class#University#0" />
-            <element signature="method#getGroupByID#0;class#University#0" />
-            <element signature="method#removeCourse#0;class#University#0" />
-            <element signature="method#getCourseByID#0;class#University#0" />
-            <element signature="method#removeTeacher#0;class#University#0" />
-            <element signature="method#getTeacherByID#0;class#University#0" />
-            <element signature="method#addTeacher#1;class#University#0" />
-            <element signature="method#removeTeacher#1;class#University#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
-          <folding>
-            <element signature="initializer##0;class#ElDienynas#0" />
-            <element signature="method#init#0;class#ElDienynas#0" />
-            <element signature="method#start#0;class#ElDienynas#0" />
-            <element signature="method#getUniversityFromDB#0;class#ElDienynas#0" />
-            <element signature="method#persistUniversityToDB#0;class#ElDienynas#0" />
-            <element signature="method#entityInstantiation#0;class#ElDienynas#0" />
-            <element signature="method#stop#0;class#ElDienynas#0" />
-            <element signature="method#mergeUniversityToDB#0;class#ElDienynas#0" />
-            <element signature="method#main#0;class#ElDienynas#0" />
-          </folding>
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -977,7 +876,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>JPA (LD2)|JPA</last-edited>
+          <last-edited>JPA</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1012,7 +911,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate|LD2</last-edited>
+          <last-edited>JPA|LD2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
