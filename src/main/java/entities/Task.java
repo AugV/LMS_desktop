@@ -1,33 +1,51 @@
 package entities;
 
-import utilities.DuplicateChecker;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
+
 
 @javax.persistence.Entity
 public class Task extends Entity implements Serializable {
 
     @Column
     private String taskCondition;
+    @Column
     private String deadline;
+    @Column
     private String points;
+    @Column
     private boolean allowSubmitCompletedTask = true;
-    @OneToMany(cascade= CascadeType.ALL)
-    private List<CompletedTask> taskCompletedTasks = new ArrayList();
 
-    public Task(String name, String taskCondition, String deadline, String points) {
-        super(name);
+    @OneToMany
+    private ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
+
+    public Task(int id, String name, String taskCondition, String deadline, String points) {
+        super(id, name);
         this.taskCondition = taskCondition;
         this.deadline = deadline;
         this.points = points;
     }
 
     public Task() {
+    }
+
+    public String getTaskCondition() {
+        return taskCondition;
+    }
+
+    public String getDeadline() {
+        return deadline;
+    }
+
+    public String getPoints() {
+        return points;
+    }
+
+    public boolean isAllowSubmitCompletedTask() {
+        return allowSubmitCompletedTask;
     }
 
     public CompletedTask getCompletedTaskById(int id) {
@@ -45,16 +63,12 @@ public class Task extends Entity implements Serializable {
         this.allowSubmitCompletedTask = allowSubmitCompletedTask;
     }
 
-    public List<CompletedTask> getTaskCompletedTasks() {
+    public ArrayList<CompletedTask> getTaskCompletedTasks() {
         return taskCompletedTasks;
     }
 
     public void addTaskCompletedTask(CompletedTask completedTask) {
-        if (allowSubmitCompletedTask) {
             this.taskCompletedTasks.add(completedTask);
-        } else {
-            System.out.println("Sorry, task is closed");
-        }
     }
 
     @Override

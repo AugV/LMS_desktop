@@ -1,69 +1,65 @@
 package entities;
+
+import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import input.InputKeyboard;
-
-import javax.persistence.CascadeType;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import java.util.NoSuchElementException;
 
 @javax.persistence.Entity
 public class University extends Entity implements Serializable {
     private static final long serialVersionUID = 6529685098267757690L;
 
-    @OneToMany(cascade= CascadeType.ALL)
+    @OneToMany
     private List<Teacher> teacherList = new ArrayList();
-    @OneToMany(cascade= CascadeType.ALL)
-    private List<StudentsGroup> studentsGroupList = new ArrayList();
-    @OneToMany(cascade= CascadeType.ALL)
+    @OneToMany
+    private List<Group> groupList = new ArrayList();
+    @OneToMany
     private List<Course> courseList = new ArrayList();
-    @OneToOne(cascade= CascadeType.ALL)
-    private StudentsGroup selectedStudentsGroup;
 
-    public University(String name) {
-        super(name);
+    @Transient
+    private Group selectedGroup;
+
+    public University(int id, String name) {
+        super(id, name);
     }
 
-    public University() {
+
+    public void setSelectedGroup(Object selectedGroup) {
+        this.selectedGroup = (Group) selectedGroup;
     }
 
-
-    public void setSelectedStudentsGroup(Object selectedStudentsGroup) {
-        this.selectedStudentsGroup = (StudentsGroup) selectedStudentsGroup;
-    }
-
-    public StudentsGroup getSelectedStudentsGroup() {
-        return selectedStudentsGroup;
+    public Group getSelectedGroup() {
+        return selectedGroup;
     }
 
     //Groups
     //region
-    public List<StudentsGroup> getStudentsGroupList() {
-        return studentsGroupList;
+    public List<Group> getGroupList() {
+        return groupList;
     }
 
-    public void addGroup(StudentsGroup studentsGroup) {
-            studentsGroupList.add(studentsGroup);
-            }
-
-    public void addGroup(String name) {
-        StudentsGroup studentsGroup = new StudentsGroup(name);
-            studentsGroupList.add(studentsGroup);
+    public void addGroup(Group group) {
+        groupList.add(group);
     }
 
-    public StudentsGroup getGroupByID(int id) {
-        for (StudentsGroup studentsGroup : this.getStudentsGroupList()) {
-                if (studentsGroup.getId() == id) {
-                    return studentsGroup;
-                }
+    public void addGroup(int id, String name) {
+        Group group = new Group(id, name);
+        groupList.add(group);
+    }
+
+    public Group getGroupByID(int id) {
+        for (Group group : this.getGroupList()) {
+            if (group.getId() == id) {
+                return group;
             }
+        }
         return null;
     }
 
-    public void removeGroup(Object groupToRemove){
-        studentsGroupList.remove(groupToRemove);
+    public void removeGroup(Object groupToRemove) {
+        groupList.remove(groupToRemove);
     }
 
     //endregion
@@ -73,19 +69,19 @@ public class University extends Entity implements Serializable {
         return courseList;
     }
 
-    public void removeCourse(Object courseToRemove){
+    public void removeCourse(Object courseToRemove) {
         courseList.remove(courseToRemove);
-        for(StudentsGroup studentsGroup : studentsGroupList){
-            studentsGroup.getGroupCourses().remove(courseToRemove);
+        for (Group group : groupList) {
+            group.getGroupCourses().remove(courseToRemove);
         }
-        for(Teacher teacher: teacherList){
+        for (Teacher teacher : teacherList) {
             teacher.getTeacherCourses().remove(courseToRemove);
         }
     }
 
     public void addCourse(Course course) {
-            courseList.add(course);
-            }
+        courseList.add(course);
+    }
 
     public Course getCourseByID(int id) {
         Course courseMatch = null;
@@ -97,6 +93,7 @@ public class University extends Entity implements Serializable {
         }
         return courseMatch;
     }
+
     //endregion
     //Teachers
     // region
@@ -108,14 +105,14 @@ public class University extends Entity implements Serializable {
         this.teacherList.add(teacher);
     }
 
-    public void removeTeacher(Object teacherToRemove){
-        System.out.println("removing");
+    public void removeTeacher(Object teacherToRemove) {
+        System.out.println("remooving");
         teacherList.remove(teacherToRemove);
     }
 
     public Teacher getTeacherByID(int id) {
         Teacher teacherMatch = null;
-               for (Teacher teacher : this.getTeacherList()) {
+        for (Teacher teacher : this.getTeacherList()) {
             if (teacher.getId() == id) {
                 teacherMatch = teacher;
                 return teacherMatch;
@@ -125,27 +122,36 @@ public class University extends Entity implements Serializable {
         return null;
     }
 
-    public void addTeacher(String name, String surname) {
-        Teacher teacher = new Teacher(name, surname);
-            teacherList.add(teacher);
+    public void addTeacher(int id, String name, String surname) {
+        Teacher teacher = new Teacher(id, name, surname);
+        teacherList.add(teacher);
     }
 
-    public void removeTeacher() {
-        System.out.println("Enter ID of the teacher you wish to remove:");
-        Teacher teacherToRemove = getTeacherByID(new InputKeyboard().getUserInputInt());
-        try{
-            teacherList.remove(teacherList.indexOf(teacherToRemove));
-        } catch(ArrayIndexOutOfBoundsException e){
+    public void removeTeacher(Teacher teacherToRemove) {
+        try {
+            teacherList.remove(teacherToRemove);
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(" !entities.Teacher does not exist!");
         }
     }
-//endregion
+
+    //endregion
     //General
-    public List<Student> getAllStudents(){
+    public List<Student> getAllStudents() {
         List<Student> allStudents = new ArrayList<>();
-        for(StudentsGroup studentsGroup : studentsGroupList){
-            allStudents.addAll(studentsGroup.getGroupStudents());
+        for (Group group : groupList) {
+            allStudents.addAll(group.getGroupStudents());
         }
         return allStudents;
+    }
+
+    public Student getStudentById(int studentId) {
+        List<Student> studentList = getAllStudents();
+        for (Student student : studentList) {
+            if (student.getId() == studentId) {
+                return student;
+            }
+        }
+        throw new NoSuchElementException("Student not found");
     }
 }

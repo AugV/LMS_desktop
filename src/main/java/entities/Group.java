@@ -1,31 +1,28 @@
 package entities;
 
-import utilities.DuplicateChecker;
 
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @javax.persistence.Entity
-public class StudentsGroup extends Entity implements Serializable {
-    @OneToMany(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
+public class Group extends Entity implements Serializable {
+
+    @OneToMany
     List<Student> groupStudents = new ArrayList();
-    @ManyToMany(cascade= CascadeType.MERGE, fetch = FetchType.EAGER)
+    @OneToMany
     List<Course> groupCourses = new ArrayList();
 
-    public StudentsGroup() {
+    public Group() {
     }
 
     public void addGroupCourse(Course groupCourse) {
             this.groupCourses.add(groupCourse);
-            }
+    }
 
-    public StudentsGroup(String name) {
-        super(name);
+    public Group(int id, String name) {
+        super(id, name);
     }
 
     public List<Student> getGroupStudents() {
@@ -33,7 +30,8 @@ public class StudentsGroup extends Entity implements Serializable {
     }
 
     public void addGroupStudents(Student student) {
-            this.groupStudents.add(student);
+        student.setStudentsGroup(this);
+        this.groupStudents.add(student);
     }
 
     public List<Course> getGroupCourses() {
@@ -42,7 +40,7 @@ public class StudentsGroup extends Entity implements Serializable {
 
     @Override
     public String toString() {
-        return "entities.StudentsGroup{" +
+        return "entities.Group{" +
                 "groupID=" + this.getId() +
                 ", name='" + this.getName() + '\'' +
                 ", groupStudents=" + groupStudents +

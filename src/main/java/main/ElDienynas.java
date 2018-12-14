@@ -16,10 +16,10 @@ public class ElDienynas extends Application {
     static{entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");}
 
     public void init() {
-        setUniversity("VGTU");
-        entityInstantiation();
-        persistUniversityToDB();
-        university= null;
+       // setUniversity("VGTU");
+        //entityInstantiation();
+        //persistUniversityToDB();
+        //university= null;
         getUniversityFromDB();
     }
 
@@ -29,7 +29,6 @@ public class ElDienynas extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//TODO https://stackoverflow.com/questions/30955910/if-i-modify-a-hibernate-entity-after-doing-a-save-when-i-commit-would-the-chan
         ParentController parentController = new ParentController(university, primaryStage);
         primaryStage.setScene(new Scene(parentController));
         primaryStage.show();
@@ -39,7 +38,10 @@ public class ElDienynas extends Application {
         EntityManager entityManager;
         entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        university = entityManager.createQuery("FROM University ", University.class).getResultList().get(0);
+        try{university = entityManager.createQuery("FROM University ", University.class).getResultList().get(1);}
+        catch(IndexOutOfBoundsException e){
+            System.out.println("out of bouds");
+        }
         entityManager.close();
     }
 

@@ -9,6 +9,7 @@
           <factory-entry name="NewPersistenceUnit" value="55106c77-128e-477d-93d1-600ecfb899d8" />
           <factory-entry name="PersistenceUnitHibernateH2" />
         </datasource-mapping>
+        <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
