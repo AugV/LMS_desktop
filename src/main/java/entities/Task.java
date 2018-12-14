@@ -1,10 +1,12 @@
 package entities;
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 
 @javax.persistence.Entity
@@ -19,11 +21,11 @@ public class Task extends Entity implements Serializable {
     @Column
     private boolean allowSubmitCompletedTask = true;
 
-    @OneToMany
-    private ArrayList<CompletedTask> taskCompletedTasks = new ArrayList();
+    @OneToMany(cascade= CascadeType.ALL)
+    private List<CompletedTask> taskCompletedTasks = new ArrayList();
 
-    public Task(int id, String name, String taskCondition, String deadline, String points) {
-        super(id, name);
+    public Task(String name, String taskCondition, String deadline, String points) {
+        super(name);
         this.taskCondition = taskCondition;
         this.deadline = deadline;
         this.points = points;
@@ -63,7 +65,7 @@ public class Task extends Entity implements Serializable {
         this.allowSubmitCompletedTask = allowSubmitCompletedTask;
     }
 
-    public ArrayList<CompletedTask> getTaskCompletedTasks() {
+    public List<CompletedTask> getTaskCompletedTasks() {
         return taskCompletedTasks;
     }
 

@@ -1,28 +1,32 @@
 package entities;
 
 
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @javax.persistence.Entity
-public class Group extends Entity implements Serializable {
+@Table
+public class StudentsGroup extends Entity implements Serializable {
 
-    @OneToMany
+    @OneToMany(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
     List<Student> groupStudents = new ArrayList();
-    @OneToMany
+    @OneToMany(cascade= CascadeType.MERGE, fetch = FetchType.EAGER)
     List<Course> groupCourses = new ArrayList();
 
-    public Group() {
+    public StudentsGroup() {
+    }
+
+    public StudentsGroup(String name) {
+        super(name);
     }
 
     public void addGroupCourse(Course groupCourse) {
             this.groupCourses.add(groupCourse);
-    }
-
-    public Group(int id, String name) {
-        super(id, name);
     }
 
     public List<Student> getGroupStudents() {
@@ -40,7 +44,7 @@ public class Group extends Entity implements Serializable {
 
     @Override
     public String toString() {
-        return "entities.Group{" +
+        return "StudentsGroup{" +
                 "groupID=" + this.getId() +
                 ", name='" + this.getName() + '\'' +
                 ", groupStudents=" + groupStudents +

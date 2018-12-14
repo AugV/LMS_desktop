@@ -1,24 +1,26 @@
 package entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Teacher extends Person {
 
-    @OneToMany
-    private ArrayList<Course> teacherCourses = new ArrayList();
+    @OneToMany(cascade= CascadeType.ALL)
+    private List<Course> teacherCourses = new ArrayList();
 
-    public Teacher(int loc_id, String loc_name, String loc_surname) {
-        super(loc_id, loc_name, loc_surname);
+    public Teacher(String loc_name, String loc_surname) {
+        super(loc_name, loc_surname);
     }
 
     public Teacher() {
         super();
     }
 
-    public ArrayList<Course> getTeacherCourses() {
+    public List<Course> getTeacherCourses() {
         return teacherCourses;
     }
 

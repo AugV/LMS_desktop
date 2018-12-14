@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="mem:test">
+<dataSource name="sample.trace.db">
   <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.14">
     <root id="1">
       <ServerVersion>1.4.196</ServerVersion>
     </root>
-    <database id="2" parent="1" name="TEST">
+    <database id="2" parent="1" name="SAMPLE.TRACE.DB">
       <Current>1</Current>
       <Visible>1</Visible>
     </database>

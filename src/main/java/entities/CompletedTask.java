@@ -1,9 +1,6 @@
 package entities;
 
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,8 +24,8 @@ public class CompletedTask extends Entity implements Serializable  {
     private String gradeDate;
 
 
-    public CompletedTask(int id, String answer, Student owner) {
-        super(id);
+    public CompletedTask(String answer, Student owner) {
+        super();
         this.answer = answer;
         this.submissionDate = dateFormat.format(calendar.getTime());
         this.owner = owner;

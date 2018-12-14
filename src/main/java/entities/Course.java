@@ -1,29 +1,30 @@
 package entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 @javax.persistence.Entity
 public class Course extends Entity implements Serializable {
     @Column
     private String information;
-    @OneToMany
-    private ArrayList<Task> courseTasks = new ArrayList();
+    @OneToMany(cascade= CascadeType.ALL)
+    private List<Task> courseTasks = new ArrayList();
 
 
-    public Course(int courseID, String name, String information) {
-        super(courseID, name);
+    public Course(String name, String information) {
+        super( name);
         this.information = information;
     }
 
-    public Course(int courseID, String name, String information, Teacher teacher, Group group) {
-        super(courseID, name);
+    public Course(String name, String information, Teacher teacher, StudentsGroup studentsGroup) {
+        super( name);
         this.information = information;
         teacher.addTeacherCourses(this);
-        group.addGroupCourse(this);
+        studentsGroup.addGroupCourse(this);
     }
 
     public Course() {
@@ -65,7 +66,7 @@ public class Course extends Entity implements Serializable {
         return taskMatch;
     }
 
-    public ArrayList<Task> getCourseTasks() {
+    public List<Task> getCourseTasks() {
         return courseTasks;
     }
 

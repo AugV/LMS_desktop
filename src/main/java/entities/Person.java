@@ -1,16 +1,17 @@
 package entities;
 
 import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
-@javax.persistence.Entity
+@MappedSuperclass
 abstract public class Person extends Entity implements Serializable {
 
     @Column
     private String surname;
 
-    public Person(int loc_id, String loc_name, String loc_surname) {
-        super(loc_id,loc_name);
+    public Person( String loc_name, String loc_surname) {
+        super(loc_name);
         this.surname = loc_surname;
     }
 
