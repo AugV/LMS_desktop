@@ -21,11 +21,15 @@ public class ArrayListConverter {
 
     public <T> ObservableList<T> objectListToObservableList(List<T> objectList) {
         ObservableList<T> observableList = FXCollections.observableArrayList();
+        try{
         for (T obj :
                 objectList) {
             observableList.add(obj);
         }
-        return observableList;
+        return observableList;}
+        catch (NullPointerException e){
+            throw  new NullPointerException();
+        }
     }
 
 }

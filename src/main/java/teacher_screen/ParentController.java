@@ -1,9 +1,12 @@
-package controllers;
+package teacher_screen;
 
-import cells.CourseCell;
-import cells.GroupCell;
-import cells.StudentCell;
-import cells.TeacherCell;
+import course_screen.TaskCell;
+import student_screen.AddGroupController;
+import student_screen.AddStudentControler;
+import course_screen.AddCourseController;
+import course_screen.CourseCell;
+import student_screen.GroupCell;
+import student_screen.StudentCell;
 import entities.University;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,16 +35,19 @@ public class ParentController extends TabPane {
     private ListView teacherListView;
 
     @FXML
-    private ListView courseListView;
-    @FXML
-    private Button btAddCourse;
-
-    @FXML
     private Button btAddGroup;
     @FXML
     private ListView groupListView;
     @FXML
     private ListView studentListView;
+
+    @FXML
+    private ListView courseListView;
+    @FXML
+    private Button btAddCourse;
+    @FXML
+    private ListView tasksListView;
+
 
     public ParentController(University university, Stage primaryStage) {
         this.primaryStage=primaryStage;
@@ -52,32 +58,9 @@ public class ParentController extends TabPane {
     @FXML
     private void initialize() {
         setUpTeacherWindow();
+        setUpStudentWindow();
         setUpCourseWindow();
 
-        groupListView.getItems().addAll(university.getStudentsGroupList());
-        groupListView.setCellFactory(param -> {
-            GroupCell cell = new GroupCell(groupListView, this, university);
-            cell.createSelections();
-            return cell.getCell();
-        });
-
-        studentListView.getItems().addAll(university.getAllStudents());
-        studentListView.setCellFactory(param -> {
-            StudentCell cell = new StudentCell(groupListView, this, university);
-            cell.createSelections();
-            return cell.getCell();
-        });
-        btAddGroup.setOnAction(event -> createGroupAddWindowController());
-    }
-
-    private void setUpCourseWindow() {
-        courseListView.getItems().addAll(university.getCourseList());
-        courseListView.setCellFactory(lv -> {
-            CourseCell cell = new CourseCell(courseListView, this, university);
-            cell.createSelections();
-            return cell.getCell();
-        });
-        btAddCourse.setOnAction(event -> createCourseAddWindowController());
     }
 
     private void setUpTeacherWindow() {
@@ -94,6 +77,40 @@ public class ParentController extends TabPane {
         btSave.setOnAction(event -> {
             createTeacherSaveWindowController();
         });
+    }
+
+    private void setUpStudentWindow() {
+        groupListView.getItems().addAll(university.getStudentsGroupList());
+        groupListView.setCellFactory(param -> {
+            GroupCell cell = new GroupCell(groupListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
+
+        //studentListView.getItems().addAll(university.getAllStudents());
+        studentListView.setCellFactory(param -> {
+            StudentCell cell = new StudentCell(studentListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
+        btAddGroup.setOnAction(event -> createGroupAddWindowController());
+    }
+
+    private void setUpCourseWindow() {
+        courseListView.getItems().addAll(university.getCourseList());
+        courseListView.setCellFactory(lv -> {
+            CourseCell cell = new CourseCell(courseListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
+
+        tasksListView.setCellFactory(param -> {
+            TaskCell cell = new TaskCell(tasksListView, this, university);
+            cell.createSelections();
+            return cell.getCell();
+        });
+
+        btAddCourse.setOnAction(event -> createCourseAddWindowController());
     }
 
     private void setUpTheLoader() {
@@ -137,6 +154,11 @@ public class ParentController extends TabPane {
     public void updateStudentListView() {
         studentListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedStudentsGroup().getGroupStudents()));
         System.out.println("StudentList updated");
+    }
+
+    public void updateTaskListView() {
+        tasksListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedCourse().getCourseTasks()));
+        System.out.println("TaskList updated");
     }
 
     public void updateGroupListView() {

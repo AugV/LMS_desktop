@@ -1,20 +1,21 @@
-package controllers;
+package common;
 
 import entities.University;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import teacher_screen.ParentController;
 
 import java.io.IOException;
 
-abstract class ChildControler extends AnchorPane {
-    University university;
-    ParentController superController;
-    Stage stage;
-    String fxmlFileName;
+abstract public class ViewControler extends AnchorPane {
+    protected University university;
+    protected ParentController superController;
+    protected Stage stage;
+    protected String fxmlFileName;
 
-    public ChildControler(University university, ParentController superController, String fxmlFileName){
+    public ViewControler(University university, ParentController superController, String fxmlFileName){
         this.superController = superController;
         this.university = university;
         this.fxmlFileName = fxmlFileName;

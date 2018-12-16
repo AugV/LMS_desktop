@@ -1,7 +1,7 @@
-package cells;
+package teacher_screen;
 
-import controllers.ParentController;
-import entities.Student;
+import common.CustomCell;
+import entities.Teacher;
 import entities.University;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
@@ -11,30 +11,33 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
 import utilities.Toast;
 
-public class StudentCell extends CustomCell {
-    public StudentCell(ListView listView, ParentController superControler, University university) {
+public class TeacherCell extends CustomCell {
+
+
+    public TeacherCell(ListView listView, ParentController superControler, University university) {
         super(listView, superControler, university);
     }
 
-    public void createSelections() {
-        MenuItem deletionItem = new MenuItem();
-        deletionItem.textProperty().bind(Bindings.format("Delete"));
-        deletionItem.setOnAction(new EventHandler<ActionEvent>() {
+    public void makeDeleteOption() {
+        MenuItem item = new MenuItem();
+        item.textProperty().bind(Bindings.format("Delete"));
+        item.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Toast.makeText(superControler.primaryStage, "Not yet a feature", 800,200,600);
+               university.removeTeacher(cell.getItem());
+                superControler.updateTeacherListView();
+                Toast.makeText(superControler.primaryStage, "entities.Teacher removed", 800,200,600);
             }
         });
-
-        contextMenu.getItems().addAll(deletionItem);
+        contextMenu.getItems().addAll(item);
     }
 
     @Override
     protected void cellUpdateMethodOverride() {
         //super.cellUpdateMethodOverride();
-        cell = new ListCell<Student>() {
+        cell = new ListCell<Teacher>() {
             @Override
-            protected void updateItem(Student item, boolean empty) {
+            protected void updateItem(Teacher item, boolean empty) {
                 super.updateItem(item, empty);
                 if (empty) {
                     text.setText(null);

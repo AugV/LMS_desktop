@@ -8,11 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root prefHeight="235.0" prefWidth="258.0" type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="235.0" prefWidth="258.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <VBox layoutX="8.0" layoutY="13.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="234.0" prefWidth="250.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add entities.StudentsGroup" wrappingWidth="165.13671875">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Group" wrappingWidth="165.13671875">
                     <font>
                         <Font size="27.0" />
                     </font>
@@ -20,11 +20,6 @@
                         <Insets bottom="20.0" />
                     </VBox.margin>
                 </Text>
-                <TextField fx:id="id" maxWidth="-Infinity" prefHeight="40.0" prefWidth="30.0" promptText="ID">
-                    <VBox.margin>
-                        <Insets bottom="20.0" />
-                    </VBox.margin>
-                </TextField>
                 <TextField fx:id="name" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="Name">
                     <VBox.margin>
                         <Insets bottom="20.0" />

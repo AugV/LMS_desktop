@@ -1,6 +1,6 @@
-package cells;
+package common;
 
-import controllers.ParentController;
+import teacher_screen.ParentController;
 import entities.Teacher;
 import entities.University;
 import javafx.scene.control.*;

@@ -22,6 +22,17 @@ public class University extends Entity implements Serializable {
     @Transient
     private StudentsGroup selectedStudentsGroup;
 
+    public void setSelectedCourse(Object selectedCourse) {
+        this.selectedCourse = (Course) selectedCourse;
+    }
+
+    @Transient
+    private Course selectedCourse;
+
+    public Course getSelectedCourse() {
+        return selectedCourse;
+    }
+
     public University(String name) {
         super(name);
     }

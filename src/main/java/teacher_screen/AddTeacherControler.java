@@ -1,6 +1,7 @@
-package controllers;
+package teacher_screen;
 
 
+import common.ViewControler;
 import entities.University;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,9 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class AddTeacherControler extends ChildControler {
-    @FXML
-    private TextField teacherId;
+public class AddTeacherControler extends ViewControler {
     @FXML
     private TextField teacherName;
     @FXML

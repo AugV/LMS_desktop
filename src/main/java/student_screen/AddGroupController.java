@@ -1,5 +1,6 @@
-package controllers;
+package student_screen;
 
+import common.ViewControler;
 import entities.University;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,11 +8,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
+import teacher_screen.ParentController;
 
 
-public class AddGroupController extends ChildControler {
-    @FXML
-    private TextField id;
+public class AddGroupController extends ViewControler {
     @FXML
     private TextField name;
     @FXML

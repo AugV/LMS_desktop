@@ -1,6 +1,7 @@
-package cells;
+package course_screen;
 
-import controllers.ParentController;
+import common.CustomCell;
+import teacher_screen.ParentController;
 import entities.Course;
 import entities.University;
 import javafx.beans.binding.Bindings;
@@ -29,7 +30,7 @@ public class CourseCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.removeCourse(cell.getItem());
                 superControler.updateCourseListView();
-                Toast.makeText(superControler.primaryStage, "entities.Course removed", 800,200,600);
+                Toast.makeText(superControler.primaryStage, "Course removed", 800,200,600);
             }
         });
 
@@ -40,7 +41,6 @@ public class CourseCell extends CustomCell {
             public void handle(ActionEvent event) {
                 final Stage dialog = new Stage();
                 dialog.initModality(Modality.APPLICATION_MODAL);
-                //dialog.initOwner(primaryStage);
                 VBox dialogVbox = new VBox(20);
                 Course course= (Course)cell.getItem();
                 dialogVbox.getChildren().add(new Text(course.getCourseInformation()));
@@ -49,7 +49,19 @@ public class CourseCell extends CustomCell {
                 dialog.show();
             }
         });
-        contextMenu.getItems().addAll(deletionItem, infoItem);
+
+        MenuItem selectGroup = new MenuItem();
+        selectGroup.textProperty().bind(Bindings.format("select"));
+        selectGroup.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                university.setSelectedCourse(cell.getItem());
+                superControler.updateTaskListView();
+                Toast.makeText(superControler.primaryStage, "Course selected", 700,200,400);
+
+            }
+        });
+        contextMenu.getItems().addAll(deletionItem, infoItem, selectGroup);
     }
 
     @Override

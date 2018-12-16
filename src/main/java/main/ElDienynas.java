@@ -1,6 +1,6 @@
 package main;
 
-import controllers.ParentController;
+import teacher_screen.ParentController;
 import entities.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -61,6 +61,7 @@ public class ElDienynas extends Application {
 //        university.addGroup("GRUPE1");
 //        university.addGroup("GRUPE2");
 //
+//
 //        university.getStudentsGroupList().get(0).addGroupStudents(new entities.Student("Petras", "Studentauskas"));
 //        university.getStudentsGroupList().get(1).addGroupStudents(new entities.Student("Studenis", "Studavicius"));
 //
@@ -84,7 +85,7 @@ public class ElDienynas extends Application {
     }
 
     public void stop() {
-        //mergeUniversityToDB();
+        mergeUniversityToDB();
         //new SerializeDeserialize().serialize(university, "universityObject.ser");
     }
 

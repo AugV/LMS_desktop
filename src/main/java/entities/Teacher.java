@@ -32,9 +32,6 @@ public class Teacher extends Person {
     public String toString() {
         return "ID: " + this.getId() +
                 ", Name: " + this.getName() +
-                ", Surname: " + this.getSurname() +
-                " entities.Teacher{" +
-                " teacherCourses= " + teacherCourses +
-                '}';
+                ", Surname: " + this.getSurname();
     }
 }

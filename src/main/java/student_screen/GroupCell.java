@@ -1,6 +1,7 @@
-package cells;
+package student_screen;
 
-import controllers.ParentController;
+import common.CustomCell;
+import teacher_screen.ParentController;
 import entities.StudentsGroup;
 import entities.University;
 import javafx.beans.binding.Bindings;

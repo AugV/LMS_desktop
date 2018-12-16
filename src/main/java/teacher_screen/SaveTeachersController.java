@@ -1,5 +1,8 @@
-package controllers;
+package teacher_screen;
 
+
+
+import common.ViewControler;
 import entities.University;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,7 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import output.PrinterFile;
 
-public class SaveTeachersController extends ChildControler {
+public class SaveTeachersController extends ViewControler {
     @FXML
     private Button btSave;
     @FXML
