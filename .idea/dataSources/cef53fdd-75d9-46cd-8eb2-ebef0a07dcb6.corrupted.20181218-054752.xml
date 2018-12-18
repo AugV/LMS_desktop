@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sample">
+  <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.14">
+    <root id="1">
+      <ServerVersion>1.4.196</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="SAMPLE">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="5" parent="4" name="COMPLETEDTASK"/>
+    <table id="6" parent="4" name="COURSE"/>
+    <table id="7" parent="4" name="COURSE_TASK"/>
+    <table id="8" parent="4" name="HIBERNATE_SEQUENCES"/>
+    <table id="9" parent="4" name="STUDENT"/>
+    <table id="10" parent="4" name="STUDENTSGROUP"/>
+    <table id="11" parent="4" name="STUDENTSGROUP_COURSE"/>
+    <table id="12" parent="4" name="STUDENTSGROUP_STUDENT"/>
+    <table id="13" parent="4" name="TASK"/>
+    <table id="14" parent="4" name="TASK_COMPLETEDTASK"/>
+    <table id="15" parent="4" name="TEACHER"/>
+    <table id="16" parent="4" name="TEACHER_COURSE"/>
+    <table id="17" parent="4" name="UNIVERSITY"/>
+    <table id="18" parent="4" name="UNIVERSITY_COURSE"/>
+    <table id="19" parent="4" name="UNIVERSITY_STUDENTSGROUP"/>
+    <table id="20" parent="4" name="UNIVERSITY_TEACHER"/>
+    <column id="21" parent="5" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_9E8E93CC_1CC2_4DB3_BB90_4BE345749FEE)</DefaultExpression>
+    </column>
+    <column id="22" parent="5" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="23" parent="5" name="ANSWER">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="24" parent="5" name="GRADE">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="25" parent="5" name="GRADEDATE">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="26" parent="5" name="SUBMISSIONDATE">
+      <Position>6</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="27" parent="5" name="OWNER_ID">
+      <Position>7</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+    </column>
+    <index id="28" parent="5" name="PRIMARY_KEY_8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="5" name="CONSTRAINT_C">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="6" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_49CD6CE3_CDF8_4D9B_ACC2_A7E3EE33AD4B)</DefaultExpression>
+    </column>
+    <column id="31" parent="6" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="32" parent="6" name="INFORMATION">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="33" parent="6" name="PRIMARY_KEY_7">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="6" name="CONSTRAINT_7">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="7" name="COURSE_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="7" name="COURSETASKS_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="37" parent="7" name="UK_7QL5JQ4M4UGRICIRLTHOP52DJ_INDEX_7">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>COURSETASKS_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="38" parent="7" name="FK6BKPM9KQTA7L3BIB9ALV3IX8W_INDEX_7">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>COURSE_ID</ColNames>
+    </index>
+    <key id="39" parent="7" name="UK_7QL5JQ4M4UGRICIRLTHOP52DJ_INDEX_7">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>COURSETASKS_ID</ColNames>
+    </key>
+    <foreign-key id="40" parent="7" name="FK6BKPM9KQTA7L3BIB9ALV3IX8W">
+      <ColNames>COURSE_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>COURSE</RefTableName>
+      <RefKeyName>CONSTRAINT_7</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="41" parent="7" name="FKD8F3KUYPO9WGKHKV42NM35COJ">
+      <ColNames>COURSETASKS_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>TASK</RefTableName>
+      <RefKeyName>CONSTRAINT_2</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="42" parent="8" name="SEQUENCE_NAME">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="8" name="NEXT_VAL">
+      <Position>2</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <index id="44" parent="8" name="PRIMARY_KEY_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SEQUENCE_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="45" parent="8" name="CONSTRAINT_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SEQUENCE_NAME</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="9" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_19F9CE8E_8D7C_4599_92AA_DC5EBFF32069)</DefaultExpression>
+    </column>
+    <column id="47" parent="9" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="48" parent="9" name="SURNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="49" parent="9" name="PRIMARY_KEY_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="9" name="CONSTRAINT_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="51" parent="10" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_0D310BD8_C70A_4C6F_B0EE_9229BD7B7BC2)</DefaultExpression>
+    </column>
+    <column id="52" parent="10" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="53" parent="10" name="PRIMARY_KEY_B8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="10" name="CONSTRAINT_B8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="11" name="STUDENTSGROUP_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="11" name="GROUPCOURSES_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="57" parent="11" name="FKO6OI0R8H06W7KOX9E38DTUV4A_INDEX_E">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STUDENTSGROUP_ID</ColNames>
+    </index>
+    <index id="58" parent="11" name="FK1A5AGYQ1CXN52SW9KL002PYNE_INDEX_E">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GROUPCOURSES_ID</ColNames>
+    </index>
+    <foreign-key id="59" parent="11" name="FKO6OI0R8H06W7KOX9E38DTUV4A">
+      <ColNames>STUDENTSGROUP_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>STUDENTSGROUP</RefTableName>
+      <RefKeyName>CONSTRAINT_B8</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="60" parent="11" name="FK1A5AGYQ1CXN52SW9KL002PYNE">
+      <ColNames>GROUPCOURSES_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>COURSE</RefTableName>
+      <RefKeyName>CONSTRAINT_7</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="61" parent="12" name="STUDENTSGROUP_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="12" name="GROUPSTUDENTS_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="63" parent="12" name="UK_JSGS4BPV703C2X1MCCECL5IUU_INDEX_F">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GROUPSTUDENTS_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="64" parent="12" name="FK906QDMPLPG4MH8314D0K9K9XB_INDEX_F">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STUDENTSGROUP_ID</ColNames>
+    </index>
+    <key id="65" parent="12" name="UK_JSGS4BPV703C2X1MCCECL5IUU_INDEX_F">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GROUPSTUDENTS_ID</ColNames>
+    </key>
+    <foreign-key id="66" parent="12" name="FK906QDMPLPG4MH8314D0K9K9XB">
+      <ColNames>STUDENTSGROUP_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>STUDENTSGROUP</RefTableName>
+      <RefKeyName>CONSTRAINT_B8</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="67" parent="12" name="FKD1B2QH9WWL3N3HX8PX7J5WJEU">
+      <ColNames>GROUPSTUDENTS_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>STUDENT</RefTableName>
+      <RefKeyName>CONSTRAINT_B</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="68" parent="13" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_24AED070_BE50_444A_AEC5_51E67B87BA00)</DefaultExpression>
+    </column>
+    <column id="69" parent="13" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="70" parent="13" name="ALLOWSUBMITCOMPLETEDTASK">
+      <Position>3</Position>
+      <DataType>BOOLEAN|16s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="13" name="DEADLINE">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="72" parent="13" name="POINTS">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="73" parent="13" name="TASKCONDITION">
+      <Position>6</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="74" parent="13" name="PRIMARY_KEY_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="75" parent="13" name="CONSTRAINT_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="76" parent="14" name="TASK_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="14" name="TASKCOMPLETEDTASKS_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="78" parent="14" name="UK_ACY126MKE531H2ONDUOJ1MW78_INDEX_6">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASKCOMPLETEDTASKS_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="79" parent="14" name="FKPKCJ1GKCELLIFGOFRMT9W4WNK_INDEX_6">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASK_ID</ColNames>
+    </index>
+    <key id="80" parent="14" name="UK_ACY126MKE531H2ONDUOJ1MW78_INDEX_6">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASKCOMPLETEDTASKS_ID</ColNames>
+    </key>
+    <foreign-key id="81" parent="14" name="FKPKCJ1GKCELLIFGOFRMT9W4WNK">
+      <ColNames>TASK_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>TASK</RefTableName>
+      <RefKeyName>CONSTRAINT_2</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="82" parent="14" name="FKMWS8HFPWJAJ27GSKYE5I5P9FH">
+      <ColNames>TASKCOMPLETEDTASKS_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>COMPLETEDTASK</RefTableName>
+      <RefKeyName>CONSTRAINT_C</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="83" parent="15" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_E45D5CA7_5896_476D_9A50_D0C17BDAFAF0)</DefaultExpression>
+    </column>
+    <column id="84" parent="15" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="85" parent="15" name="SURNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="86" parent="15" name="PRIMARY_KEY_D">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="15" name="CONSTRAINT_D">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="88" parent="16" name="TEACHER_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="16" name="TEACHERCOURSES_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="90" parent="16" name="UK_68C87P96K2WTF2Q6B9GVII586_INDEX_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TEACHERCOURSES_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="91" parent="16" name="FKBU2TTPPWQX95BW5C5JFRY8V7Y_INDEX_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TEACHER_ID</ColNames>
+    </index>
+    <key id="92" parent="16" name="UK_68C87P96K2WTF2Q6B9GVII586_INDEX_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TEACHERCOURSES_ID</ColNames>
+    </key>
+    <foreign-key id="93" parent="16" name="FKBU2TTPPWQX95BW5C5JFRY8V7Y">
+      <ColNames>TEACHER_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>TEACHER</RefTableName>
+      <RefKeyName>CONSTRAINT_D</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="94" parent="16" name="FKLGIECWS3IDB5AFTIFJTWWA5B0">
+      <ColNames>TEACHERCOURSES_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>COURSE</RefTableName>
+      <RefKeyName>CONSTRAINT_7</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="95" parent="17" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_195B2FA7_AC86_4AEF_BABB_70DF7C2A8EB0)</DefaultExpression>
+    </column>
+    <column id="96" parent="17" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="97" parent="17" name="SELECTEDSTUDENTSGROUP_ID">
+      <Position>3</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+    </column>
+    <index id="98" parent="17" name="PRIMARY_KEY_28">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="99" parent="17" name="FKPKK6LJVPQLE17RM6BHL1UD8DM_INDEX_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SELECTEDSTUDENTSGROUP_ID</ColNames>
+    </index>
+    <key id="100" parent="17" name="CONSTRAINT_28">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="101" parent="17" name="FKPKK6LJVPQLE17RM6BHL1UD8DM">
+      <ColNames>SELECTEDSTUDENTSGROUP_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>STUDENTSGROUP</RefTableName>
+      <RefKeyName>CONSTRAINT_B8</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="102" parent="18" name="UNIVERSITY_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="18" name="COURSELIST_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="104" parent="18" name="UK_EEGW80EPJRUQAIYHNGOFQXTHK_INDEX_8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>COURSELIST_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="105" parent="18" name="FKLUHKDAND8DNC59KP725EKCF15_INDEX_8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UNIVERSITY_ID</ColNames>
+    </index>
+    <key id="106" parent="18" name="UK_EEGW80EPJRUQAIYHNGOFQXTHK_INDEX_8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>COURSELIST_ID</ColNames>
+    </key>
+    <foreign-key id="107" parent="18" name="FKLUHKDAND8DNC59KP725EKCF15">
+      <ColNames>UNIVERSITY_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>UNIVERSITY</RefTableName>
+      <RefKeyName>CONSTRAINT_28</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="108" parent="18" name="FKGVI4D4YI4EP7JER8E4WD6XUVV">
+      <ColNames>COURSELIST_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>COURSE</RefTableName>
+      <RefKeyName>CONSTRAINT_7</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="109" parent="19" name="UNIVERSITY_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="19" name="STUDENTSGROUPLIST_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="111" parent="19" name="UK_SGHQENYLTTJ69941HIVDN8UOW_INDEX_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STUDENTSGROUPLIST_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="112" parent="19" name="FKQMB6L0LQ70GO5E1FH2DVKGNMF_INDEX_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UNIVERSITY_ID</ColNames>
+    </index>
+    <key id="113" parent="19" name="UK_SGHQENYLTTJ69941HIVDN8UOW_INDEX_B">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STUDENTSGROUPLIST_ID</ColNames>
+    </key>
+    <foreign-key id="114" parent="19" name="FKQMB6L0LQ70GO5E1FH2DVKGNMF">
+      <ColNames>UNIVERSITY_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>UNIVERSITY</RefTableName>
+      <RefKeyName>CONSTRAINT_28</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="115" parent="19" name="FKSQ52TRA39BF3E6OXT0XSL0TMW">
+      <ColNames>STUDENTSGROUPLIST_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>STUDENTSGROUP</RefTableName>
+      <RefKeyName>CONSTRAINT_B8</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="116" parent="20" name="UNIVERSITY_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="20" name="TEACHERLIST_ID">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="118" parent="20" name="UK_7SX4749W6TBWT3J7X52MJQRNU_INDEX_A">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TEACHERLIST_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="119" parent="20" name="FK9DSM5IDFXSKHL6ETPLKFGOQWT_INDEX_A">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UNIVERSITY_ID</ColNames>
+    </index>
+    <key id="120" parent="20" name="UK_7SX4749W6TBWT3J7X52MJQRNU_INDEX_A">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TEACHERLIST_ID</ColNames>
+    </key>
+    <foreign-key id="121" parent="20" name="FK9DSM5IDFXSKHL6ETPLKFGOQWT">
+      <ColNames>UNIVERSITY_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>UNIVERSITY</RefTableName>
+      <RefKeyName>CONSTRAINT_28</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="122" parent="20" name="FK3IS31704C6O6BFKQD5KDUPOPB">
+      <ColNames>TEACHERLIST_ID</ColNames>
+      <RefSchemaName>PUBLIC</RefSchemaName>
+      <RefTableName>TEACHER</RefTableName>
+      <RefKeyName>CONSTRAINT_D</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

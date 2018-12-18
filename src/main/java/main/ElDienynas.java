@@ -16,7 +16,7 @@ public class ElDienynas extends Application {
     static{entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");}
 
     public void init() {
-        //setUniversity("VGTU");
+//        setUniversity("VGTU");
 //        entityInstantiation();
 //        persistUniversityToDB();
 //        university= null;
@@ -41,7 +41,7 @@ public class ElDienynas extends Application {
         entityManager.getTransaction().begin();
         try{university = entityManager.createQuery("FROM University ", University.class).getResultList().get(0);}
         catch(IndexOutOfBoundsException e){
-            System.out.println("out of bounds");
+            System.out.println(e + "out of bounds");
         }
         entityManager.close();
     }
@@ -55,37 +55,37 @@ public class ElDienynas extends Application {
     }
 //TODO reaorganize package structure
     private void entityInstantiation() {
-//        university.addTeacher("Tadas", "jablinksis");
-//        university.addTeacher("Laimonas", "Stanislovsksi");
-//
-//        university.addGroup("GRUPE1");
-//        university.addGroup("GRUPE2");
-//
-//
-//        university.getStudentsGroupList().get(0).addGroupStudents(new entities.Student("Petras", "Studentauskas"));
-//        university.getStudentsGroupList().get(1).addGroupStudents(new entities.Student("Studenis", "Studavicius"));
-//
-//        university.addCourse(new entities.Course(
-//                "matematika", "Matematikos kursas", university.getTeacherList().get(0), university.getStudentsGroupList().get(0)));
-//        university.addCourse(new entities.Course(
-//                "darbaiXD", "Darbuko salalai", university.getTeacherList().get(1), university.getStudentsGroupList().get(1)));
-//        university.addCourse(new entities.Course(
-//                "darkoks velnias", "dar vienas niekam nereikalingas kursas", university.getTeacherList().get(1), university.getStudentsGroupList().get(1)));
-//
-//        entities.Task task1 = new entities.Task("primasTaskas", "ejozaselse per ezereli", "08-09", "5" );
-//        university.getCourseList().get(0).addCourseTask(task1);
-//
-//        entities.Task task2 = new entities.Task("antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1");
-//        university.getCourseList().get(1).addCourseTask(task2);
-//
-//        university.getCourseList().get(0).getCourseTasks().get(0).addTaskCompletedTask(new entities.CompletedTask(
+        university.addTeacher("Tadas", "jablinksis");
+        university.addTeacher("Laimonas", "Stanislovsksi");
+
+        university.addGroup("GRUPE1");
+        university.addGroup("GRUPE2");
+
+
+        university.getStudentsGroupList().get(0).addGroupStudents(new entities.Student("Petras", "Studentauskas"));
+        university.getStudentsGroupList().get(1).addGroupStudents(new entities.Student("Studenis", "Studavicius"));
+
+        university.addCourse(new entities.Course(
+                "matematika", "Matematikos kursas", university.getTeacherList().get(0), university.getStudentsGroupList().get(0)));
+        university.addCourse(new entities.Course(
+                "darbaiXD", "Darbuko salalai", university.getTeacherList().get(1), university.getStudentsGroupList().get(1)));
+        university.addCourse(new entities.Course(
+                "darkoks velnias", "dar vienas niekam nereikalingas kursas", university.getTeacherList().get(1), university.getStudentsGroupList().get(1)));
+
+        entities.Task task1 = new entities.Task("primasTaskas", "ejozaselse per ezereli", "08-09", "5" );
+        university.getCourseList().get(0).addCourseTask(task1);
+
+        entities.Task task2 = new entities.Task("antrasTaskas", "ezerelis ejo per zaselse", "12-12", "1");
+        university.getCourseList().get(1).addCourseTask(task2);
+
+//        university.getCourseList().get(0).getCourseTasks().get(0).addTaskCompletedTask(new CompletedTask(
 //                 "teisingas atsakymas, kolegos"));
-//        university.getCourseList().get(1).getCourseTasks().get(0).addTaskCompletedTask(new entities.CompletedTask(
+//        university.getCourseList().get(1).getCourseTasks().get(0).addTaskCompletedTask(new CompletedTask(
 //                 "neteisingas atsakymas, biciuli"));
     }
 
     public void stop() {
-        mergeUniversityToDB();
+       mergeUniversityToDB();
         //new SerializeDeserialize().serialize(university, "universityObject.ser");
     }
 

@@ -64,12 +64,15 @@ public class ParentController extends TabPane {
     }
 
     private void setUpTeacherWindow() {
-        teacherListView.getItems().addAll(university.getTeacherList());
+        try{teacherListView.getItems().addAll(university.getTeacherList());
         teacherListView.setCellFactory(lv -> {
             TeacherCell cell = new TeacherCell(teacherListView, this, university);
             cell.makeDeleteOption();
             return cell.getCell();
-        });
+        });}
+        catch(NullPointerException e){
+            System.out.println("AHOI NULLPOINTER");
+        }
         btAddTeacher.setOnAction(event -> {
                     createTeacherAddWindowController();
                 }
