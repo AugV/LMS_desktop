@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/ElDienynasTRUE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/ElDienynasTRUE.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,45 +48,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynasTRUE.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state relative-caret-position="461">
+              <caret line="54" column="30" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="54" selection-end-column="30" />
               <folding>
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#609#610#0" expanded="true" />
-                <element signature="e#3651#3652#0" expanded="true" />
-                <element signature="e#3686#3687#0" expanded="true" />
-                <element signature="method#mergeUniversityToDB#0;class#ElDienynas#0" />
-                <element signature="method#persistUniversityToDB#0;class#ElDienynas#0" />
-                <element signature="e#2040#2041#0" expanded="true" />
-                <element signature="e#2068#2069#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="method#getUniversityFromDB#0;class#DUBLICATEElDienynas#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getUniversityFromDB#0;class#DUBLICATEElDienynas#0" />
-                <element signature="method#mergeUniversityToDB#0;class#DUBLICATEElDienynas#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+            <state relative-caret-position="187">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#DatabaseManagerImpl#0;class#DatabaseManagerImpl#0" />
+                <element signature="method#mergeToDatabase#0;class#DatabaseManagerImpl#0" />
+                <element signature="method#getFromDatabase#0;class#DatabaseManagerImpl#0" />
+                <element signature="method#queryObject#0;class#DatabaseManagerImpl#0" />
+                <element signature="e#1001#1116#0" />
+                <element signature="e#1159#1236#0" />
+                <element signature="method#persistToDatabase#0;class#DatabaseManagerImpl#0" />
+                <element signature="method#startTransaction#0;class#DatabaseManagerImpl#0" />
               </folding>
             </state>
           </provider>
@@ -193,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/utilities/DataFiller.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/DUBLICATEElDienynas.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java" />
       </list>
     </option>
   </component>
@@ -385,12 +373,12 @@
       <workItem from="1545206380409" duration="892000" />
       <workItem from="1545229799091" duration="1146000" />
       <workItem from="1545244514169" duration="1029000" />
-      <workItem from="1549461649134" duration="7681000" />
+      <workItem from="1549461649134" duration="9232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73938000" />
+    <option name="totallyTimeSpent" value="75489000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -794,24 +782,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+        <state relative-caret-position="461">
+          <caret line="54" column="30" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="54" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="method#getUniversityFromDB#0;class#DUBLICATEElDienynas#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/DatabaseManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="187">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getUniversityFromDB#0;class#DUBLICATEElDienynas#0" />
-            <element signature="method#mergeUniversityToDB#0;class#DUBLICATEElDienynas#0" />
+            <element signature="method#DatabaseManagerImpl#0;class#DatabaseManagerImpl#0" />
+            <element signature="method#mergeToDatabase#0;class#DatabaseManagerImpl#0" />
+            <element signature="method#getFromDatabase#0;class#DatabaseManagerImpl#0" />
+            <element signature="method#queryObject#0;class#DatabaseManagerImpl#0" />
+            <element signature="e#1001#1116#0" />
+            <element signature="e#1159#1236#0" />
+            <element signature="method#persistToDatabase#0;class#DatabaseManagerImpl#0" />
+            <element signature="method#startTransaction#0;class#DatabaseManagerImpl#0" />
           </folding>
         </state>
       </provider>

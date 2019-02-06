@@ -25,7 +25,7 @@ public class ElDienynas extends Application {
     }
 
     public void stop() {
-       // mergeUniversityToDB();
+       dataBaseManager.mergeToDatabase(university);
     }
 
     /*private void getUniversityFromDB() {

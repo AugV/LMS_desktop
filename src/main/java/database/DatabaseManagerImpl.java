@@ -8,32 +8,56 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class DatabaseManagerImpl implements DatabaseManager<Entity> {
-    private static EntityManagerFactory entityManagerFactory = null;
+    private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");
+    private EntityManager entityManager;
 
     public DatabaseManagerImpl() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");
     }
 
     @Override
     public void mergeToDatabase(Entity entityToMerge) {
-
+        startTransaction();
+        entityManager.merge(entityToMerge);
+        commitTransaction();
+        closeTransaction();
     }
 
     @Override
     public Entity getFromDatabase(Entity objectToGet) {
-        EntityManager entityManager;
-        entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-        try{objectToGet = entityManager.createQuery("FROM University", University.class).getResultList().get(0);}
+        startTransaction();
+        objectToGet = queryObject(objectToGet);
+        closeTransaction();
+        return objectToGet;
+    }
+
+    private Entity queryObject(Entity objectToGet) {
+        try{
+            objectToGet = entityManager.createQuery("FROM University", University.class).getResultList().get(0);}
         catch(IndexOutOfBoundsException e){
-            System.out.println(e + "out of bounds");
+            System.out.println(e + "Could not find in Database");
         }
-        entityManager.close();
         return objectToGet;
     }
 
     @Override
     public void persistToDatabase(Entity entityToPersist) {
-
+        startTransaction();
+        entityManager.persist(entityToPersist);
+        commitTransaction();
+        closeTransaction();
     }
+
+    private void startTransaction() {
+         this.entityManager = entityManagerFactory.createEntityManager();
+         this.entityManager.getTransaction().begin();
+    }
+
+    private void commitTransaction() {
+        entityManager.getTransaction().commit();
+    }
+
+    private void closeTransaction() {
+        entityManager.close();
+    }
+
 }
