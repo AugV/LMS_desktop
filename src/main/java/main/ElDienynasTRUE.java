@@ -1,20 +1,22 @@
 package main;
 
-import database.DatabaseManager;
-import database.DatabaseManagerImpl;
-import entities.University;
+import teacher_screen.ParentController;
+import entities.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import teacher_screen.ParentController;
 
-public class ElDienynas extends Application {
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class ElDienynasTRUE extends Application {
     private University university;
-    public DatabaseManager dataBaseManager = new DatabaseManagerImpl();
+    private static final EntityManagerFactory entityManagerFactory;
+    static{entityManagerFactory = Persistence.createEntityManagerFactory("PersistenceUnitHibernateH2");}
 
     public void init() {
-        university = (University) dataBaseManager.getFromDatabase(university);
-
+        getUniversityFromDB();
     }
 
     @Override
@@ -25,10 +27,10 @@ public class ElDienynas extends Application {
     }
 
     public void stop() {
-       // mergeUniversityToDB();
+        mergeUniversityToDB();
     }
 
-    /*private void getUniversityFromDB() {
+    private void getUniversityFromDB() {
         EntityManager entityManager;
         entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
@@ -53,7 +55,7 @@ public class ElDienynas extends Application {
         entityManager.persist(university);
         entityManager.getTransaction().commit();
         entityManager.close();
-    }*/
+    }
 
     public static void main(String[] args) {
         launch(args);
