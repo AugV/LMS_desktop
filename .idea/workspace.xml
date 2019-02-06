@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b526f546-da70-44df-91e8-f454bfe8b132" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/55106c77-128e-477d-93d1-600ecfb899d8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9220abe5-5b4e-49c3-83d2-69027f6ae7bc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LD2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LD2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/BasicInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/input/InputFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/input/InputKeyboard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ArrayListConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ArrayListConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/DuplicateChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/SerializeDeserialize.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/DataFiller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,37 +46,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/common/CustomCell.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/output/PrinterFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/ArrayListConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="527">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#3651#3652#0" expanded="true" />
+                <element signature="e#3686#3687#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Toast.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/DataFiller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="136">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -109,6 +85,7 @@
       <find>se</find>
       <find>Group_id</find>
       <find>stude</find>
+      <find>Input</find>
     </findStrings>
     <replaceStrings>
       <replace>CascadeType.MERGE</replace>
@@ -121,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/entities/Task.java" />
         <option value="$PROJECT_DIR$/src/entities/Entity.java" />
         <option value="$PROJECT_DIR$/src/utilities/DuplicateChecker.java" />
         <option value="$PROJECT_DIR$/src/entities/University.java" />
@@ -167,11 +143,12 @@
         <option value="$PROJECT_DIR$/src/main/java/entities/Entity.java" />
         <option value="$PROJECT_DIR$/src/main/java/teacher_screen/ParentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/StudentsGroup.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cef53fdd-75d9-46cd-8eb2-ebef0a07dcb6/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/input/InputFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/ArrayListConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/ElDienynas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/DataFiller.java" />
       </list>
     </option>
   </component>
@@ -223,6 +200,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LMS_desktop_1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LMS_desktop_1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LMS_desktop_1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AV_LD2" type="b2602c69:ProjectViewProjectNode" />
@@ -337,12 +338,12 @@
       <workItem from="1545206380409" duration="892000" />
       <workItem from="1545229799091" duration="1146000" />
       <workItem from="1545244514169" duration="1029000" />
-      <workItem from="1549461649134" duration="1998000" />
+      <workItem from="1549461649134" duration="2665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68255000" />
+    <option name="totallyTimeSpent" value="68922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -355,6 +356,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="45" width="1800" height="955" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80267966" visible="true" weight="0.19425288" />
       <window_info id="Persistence" order="1" sideWeight="0.19783616" side_tool="true" weight="0.18505748" />
@@ -390,7 +392,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" x="0" y="0" width="410" height="676" id="Documentation" order="8" sideWeight="0.5010482" side_tool="true" visible="true" weight="0.24974975" />
-      <window_info anchor="right" id="Database" order="9" visible="true" weight="0.19367816" />
+      <window_info anchor="right" id="Database" order="9" weight="0.19367816" />
       <window_info anchor="right" id="Maven" order="10" />
     </layout>
   </component>
@@ -398,13 +400,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9220abe5-5b4e-49c3-83d2-69027f6ae7bc/console.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/55106c77-128e-477d-93d1-600ecfb899d8/console.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/35a8b833-39ed-46ec-af4b-1db75a30f329/console.sql" />
@@ -629,13 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/course_screen/AddCourseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="566">
@@ -728,6 +716,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/ElDienynas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#3651#3652#0" expanded="true" />
+            <element signature="e#3686#3687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/DataFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
