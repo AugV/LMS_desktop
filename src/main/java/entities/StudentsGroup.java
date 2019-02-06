@@ -44,10 +44,7 @@ public class StudentsGroup extends Entity implements Serializable {
 
     @Override
     public String toString() {
-        return "StudentsGroup{" +
-                "groupID=" + this.getId() +
-                ", name='" + this.getName() + '\'' +
-                ", groupStudents=" + groupStudents +
-                '}';
+        return "groupID=" + this.getId() +
+                ", name='" + this.getName();
     }
 }
