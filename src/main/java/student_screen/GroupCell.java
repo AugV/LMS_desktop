@@ -1,6 +1,7 @@
 package student_screen;
 
 import common.CustomCell;
+import entities.StudentsGroupNull;
 import teacher_screen.ParentController;
 import entities.StudentsGroup;
 import entities.University;
@@ -25,27 +26,30 @@ public class GroupCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.removeGroup(cell.getItem());
                 superControler.updateGroupListView();
-                Toast.makeText(superControler.primaryStage, "entities.StudentsGroup removed", 800,200,600);
+                Toast.makeText(superControler.primaryStage, "StudentsGroup removed", 800,200,600);
             }
         });
 
         MenuItem addStudent = new MenuItem();
-        addStudent.textProperty().bind(Bindings.format("add entities.Student"));
+        addStudent.textProperty().bind(Bindings.format("Add Student"));
         addStudent.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                university.setSelectedStudentsGroup(cell.getItem());
+                superControler.updateStudentListView();
                 superControler.createStudentAddWindowController();
+                university.setSelectedStudentsGroup(new StudentsGroupNull());
             }
         });
 
         MenuItem selectGroup = new MenuItem();
-        selectGroup.textProperty().bind(Bindings.format("select"));
+        selectGroup.textProperty().bind(Bindings.format("Select"));
         selectGroup.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 university.setSelectedStudentsGroup(cell.getItem());
                 superControler.updateStudentListView();
-                Toast.makeText(superControler.primaryStage, "group selected", 700,200,400);
+                Toast.makeText(superControler.primaryStage, "Group selected", 700,200,400);
 
             }
         });
@@ -55,7 +59,6 @@ public class GroupCell extends CustomCell {
 
     @Override
     protected void cellUpdateMethodOverride() {
-        //super.cellUpdateMethodOverride();
         cell = new ListCell<StudentsGroup>() {
             @Override
             protected void updateItem(StudentsGroup item, boolean empty) {

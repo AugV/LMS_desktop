@@ -1,5 +1,6 @@
 package utilities;
 
+import entities.Course;
 import entities.University;
 
 public class DataFiller {
@@ -16,11 +17,11 @@ public class DataFiller {
         university.getStudentsGroupList().get(0).addGroupStudents(new entities.Student("Petras", "Studentauskas"));
         university.getStudentsGroupList().get(1).addGroupStudents(new entities.Student("Studenis", "Studavicius"));
 
-        university.addCourse(new entities.Course(
+        university.addCourse(new Course(
                 "matematika", "Matematikos kursas", university.getTeacherList().get(0), university.getStudentsGroupList().get(0)));
-        university.addCourse(new entities.Course(
+        university.addCourse(new Course(
                 "darbaiXD", "Darbuko salalai", university.getTeacherList().get(1), university.getStudentsGroupList().get(1)));
-        university.addCourse(new entities.Course(
+        university.addCourse(new Course(
                 "darkoks velnias", "dar vienas niekam nereikalingas kursas", university.getTeacherList().get(1), university.getStudentsGroupList().get(1)));
 
         entities.Task task1 = new entities.Task("primasTaskas", "ejozaselse per ezereli", "08-09", "5" );

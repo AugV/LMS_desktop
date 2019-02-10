@@ -28,33 +28,6 @@ public class ElDienynas extends Application {
        dataBaseManager.mergeToDatabase(university);
     }
 
-    /*private void getUniversityFromDB() {
-        EntityManager entityManager;
-        entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-        try{university = entityManager.createQuery("FROM University ", University.class).getResultList().get(0);}
-        catch(IndexOutOfBoundsException e){
-            System.out.println(e + "out of bounds");
-        }
-        entityManager.close();
-    }
-
-    private void mergeUniversityToDB() {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-        entityManager.merge(university);
-        entityManager.getTransaction().commit();
-        entityManager.close();
-    }
-
-    private void persistUniversityToDB() {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-        entityManager.persist(university);
-        entityManager.getTransaction().commit();
-        entityManager.close();
-    }*/
-
     public static void main(String[] args) {
         launch(args);
     }

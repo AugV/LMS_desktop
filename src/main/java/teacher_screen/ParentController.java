@@ -2,7 +2,7 @@ package teacher_screen;
 
 import course_screen.TaskCell;
 import student_screen.AddGroupController;
-import student_screen.AddStudentControler;
+import student_screen.AddStudentController;
 import course_screen.AddCourseController;
 import course_screen.CourseCell;
 import student_screen.GroupCell;
@@ -146,7 +146,7 @@ public class ParentController extends TabPane {
     }
 
     public void createStudentAddWindowController() {
-        new AddStudentControler(university, this, addStudentFXML);
+        new AddStudentController(university, this, addStudentFXML);
     }
 
     public void updateTeacherListView() {

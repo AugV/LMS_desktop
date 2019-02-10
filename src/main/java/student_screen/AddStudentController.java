@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import teacher_screen.ParentController;
 
-public class AddStudentControler extends ViewControler {
+public class AddStudentController extends ViewControler {
     @FXML
     private TextField name;
     @FXML
@@ -18,7 +18,7 @@ public class AddStudentControler extends ViewControler {
     @FXML
     private Button btAdd;
 
-    public AddStudentControler(University university, ParentController superController, String fxmlFileName) {
+    public AddStudentController(University university, ParentController superController, String fxmlFileName) {
         super(university, superController, fxmlFileName);
     }
 

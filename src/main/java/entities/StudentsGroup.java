@@ -25,7 +25,7 @@ public class StudentsGroup extends Entity implements Serializable {
         super(name);
     }
 
-    public void addGroupCourse(Course groupCourse) {
+    public void addGroupCourse(Course groupCourse)  {
             this.groupCourses.add(groupCourse);
     }
 
