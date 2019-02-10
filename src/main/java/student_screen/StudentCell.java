@@ -10,7 +10,6 @@ import javafx.event.EventHandler;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
-import utilities.Toast;
 
 public class StudentCell extends CustomCell {
     public StudentCell(ListView listView, ParentController superControler, University university) {
@@ -23,7 +22,7 @@ public class StudentCell extends CustomCell {
         deletionItem.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.getSelectedStudentsGroup().getGroupStudents().remove(cell.getItem());
+                university.getSelectedStudentsGroupImpl().getGroupStudents().remove(cell.getItem());
                 superControler.updateStudentListView();
             }
         });

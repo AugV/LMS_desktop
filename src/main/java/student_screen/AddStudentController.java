@@ -2,6 +2,7 @@ package student_screen;
 
 import common.ViewControler;
 import entities.Student;
+import entities.StudentsGroup;
 import entities.University;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -18,8 +19,11 @@ public class AddStudentController extends ViewControler {
     @FXML
     private Button btAdd;
 
-    public AddStudentController(University university, ParentController superController, String fxmlFileName) {
-        super(university, superController, fxmlFileName);
+    StudentsGroup studentsGroup;
+
+    public AddStudentController(StudentsGroup clickedGroup, ParentController superController, String fxmlFileName) {
+        super(superController, fxmlFileName);
+        studentsGroup = clickedGroup;
     }
 
     @FXML
@@ -27,7 +31,7 @@ public class AddStudentController extends ViewControler {
         btAdd.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.getSelectedStudentsGroup().addGroupStudents(new Student(
+                studentsGroup.addGroupStudents(new Student(
                         name.getText(),
                         surname.getText()));
                 superController.updateStudentListView();

@@ -23,6 +23,13 @@ abstract public class ViewControler extends AnchorPane {
         setUpStage();
     }
 
+    public ViewControler(ParentController superController, String fxmlFileName){
+        this.superController = superController;
+        this.fxmlFileName = fxmlFileName;
+        setUpTheLoader();
+        setUpStage();
+    }
+
     private void setUpStage() {
         stage = new Stage();
         stage.setScene(new Scene(this));

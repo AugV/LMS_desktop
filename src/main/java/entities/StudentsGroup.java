@@ -1,50 +1,13 @@
 package entities;
 
-
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-@javax.persistence.Entity
-@Table
-public class StudentsGroup extends Entity implements Serializable {
+public interface StudentsGroup {
+    void addGroupCourse(Course groupCourse);
 
-    @OneToMany(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
-    List<Student> groupStudents = new ArrayList();
-    @OneToMany(cascade= CascadeType.MERGE, fetch = FetchType.EAGER)
-    List<Course> groupCourses = new ArrayList();
+    List<Course> getGroupCourses();
 
-    public StudentsGroup() {
-    }
+    void addGroupStudents(Student student);
 
-    public StudentsGroup(String name) {
-        super(name);
-    }
-
-    public void addGroupCourse(Course groupCourse)  {
-            this.groupCourses.add(groupCourse);
-    }
-
-    public List<Student> getGroupStudents() {
-        return groupStudents;
-    }
-
-    public void addGroupStudents(Student student) {
-        student.setStudentsGroup(this);
-        this.groupStudents.add(student);
-    }
-
-    public List<Course> getGroupCourses() {
-        return groupCourses;
-    }
-
-    @Override
-    public String toString() {
-        return "groupID=" + this.getId() +
-                ", name='" + this.getName();
-    }
+    List<Student> getGroupStudents();
 }

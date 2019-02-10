@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 public class Student extends Person {
 
     @ManyToOne
-    private StudentsGroup studentsGroup;
+    private StudentsGroupImpl studentsGroupImpl;
 
 
     public Student(String loc_name, String loc_surname) {
@@ -18,12 +18,12 @@ public class Student extends Person {
     }
 
 
-    public StudentsGroup getStudentsGroup() {
-        return studentsGroup;
+    public StudentsGroupImpl getStudentsGroupImpl() {
+        return studentsGroupImpl;
     }
 
-    public void setStudentsGroup(StudentsGroup studentsGroup) {
-        this.studentsGroup = studentsGroup;
+    public void setStudentsGroupImpl(StudentsGroupImpl studentsGroupImpl) {
+        this.studentsGroupImpl = studentsGroupImpl;
     }
 
     @Override

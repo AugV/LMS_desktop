@@ -1,8 +1,6 @@
 package entities;
 
-import java.util.List;
-
-public class StudentsGroupNull extends StudentsGroup {
+public class StudentsGroupNull extends StudentsGroupImpl {
 
 
     @Override

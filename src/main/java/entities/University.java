@@ -15,12 +15,12 @@ public class University extends Entity implements Serializable {
     @OneToMany(cascade= CascadeType.ALL)
     private List<Teacher> teacherList = new ArrayList();
     @OneToMany(cascade= CascadeType.ALL)
-    private List<StudentsGroup> studentsGroupList = new ArrayList();
+    private List<StudentsGroupImpl> studentsGroupImplList = new ArrayList();
     @OneToMany(cascade= CascadeType.ALL)
     private List<Course> courseList = new ArrayList();
 
     @Transient
-    private StudentsGroup selectedStudentsGroup;
+    private StudentsGroupImpl selectedStudentsGroupImpl;
 
     public void setSelectedCourse(Object selectedCourse) {
         this.selectedCourse = (Course) selectedCourse;
@@ -41,40 +41,40 @@ public class University extends Entity implements Serializable {
     }
 
 
-    public void setSelectedStudentsGroup(Object selectedStudentsGroup) {
-        this.selectedStudentsGroup = (StudentsGroup) selectedStudentsGroup;
+    public void setSelectedStudentsGroupImpl(Object selectedStudentsGroupImpl) {
+        this.selectedStudentsGroupImpl = (StudentsGroupImpl) selectedStudentsGroupImpl;
     }
 
-    public StudentsGroup getSelectedStudentsGroup() {
-        return selectedStudentsGroup;
+    public StudentsGroupImpl getSelectedStudentsGroupImpl() {
+        return selectedStudentsGroupImpl;
     }
 
     //Groups
     //region
-    public List<StudentsGroup> getStudentsGroupList() {
-        return studentsGroupList;
+    public List<StudentsGroupImpl> getStudentsGroupImplList() {
+        return studentsGroupImplList;
     }
 
-    public void addGroup(StudentsGroup studentsGroup) {
-        studentsGroupList.add(studentsGroup);
+    public void addGroup(StudentsGroupImpl studentsGroupImpl) {
+        studentsGroupImplList.add(studentsGroupImpl);
     }
 
     public void addGroup(String name) {
-        StudentsGroup studentsGroup = new StudentsGroup(name);
-        studentsGroupList.add(studentsGroup);
+        StudentsGroupImpl studentsGroupImpl = new StudentsGroupImpl(name);
+        studentsGroupImplList.add(studentsGroupImpl);
     }
 
-    public StudentsGroup getGroupByID(int id) {
-        for (StudentsGroup studentsGroup : this.getStudentsGroupList()) {
-            if (studentsGroup.getId() == id) {
-                return studentsGroup;
+    public StudentsGroupImpl getGroupByID(int id) {
+        for (StudentsGroupImpl studentsGroupImpl : this.getStudentsGroupImplList()) {
+            if (studentsGroupImpl.getId() == id) {
+                return studentsGroupImpl;
             }
         }
         return null;
     }
 
     public void removeGroup(Object groupToRemove) {
-        studentsGroupList.remove(groupToRemove);
+        studentsGroupImplList.remove(groupToRemove);
     }
 
     //endregion
@@ -86,8 +86,8 @@ public class University extends Entity implements Serializable {
 
     public void removeCourse(Object courseToRemove) {
         courseList.remove(courseToRemove);
-        for (StudentsGroup studentsGroup : studentsGroupList) {
-            studentsGroup.getGroupCourses().remove(courseToRemove);
+        for (StudentsGroupImpl studentsGroupImpl : studentsGroupImplList) {
+            studentsGroupImpl.getGroupCourses().remove(courseToRemove);
         }
         for (Teacher teacher : teacherList) {
             teacher.getTeacherCourses().remove(courseToRemove);
@@ -154,8 +154,8 @@ public class University extends Entity implements Serializable {
     //General
     public List<Student> getAllStudents() {
         List<Student> allStudents = new ArrayList<>();
-        for (StudentsGroup studentsGroup : studentsGroupList) {
-            allStudents.addAll(studentsGroup.getGroupStudents());
+        for (StudentsGroupImpl studentsGroupImpl : studentsGroupImplList) {
+            allStudents.addAll(studentsGroupImpl.getGroupStudents());
         }
         return allStudents;
     }

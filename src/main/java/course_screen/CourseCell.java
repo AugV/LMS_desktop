@@ -1,6 +1,7 @@
 package course_screen;
 
 import common.CustomCell;
+import entities.StudentsGroupNull;
 import teacher_screen.ParentController;
 import entities.Course;
 import entities.University;
@@ -34,6 +35,15 @@ public class CourseCell extends CustomCell {
             }
         });
 
+        MenuItem addTask = new MenuItem();
+        addTask.textProperty().bind(Bindings.format("Add Task"));
+        addTask.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                superControler.createTaskAddWindowController(cell.getItem());
+            }
+        });
+
         MenuItem infoItem = new MenuItem();
         infoItem.textProperty().bind(Bindings.format("get information"));
         infoItem.setOnAction(new EventHandler<ActionEvent>() {
@@ -61,7 +71,7 @@ public class CourseCell extends CustomCell {
 
             }
         });
-        contextMenu.getItems().addAll(deletionItem, infoItem, selectGroup);
+        contextMenu.getItems().addAll(addTask, deletionItem, infoItem, selectGroup);
     }
 
     @Override

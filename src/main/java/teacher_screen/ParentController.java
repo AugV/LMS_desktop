@@ -1,6 +1,10 @@
 package teacher_screen;
 
+import course_screen.AddTaskController;
 import course_screen.TaskCell;
+import entities.Course;
+import entities.StudentsGroup;
+import entities.StudentsGroupImpl;
 import student_screen.AddGroupController;
 import student_screen.AddStudentController;
 import course_screen.AddCourseController;
@@ -26,6 +30,8 @@ public class ParentController extends TabPane {
     private String addGroupFXML = "/groupAddWindow.fxml";
     private String addStudentFXML = "/studentAddWindow.fxml";
     private String parentFile = "/ApplicationInterface.fxml";
+    private String addTaskFXML = "/AddTaskView.fxml";
+
 
     @FXML
     private Button btAddTeacher;
@@ -50,7 +56,7 @@ public class ParentController extends TabPane {
 
 
     public ParentController(University university, Stage primaryStage) {
-        this.primaryStage=primaryStage;
+        this.primaryStage = primaryStage;
         this.university = university;
         setUpTheLoader();
     }
@@ -64,13 +70,14 @@ public class ParentController extends TabPane {
     }
 
     private void setUpTeacherWindow() {
-        try{teacherListView.getItems().addAll(university.getTeacherList());
-        teacherListView.setCellFactory(lv -> {
-            TeacherCell cell = new TeacherCell(teacherListView, this, university);
-            cell.makeDeleteOption();
-            return cell.getCell();
-        });}
-        catch(NullPointerException e){
+        try {
+            teacherListView.getItems().addAll(university.getTeacherList());
+            teacherListView.setCellFactory(lv -> {
+                TeacherCell cell = new TeacherCell(teacherListView, this, university);
+                cell.makeDeleteOption();
+                return cell.getCell();
+            });
+        } catch (NullPointerException e) {
             System.out.println("AHOI NULLPOINTER");
         }
         btAddTeacher.setOnAction(event -> {
@@ -83,7 +90,7 @@ public class ParentController extends TabPane {
     }
 
     private void setUpStudentWindow() {
-        groupListView.getItems().addAll(university.getStudentsGroupList());
+        groupListView.getItems().addAll(university.getStudentsGroupImplList());
         groupListView.setCellFactory(param -> {
             GroupCell cell = new GroupCell(groupListView, this, university);
             cell.createSelections();
@@ -145,8 +152,12 @@ public class ParentController extends TabPane {
 
     }
 
-    public void createStudentAddWindowController() {
-        new AddStudentController(university, this, addStudentFXML);
+    public void createStudentAddWindowController(Object clickedGroup) {
+        new AddStudentController((StudentsGroupImpl) clickedGroup, this, addStudentFXML);
+    }
+
+    public void createTaskAddWindowController(Object clickedCourse) {
+        new AddTaskController((Course) clickedCourse, this, addTaskFXML);
     }
 
     public void updateTeacherListView() {
@@ -155,17 +166,21 @@ public class ParentController extends TabPane {
     }
 
     public void updateStudentListView() {
-        studentListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedStudentsGroup().getGroupStudents()));
-        System.out.println("StudentList updated");
+        if (university.getSelectedStudentsGroupImpl() != null) {
+            studentListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedStudentsGroupImpl().getGroupStudents()));
+            System.out.println("StudentList updated");
+        }
     }
 
     public void updateTaskListView() {
-        tasksListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedCourse().getCourseTasks()));
-        System.out.println("TaskList updated");
+        if (university.getSelectedCourse() != null) {
+            tasksListView.setItems(new ArrayListConverter().objectListToObservableList(university.getSelectedCourse().getCourseTasks()));
+            System.out.println("TaskList updated");
+        }
     }
 
     public void updateGroupListView() {
-        groupListView.setItems(new ArrayListConverter().objectListToObservableList(university.getStudentsGroupList()));
+        groupListView.setItems(new ArrayListConverter().objectListToObservableList(university.getStudentsGroupImplList()));
         System.out.println("GroupList updated");
     }
 

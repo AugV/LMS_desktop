@@ -20,11 +20,11 @@ public class Course extends Entity implements Serializable {
         this.information = information;
     }
 
-    public Course(String name, String information, Teacher teacher, StudentsGroup studentsGroup) {
+    public Course(String name, String information, Teacher teacher, StudentsGroupImpl studentsGroupImpl) {
         super( name);
         this.information = information;
         teacher.addTeacherCourses(this);
-        studentsGroup.addGroupCourse(this);
+        studentsGroupImpl.addGroupCourse(this);
     }
 
     public Course() {

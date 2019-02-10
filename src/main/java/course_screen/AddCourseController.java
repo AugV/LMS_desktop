@@ -1,10 +1,8 @@
 package course_screen;
 
 import common.ViewControler;
-import entities.StudentsGroup;
+import entities.StudentsGroupImpl;
 import entities.Teacher;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.control.ComboBox;
 import teacher_screen.ParentController;
 import entities.Course;
@@ -32,7 +30,7 @@ public class AddCourseController extends ViewControler {
     private Button btAdd;
 
     private Teacher selectedTeacher;
-    private StudentsGroup selectedGroup;
+    private StudentsGroupImpl selectedGroup;
 
     public AddCourseController(University university, ParentController superController, String fxmlFileName) {
         super(university, superController, fxmlFileName);
@@ -56,7 +54,7 @@ public class AddCourseController extends ViewControler {
                 try{
                     selectedGroup.addGroupCourse(course);
                 }catch (NullPointerException e) {
-                    System.out.println(" !StudentsGroup does not exist!");
+                    System.out.println(" !StudentsGroupImpl does not exist!");
                 }
                 university.addCourse(course);
                 superController.updateCourseListView();
@@ -67,9 +65,9 @@ public class AddCourseController extends ViewControler {
     }
 
     private void initializeGroupBox(University university) {
-        groupBox.getItems().addAll(university.getStudentsGroupList());
+        groupBox.getItems().addAll(university.getStudentsGroupImplList());
         groupBox.valueProperty().addListener(
-                (observable, oldValue, newValue) -> selectedGroup = (StudentsGroup) newValue);
+                (observable, oldValue, newValue) -> selectedGroup = (StudentsGroupImpl) newValue);
     }
 
     private void initializeTeacherBox(University university) {

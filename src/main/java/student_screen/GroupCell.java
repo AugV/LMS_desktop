@@ -1,9 +1,9 @@
 package student_screen;
 
 import common.CustomCell;
+import entities.StudentsGroupImpl;
 import entities.StudentsGroupNull;
 import teacher_screen.ParentController;
-import entities.StudentsGroup;
 import entities.University;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
@@ -26,7 +26,7 @@ public class GroupCell extends CustomCell {
             public void handle(ActionEvent event) {
                 university.removeGroup(cell.getItem());
                 superControler.updateGroupListView();
-                Toast.makeText(superControler.primaryStage, "StudentsGroup removed", 800,200,600);
+                Toast.makeText(superControler.primaryStage, "StudentsGroupImpl removed", 800,200,600);
             }
         });
 
@@ -35,10 +35,7 @@ public class GroupCell extends CustomCell {
         addStudent.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.setSelectedStudentsGroup(cell.getItem());
-                superControler.updateStudentListView();
-                superControler.createStudentAddWindowController();
-                university.setSelectedStudentsGroup(new StudentsGroupNull());
+                superControler.createStudentAddWindowController(cell.getItem());
             }
         });
 
@@ -47,7 +44,7 @@ public class GroupCell extends CustomCell {
         selectGroup.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                university.setSelectedStudentsGroup(cell.getItem());
+                university.setSelectedStudentsGroupImpl(cell.getItem());
                 superControler.updateStudentListView();
                 Toast.makeText(superControler.primaryStage, "Group selected", 700,200,400);
 
@@ -59,9 +56,9 @@ public class GroupCell extends CustomCell {
 
     @Override
     protected void cellUpdateMethodOverride() {
-        cell = new ListCell<StudentsGroup>() {
+        cell = new ListCell<StudentsGroupImpl>() {
             @Override
-            protected void updateItem(StudentsGroup item, boolean empty) {
+            protected void updateItem(StudentsGroupImpl item, boolean empty) {
                 super.updateItem(item, empty);
                 if (empty) {
                     text.setText(null);

@@ -30,6 +30,13 @@ public class Task extends Entity implements Serializable {
         this.deadline = deadline;
         this.points = points;
     }
+    public Task(String name, String taskCondition, String deadline, String points, boolean allowSubmitCompletedTask) {
+        super(name);
+        this.taskCondition = taskCondition;
+        this.deadline = deadline;
+        this.points = points;
+        this.allowSubmitCompletedTask = allowSubmitCompletedTask;
+    }
 
     public Task() {
     }
